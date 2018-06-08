@@ -1,0 +1,44 @@
+.gradient(@to, @c1, @c2){
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
+background: @c1; /* Old browsers */
+background: -moz-linear-gradient(to @to, @c1 0%, @c2 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(to @to, @c1 0%,@c2 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to @to, @c1 0%, @c2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@c1', endColorstr='@c2',GradientType=1 ); /* IE6-9 */
+}
+
+.transition(){
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.transform(@v){
+  -webkit-transform: @v;
+  -moz-transform: @v;
+  -ms-transform: @v;
+  -o-transform: @v;
+  transform: @v;
+}
+
+.flex(){
+  display: flex;
+  display: -o-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  //@media(max-width: 1024px){flex-wrap: wrap;}
+}
+
+.uppercase(){
+  text-transform: uppercase;
+}
+
+.strong(){
+  font-weight: bold;
+}
+
+.uppercase(){
+  text-transform: uppercase;
+}

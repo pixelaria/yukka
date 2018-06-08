@@ -96,7 +96,7 @@ gulp.task('img', function() {
 gulp.task('browser-sync', function() { 
   browserSync({ 
     server: { baseDir: 'docs' }, // Директория для сервера - docs
-    notify: false // Отключаем уведомления
+    notify: true // Отключаем уведомления
   });
 });
 
