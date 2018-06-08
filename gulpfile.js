@@ -52,10 +52,14 @@ gulp.task('libs', function() {
       .pipe(cssnano()) // Сжимаем
       .pipe(gulp.dest('./docs/css')); // Выгружаем в папку docs/css
 
+  console.log('---------- Минификация CSS библиотек закончена');
+  console.log('---------- Минификация JS библиотек');
   gulp.src('src/libs/js/*.js') // Берем less только с первого уровня
       .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.css
       .pipe(jsmin()) // Сжимаем
       .pipe(gulp.dest('./docs/js/')); // Выгружаем в папку docs/css
+
+  console.log('---------- Минификация JS библиотек закончена');
 });
 
 // Сборка и минификация собственного JS для продакшена
