@@ -67,6 +67,39 @@ body{
 	}
 }
 
+.btn--double{
+	padding: 5px 20px;
+	width: 10em;
+	position: relative;
+	padding-left: 30px;
+	background: @red;
+	border: solid 2px @red;
+	color: @white;
+	&:before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 3px;
+		left: -13px;
+		width: 23px;
+		height: 23px;
+		background: @white;
+		.transform(rotate(45deg));
+
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 3px;
+		right: -14px;
+		width: 23px;
+		height: 23px;
+		background: @white;
+		.transform(rotate(45deg));
+	}
+}
+
 /* шапка */
 .header{
 	.container{
@@ -140,7 +173,7 @@ body{
 	.present__line{  .hide; }
 }
 
-.gallery{
+.gallery-section{
 	&__row{
 		.flex;
 	}
@@ -210,9 +243,7 @@ body{
 		}
 		.item{
 			text-align: center;
-			&__img{}
-			&__title{ font-size: 1.5em; }
-			&__price{}
+			&__title{ font-size: 1.5em;  padding: 0 1em;}
 			.price__ruble{ font-size: 1.2em; }
 		}
 		.btn--double{
@@ -247,4 +278,17 @@ body{
 			}
 		}
 	}
+}
+
+.instruments{
+	text-align: center;
+	.gallery{
+		&__row{ .flex; }
+		&__item{.i-4; }
+		.item{
+			&__title{ font-size: 1.5em; padding: 0 1em;}
+			.price__ruble{ font-size: 1.2em; }
+		}
+	}
+	
 }
