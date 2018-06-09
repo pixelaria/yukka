@@ -15,6 +15,10 @@
 	/* font-family: 'Amatic SC', cursive; */
 }
 
+body{
+	background: @white;
+}
+
 .btn{
 	position: relative;
 	display: inline-block;
@@ -37,7 +41,7 @@
 	padding-left: 30px;
 	background: @red;
 	border: solid 2px @red;
-	color: #fff;
+	color: @white;
 	&:before{
 		content: '';
 		position: absolute;
@@ -46,7 +50,7 @@
 		left: -13px;
 		width: 23px;
 		height: 23px;
-		background: #fff;
+		background: @white;
 		.transform(rotate(45deg));
 
 	}
@@ -198,3 +202,49 @@
 	}
 }
 
+.choice{
+	&__choice-block{
+		.flex;
+		.choice-block{
+			&__item{ .i-4; }
+		}
+		.item{
+			text-align: center;
+			&__img{}
+			&__title{ font-size: 1.5em; }
+			&__price{}
+			.price__ruble{ font-size: 1.2em; }
+		}
+		.btn--double{
+			padding: 5px 20px;
+			width: 10em;
+			position: relative;
+			padding-left: 30px;
+			background: @red;
+			border: solid 2px @red;
+			color: @white;
+			&:before{
+				content: '';
+				position: absolute;
+				display: block;
+				top: 3px;
+				left: -13px;
+				width: 23px;
+				height: 23px;
+				background: @white;
+				.transform(rotate(45deg));
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				display: block;
+				top: 3px;
+				right: -14px;
+				width: 23px;
+				height: 23px;
+				background: @white;
+				.transform(rotate(45deg));
+			}
+		}
+	}
+}
