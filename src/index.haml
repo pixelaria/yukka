@@ -1,0 +1,231 @@
+!!!
+%html{lang:'ru'}
+	%head
+		%title домики
+		%meta{charset:'UTF-8'}
+		%link{'http-equiv':'X-UA-Compatible',content:'IE=edge'}
+		%meta{name:'format-detection',content:'telephone=no'}
+		%meta{name:'viewport',content:'width=device-width, initial-scale=1.0'}
+		%link{rel:"stylesheet",href:"./css/libs.min.css"}
+		%link{rel:"stylesheet",href:"./css/bungle.css"}
+	%body
+		%header.header
+			.container
+				.header__logo.logo
+					%a.logo__link{href:"#"}
+						%img.logo__img{src:"img/logo.png", alt:""}
+				%nav.header__nav.nav
+					%ul.nav__list
+						%li.nav__item
+							%a.nav__link{href:'#present'}О домиках
+						%li.nav__item
+							%a.nav__link{href:'#products'}Каталог
+						%li.nav__item
+							%a.nav__link{href:'#callback'}Заказать
+						%li.nav__item
+							%a.nav__link{href:'#charity'}Благотворительность
+						%li.nav__item
+							%a.nav__link{href:'#contacts'}Контакты
+				%a.callback__btn{href:'#'} Звонок
+		%main
+			%section.title-section
+				.container
+					.title-section__title
+						%img.title-section__img{src:'img/header-img.png'}
+					.title-section__delivery.delivery
+						%img{src:'img/header-tittle.png', alt:''}
+						%p.delivery__text Курьерская доставка по Санкт-Петербургу
+						%p.delivery__text.delivery__text--red всего за 199 рублей
+						%a.delivery__link.btn.btn--flag{href:''} Хочу
+			%section.magic-house
+				.container
+					%p.section-title Волшебный домик из детства
+					%p.magic-house__text Все мы в детстве строили домики и убежища под столами и стульями из подручных одеял и подушек, прятали там самое сокровенное, обязательно внутри должен был быть фонарик и что-то вкусненькое. Там мы чувствовали себя окруженными тайной, в безопасности. Наши домики-раскраски окунут вашего ребёнка или вполне себе взрослого человека в тот мир, который мы давно покинули, а вы сможете составить им компанию.
+			%section#present.present
+				.container
+					%p.section-title Прекрасный подарок для вашего ребёнка
+					.present__items
+						.present-item
+							.present-item__text
+								%p.present-item__title Безопасно
+								%p.present-item__about При конструировании мы учли, чтобы в домиках не было острых углов, а края деталей обработали специальным образом, чтобы ребёнок не мог пораниться.
+							%img.present-item__img{src:'img/mh1.png', alt:''}
+						%svg.present-item__line{src:'img/svg/line1.svg'}
+						.present-item
+							%img.present-item__img{src:'img/mh2.png', alt:''}
+							.present-item__text
+								%p.present-item__title Экологично
+								%p.present-item__about Мы используем в производстве только экологически чистый гофрокартон и водные краски, вся продукция производится в строгом соответствии с ГОСТом и имеет все необходимые сертификаты.
+						%svg.present-item__line
+						.present-item
+							.present-item__text
+								%p.present-item__title Легко собрать
+								%p.present-item__about Домик легко собирается интуитивно, но всё же мы приложили подробную инструкцию.
+							%img.present-item__img{src:'img/mh3.png', alt:''}
+						%svg.present-item__line
+						.present-item
+							%img.present-item__img{src:'img/mh4.png', alt:''}
+							.present-item__text
+								%p.present-item__title Легко раскрасить
+								%p.present-item__about Для раскрашчивания отлично подойдут карандаши, мелки, фломастеры, маркеры или гуашь. Вы можете приобрести их у нас.
+						%svg.present-item__line
+						.present-item
+							.present-item__text
+								%p.present-item__title Удобная доставка
+								%p.present-item__about Мы организуем доставку до удобного вам пункта выдачи или прямо до порога.
+								%a.btn.btn--flag Хочу!
+							%img.present-item__img{src:'img/mh5.png', alt:''}
+						%svg.present-item__line
+			%section#products.products
+				.container
+					%p.section-title А вот и домик!
+					.gallery
+						.gallery__item.gallery-item
+							%img.gallery-item__img{src:"img/g1.png", alt:""}
+							%p.gallery-item__about Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, sapiente.
+						.gallery__item.gallery-item
+							%img.gallery-item__img{src:"img/g2.png", alt:""}
+							%p.gallery-item__about Lorem ipsum dolor sit amet, consectetur.
+						.gallery__item.gallery-item
+							%img.gallery-item__img{src:"img/g3.png", alt:""}
+							%p.gallery-item__about Lorem ipsum dolor sit amet, consectetur adipisicing.
+						.gallery__item.gallery-item
+							%img.gallery-item__img{src:"img/g4.png", alt:""}
+							%p.gallery-item__about Lorem ipsum dolor sit amet.
+						.gallery__item.gallery-item
+							%img.gallery-item__img{src:"img/g5.png", alt:""}
+							%p.gallery-item__about Lorem ipsum dolor sit amet, consectetur adipisicing.
+						.gallery__item.gallery-item
+							%img.gallery-item__img{src:"img/g6.png", alt:""}
+							%p.gallery-item__about Lorem ipsum dolor sit amet.
+					.gallery__pagination.pagination
+						%span.pagination__circle.pagination__circle--active
+						%span.pagination__circle
+						%span.pagination__circle
+			%section.choice
+				.container
+					%p.section-title Выберите тот, что вам по душе
+					.choice__items
+						.choice-item
+							%img.choice-item__img{src:"img/ch1.png", alt:""}
+							%p.choice-item__title Крепость
+							%p.choice-item__price.price
+								%i.price__value 900
+								%span.price__valute &#8399;
+							%a.btn.btn--double Заказать
+						.choice-item
+							%img.choice-item__img{src:"img/ch2.png", alt:""}
+							%p.choice-item__title Шапито
+							%p.choice-item__price.price
+								%i.price_value 900
+								%span.price__valute &#8399;
+							%a.btn.btn--double Заказать
+						.choice-item
+							%img.choice-item__img{src:"img/ch3.png", alt:""}
+							%p.choice-item__title Избушка
+							%p.choice-item__price.price
+								%i.price_value 900
+								%span.price__valute &#8399;
+							%a.btn.btn--double Заказать
+			%section.instruments
+				.container
+					%p.section-title Для раскраски домиков
+					.instruments__items
+						.instruments-item
+							%img.instruments-item__img{src:"img/instr1.png", alt:""}
+							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+							%p.instruments-item__price.price
+								%i.price_value 900
+								%span.price__valute &#8399;
+							%a.btn.btn--double Заказать
+						.instruments-item
+							%img.instruments-item__img{src:"img/instr2.png", alt:""}
+							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+							%p.instruments-item__price.price
+								%i.price_value 900
+								%span.price__valute &#8399;
+							%a.btn.btn--double Заказать
+						.instruments-item
+							%img.instruments-item__img{src:"img/instr3.png", alt:""}
+							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+							%p.instruments-item__price.price
+								%i.price_value 900
+								%span.price__valute &#8399;
+							%a.btn.btn--double Заказать
+						.instruments-item
+							%img.instruments-item__img{src:"img/instr4.png", alt:""}
+							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+							%p.instruments-item__price.price
+								%i.price_value 900
+								%span.price__valute &#8399;
+							%a.btn.btn--double Заказать
+						.instruments-item
+							%img.instruments-item__img{src:"img/instr5.png", alt:""}
+							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+							%p.instruments-item__price.price
+								%i.price_value 900
+								%span.price__valute &#8399;
+							%a.btn.btn--double Заказать
+						.instruments-item
+							%img.instruments-item__img{src:"img/instr6.png", alt:""}
+							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+							%p.instruments-item__price.price
+								%i.price_value 900
+								%span.price__valute &#8399;
+							%a.btn.btn--double Заказать
+						.instruments-item
+							%img.instruments-item__img{src:"img/instr7.png", alt:""}
+							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+							%p.instruments-item__price.price
+								%i.value 900
+								%span.price__valute &#8399;
+							%a.btn.btn--double Заказать
+			%section#order.order
+				.container
+					%p.section-title Как заказать?
+					%ol.order__list
+						%li.order__item Выберите самый классный домик
+						%li.order__item Вам могут пригодится карандаши, маркеры, фломастеры, мелки и фонарик
+						%li.order__item Выберите удобный пункт выдачи
+						%li.order__item Оставьте контакты и наш менеджер с вами свяжется
+			%section#charity.charity
+				.container
+					%p.section-title Благотворительность
+					.charity__info
+						.charity__text Мы понимаем, что можем сделать этот мир лучше и поэтому активно сотрудничаем с Благотворительным Фондом Константина Хабенского, который оказывает поддержку детям в очень непростых жизненных ситуациях.
+						.charity__text С каждого приобретенного вами домика мы перечисляем 10 рублей в БФКХ и абсолютно уверены, что это необходимо.
+						.charity__text Присоединяйтесь к нам, ведь делать добро совсем просто!
+					%img.charity__img{src:"img/char1.png", alt:""}
+					.charity__read-more
+						%a.btn--flag.btn--invert{href:"#"} Читать больше
+			%section#callback.callback
+				.container
+					%img.callback__img{src:"img/form.png", alt:""}
+					%form.callback__form.form
+						%p.form__title Остались вопросы?
+						%input.form__text{type:'text', name:'name', placeholder:'Ваше Имя'}
+						%input.form__text{type:'text', name:'name', placeholder:'Номер телефона'}
+						%input.form__submit.btn.btn--double.btn--invert{type:'submit', value:'Перезвонить'}
+						%p.form__confid *Потилика конфиденциальности
+			%section.contacts
+				.container
+					%p.section-title Контакты
+					.contacts__info
+						.contacts-info 
+							%img.contacts-info__icon.contacts-info__icon--address{src:"img/icon1.png", alt:""}
+							%p.contacts-info__text 197198, Россия, г. Санкт-Петербург, ул. Съезжинская, 37А
+						.contacts-info
+							%img.contacts-info__icon.contacts-info__icon--tel{src:"img/icon2.png", alt:""}
+							.contacts-info__text 8-981-777-77-77
+						.contacts-info
+							%img.contacts-info__icon.contacts-info__icon--mail{src:"img/icon3.png", alt:""}
+							.contacts-info__text admin@ad.min
+						.contacts-info
+							.contacts-info--social
+								%a.contacts-info__link
+									%img.contacts-info__icon.contacts-info__icon--vk{src:"img/icon4.png", alt:""}
+								%a.contacts-info__link
+									%img.contacts-info__icon.contacts-info__icon--instargamm{src:"img/icon5.png", alt:""}
+			%footer.footer
+				.container
+					%p.footer__coperight &#169;

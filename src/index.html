@@ -100,17 +100,10 @@
 <div class='present-item__text'>
 <p class='present-item__title'>Удобная доставка</p>
 <p class='present-item__about'>Мы организуем доставку до удобного вам пункта выдачи или прямо до порога.</p>
+<a class='btn btn--flag'>Хочу!</a>
 </div>
 <img alt='' class='present-item__img' src='img/mh5.png'>
 </div>
-<div class='present-item'>
-<div class='present-item__text'>
-<p class='present-item__title'>Лучшие цены</p>
-<p class='present-item__about'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, dolore.</p>
-<a class='btn btn--flag'>Хочу!</a>
-</div>
-</div>
-
 <svg class='present-item__line'></svg>
 </div>
 </div>
@@ -145,7 +138,7 @@
 </div>
 </div>
 <div class='gallery__pagination pagination'>
-<span class='pagination__circle--active'></span>
+<span class='pagination__circle pagination__circle--active'></span>
 <span class='pagination__circle'></span>
 <span class='pagination__circle'></span>
 </div>
@@ -258,12 +251,12 @@
 <section class='order' id='order'>
 <div class='container'>
 <p class='section-title'>Как заказать?</p>
-<ul class='order__list'>
+<ol class='order__list'>
 <li class='order__item'>Выберите самый классный домик</li>
 <li class='order__item'>Вам могут пригодится карандаши, маркеры, фломастеры, мелки и фонарик</li>
 <li class='order__item'>Выберите удобный пункт выдачи</li>
 <li class='order__item'>Оставьте контакты и наш менеджер с вами свяжется</li>
-</ul>
+</ol>
 </div>
 </section>
 <section class='charity' id='charity'>
@@ -288,7 +281,7 @@
 <input class='form__text' name='name' placeholder='Ваше Имя' type='text'>
 <input class='form__text' name='name' placeholder='Номер телефона' type='text'>
 <input class='form__submit btn btn--double btn--invert' type='submit' value='Перезвонить'>
-<p class='form confid'>*Потилика конфиденциальности</p>
+<p class='form__confid'>*Потилика конфиденциальности</p>
 </form>
 </div>
 </section>
@@ -297,29 +290,33 @@
 <p class='section-title'>Контакты</p>
 <div class='contacts__info'>
 <div class='contacts-info'>
-<div class='contacts-info__icon contacts-info__icon--address'></div>
+<img alt='' class='contacts-info__icon contacts-info__icon--address' src='img/icon1.png'>
 <p class='contacts-info__text'>197198, Россия, г. Санкт-Петербург, ул. Съезжинская, 37А</p>
 </div>
 <div class='contacts-info'>
-<div class='contacts-info__icon contacts-info__icon--tel'></div>
+<img alt='' class='contacts-info__icon contacts-info__icon--tel' src='img/icon2.png'>
 <div class='contacts-info__text'>8-981-777-77-77</div>
 </div>
 <div class='contacts-info'>
-<div class='contacts-info__icon contacts-info__icon--mail'></div>
+<img alt='' class='contacts-info__icon contacts-info__icon--mail' src='img/icon3.png'>
 <div class='contacts-info__text'>admin@ad.min</div>
 </div>
 <div class='contacts-info'>
-<div class='contacts-info__icon contacts-info__icon--vk'></div>
+<div class='contacts-info--social'>
+<a class='contacts-info__link'>
+<img alt='' class='contacts-info__icon contacts-info__icon--vk' src='img/icon4.png'>
+</a>
+<a class='contacts-info__link'>
+<img alt='' class='contacts-info__icon contacts-info__icon--instargamm' src='img/icon5.png'>
+</a>
 </div>
-<div class='contacts-info'>
-<div class='contacts-info__icon contacts-info__icon--instargamm'></div>
 </div>
 </div>
 </div>
 </section>
 <footer class='footer'>
 <div class='container'>
-<p class='footer__coperight'>&#169;</p>
+<p class='footer__copyright'>&#169; Все права защищены</p>
 </div>
 </footer>
 </main>
