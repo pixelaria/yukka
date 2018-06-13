@@ -59,8 +59,8 @@ ul, ul > li{
 		border-right:  solid 20px;
 		border-bottom: solid 20px;
 	}
-	&:before{ position: relative; }
-	&:after{ position: relative;left: 16px; }
+	
+	&:after{ left: 16px; }
 	
 	&--flag{
 		&:before{
@@ -358,8 +358,10 @@ ul, ul > li{
 			font-size: 1.5em;
 		}
 	}
+	.price__valute{ font-family: 'PT Sans', serif; }
 	.btn{
 		.center;
+		margin-top: 2em;
 	}
 }
 .order{
@@ -465,7 +467,21 @@ ul, ul > li{
 		&--double{
 			&:before,
 			&:after{
-				background: @red !important;
+				background: @red;
+			}
+			&:hover{
+				border-color: @red;
+				background: #fff;
+				&:before{
+					left: -16px;
+					-webkit-box-shadow: 2px -2px 0 0 @red;
+					box-shadow: 2px -2px 0 0 @red;
+				}
+				&:after{
+					left: 16px;
+					-webkit-box-shadow: -2px 2px 0 0 @red;
+					box-shadow: -2px 2px 0 0 @red;
+				}
 			}
 		}
 	}
@@ -476,21 +492,28 @@ ul, ul > li{
 		.flex;
 		justify-content: space-between;
 	}
-	&-info{
-		.i-3;
+	&__info{
 		.flex;
 		-ms-align-items: center;
 		align-items: center;
 		justify-content: space-between;
+	}
+	&-info{
+		.flex;
+		-ms-align-items: center;
+		align-items: center;
+		justify-content: center;
+		.i-3;
 		&__icon{ padding-right: 5px; }
 		&__text{ display: block; }
 		&--social{
 			.flex;
-			.i-1;
+			/* .i-1; */
 		}
 		&__link{
+			display: block;
 			padding: 0 5px;
-		}		
+		}
 	}
 }
 
