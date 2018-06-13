@@ -3,7 +3,8 @@
 @import "./imports/_grid.less";
 @import "./imports/_variables.less";
 @import "./imports/_fonts.less";
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Roboto|PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Roboto|PT+Sans:regular,italic,bold,bolditalic');
+@import url('http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"');
 
 *{
 	margin: 0;
@@ -11,10 +12,11 @@
 	position: relative;
 	list-style-type: none;
 	text-decoration: none;
+	line-height: 1.7em;
 	color:inherit;
 	font-family: 'Roboto', sans-serif;
 	/* font-family: 'Amatic SC', cursive; */
-	font-family: 'PT+Sans', sans-serif;
+/* 	font-family: 'PT+Sans', sans-serif; */
 }
 
 body{
@@ -35,41 +37,99 @@ ul, ul > li{
 }	
 
 .btn{
+	width: 13em;
+	height: 2.5em;
 	.flex;
-	.center;
-	justify-content: center;
+/* 	left: 15px; */
+	justify-content: space-between;
 	-ms-align-items: center;
 	align-items: center;
-	max-width: 10em;
-	border: solid 2px @red;
 	background: @red;
 	color: @white;
-	padding: 3px;
-	&:before, &:after{
+	cursor: pointer;
+	&:before,
+	&:after{
 		content: '';
 		position: relative;
 		display: inline-block;
-		width: 24px;
-		height: 24px;
-		border: solid 2px;
-		.transform(rotate(45deg));
+		width: 0;
+		height: 0;
+		border-left:   solid 20px;
+		border-top:    solid 20px;
+		border-right:  solid 20px;
+		border-bottom: solid 20px;
 	}
-	&:before{ background: @white; left: -3.15em; }
-	&:after{ right: -3.15em; }
-	&--flag{ &:after{ background: @red; border-color:@red; } }
-	&--double{ &:after{ background: @white; } }
-	&--invert{
-		background: @white;
-		color: @red;
-		&:before, &:after{ background: @white; }
+	&:before{ position: relative; }
+	&:after{ position: relative;left: 16px; }
+	
+	&--flag{
 		&:before{
-			border-left-color: @white;
-			border-bottom-color: @white;
+			border-left-color:   @white;
+			border-top-color:    @red;
+			border-right-color:  @red;
+			border-bottom-color: @red;
 		}
 		&:after{
-			border-top-color: @white;
-			border-right-color: @white;
+			border-left-color:   @red;
+			border-top-color:    @white;
+			border-right-color:  @white;
+			border-bottom-color: @white;
 		}
+		&:hover{
+			background: @dRed;
+			color: @white;
+			&:before{
+				border-top-color:    @dRed;
+				border-right-color:  @dRed;
+				border-bottom-color: @dRed;
+			}
+			&:after{
+				border-left-color:   @dRed;
+			}
+		}
+
+	}
+	
+	&--double, &--invert{
+		border: solid 2px @red;
+		color: @white;
+		&:before,
+		&:after{
+			border-color: none;
+			border-left-width: 	 14px;
+			border-top-width:    14px;
+			border-right-width:  14px;
+			border-bottom-width: 14px;
+			.transform(rotate(45deg));
+		}
+		&:before{
+			left: -16px;
+			-webkit-box-shadow: 2px -2px 0 0 @red;
+			box-shadow: 2px -2px 0 0 @red;
+		}
+		&:after{
+			left: 16px;
+			-webkit-box-shadow: -2px 2px 0 0 @red;
+			box-shadow: -2px 2px 0 0 @red;
+
+		}
+		&:hover{
+			background: @dRed;
+			border-color: @dRed;
+			&:before{
+				-webkit-box-shadow: 2px -2px 0 0 @dRed;
+				box-shadow: 2px -2px 0 0 @dRed;
+			}
+			&:after{
+				-webkit-box-shadow: -2px 2px 0 0 @dRed;
+				box-shadow: -2px 2px 0 0 @dRed;
+			}
+		}
+	}
+	
+	&--invert{
+		background: none;
+		color: @red;
 	}
 }
 
@@ -92,28 +152,36 @@ ul, ul > li{
 		padding: 5px 20px;
 		&:hover{ color: @red; }
 	}
+	&__callback-btn{
+		border-bottom: dashed 1px #000;
+		&:hover{ color: @red; border-bottom-color: @red; }
+	}
 }
 
 /* стартовый блок */
 .title-section{
 	padding-top: 2em;
 	.container{ .flex; justify-content: space-between; }
-	.title-section__img-block, .title-section__text-block{
+	&__img-block, &__text-block{
 		width: 100%; 
 		text-align: center;
 	}
 
 	.delivery{
-		padding-top: 6em;
+		padding-top: 4em;
+		text-align: center;
 		&__text{
-			text-align: center;
 			&--red{
 				color: @red;
 			}
 		}
+		&__img{ padding-bottom: 4em; }
 		&__link{
 			.center;
+			margin-top: 2em;
+			padding-right: 15px;
 		}
+
 	}
 
 }
@@ -152,9 +220,14 @@ ul, ul > li{
 		}
 		.btn--flag{
 			.center;
+			margin-top: 2em;
 			&:before{
-				background: @yellow;
-				border-color:@yellow;
+				border-left-color: @yellow;
+			}
+			&:after{
+				border-top-color:    @yellow;
+				border-right-color:  @yellow;
+				border-bottom-color: @yellow;
 			}
 		}
 	}
@@ -171,14 +244,56 @@ ul, ul > li{
 		flex-wrap: wrap;
 		&-item{
 			.i-4;
+			max-height: 17em;
+			position: relative;
+			display: block;
 			overflow: hidden;
+			margin-bottom: 1em;
+			cursor: pointer;
+			z-index: 1;
+			&:nth-child(3n){ margin-right: 0; }
+			&__img{
+				position: relative;
+				display: block;
+				width: 100%;
+				.transition;
+			}
 			&__about{
+				position: absolute;
+				bottom: -5em;
+				width: 100%;
+				display: block;
+				padding: 1em;
+				background: rgba(255, 255, 255, 0.5);
+				color: #000;
+				text-align: center;
+				z-index: 3;
+			}
+			&:before{
+				content: '';
 				position: absolute;
 				display: block;
 				width: 100%;
-				padding: 1em;
-				background: rgba(255,255,255,0.7);
-				bottom: 0;
+				height: 100%;
+				background: #000;
+				z-index: 3;
+				opacity: 0;
+				.transition;
+			}
+			&:hover{
+				.transition;
+				.gallery-item__img{
+					.transform(scale(1.1));
+					.transition;
+				}
+				.gallery-item__about{
+					bottom: 0;
+					.transition;
+				}
+				&:before{
+				opacity: 0.5;
+				.transition;
+				}
 			}
 		}
 	}
@@ -195,10 +310,12 @@ ul, ul > li{
 			border: solid 2px grey;
 			border-radius: 1em;
 			cursor: pointer;
+			&:hover{ background: grey; }
 			&--active{
 				border-color: @red;
 				background: @red;
 				position: relative;
+				&:hover{ background: @red; }
 			}
 		}
 	}
@@ -214,7 +331,11 @@ ul, ul > li{
 		&__title{
 			font-size: 1.5em;
 		}
+		.price__valute{
+			font-family: 'PT Sans', serif;
+		}
 		.btn{
+			.center;
 			margin-top: 2em;
 		}
 	}
@@ -236,6 +357,9 @@ ul, ul > li{
 		&__title{
 			font-size: 1.5em;
 		}
+	}
+	.btn{
+		.center;
 	}
 }
 .order{
@@ -326,14 +450,23 @@ ul, ul > li{
 		&__text::-moz-placeholder{ color:@white; opacity:1; }/* Firefox 18- */
 		&__text:-ms-input-placeholder{ color:@white; opacity:1; }/* IE */
 		&__submit{
-			display: block;
-				&:focus,
-				&:checked,
-				&:active,{
-					border: none;
-					outline:none;
-				}
+			&:focus,
+			&:checked,
+			&:active,{
+				border: none;
+				outline:none;
+			}
 			cursor: pointer;
+		}
+	}
+	.btn{
+		.center;
+		background: @white;
+		&--double{
+			&:before,
+			&:after{
+				background: @red !important;
+			}
 		}
 	}
 }

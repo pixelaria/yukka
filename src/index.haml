@@ -1,13 +1,12 @@
 !!!
 %html{lang:'ru'}
 	%head
-		%title домики
-		%meta{charset:'UTF-8'}
-		%link{'http-equiv':'X-UA-Compatible',content:'IE=edge'}
-		%meta{name:'format-detection',content:'telephone=no'}
-		%meta{name:'viewport',content:'width=device-width, initial-scale=1.0'}
-		%link{rel:"stylesheet",href:"./css/libs.min.css"}
-		%link{rel:"stylesheet",href:"./css/bungle.css"}
+		%meta{charset:"UTF-8"}
+		%meta{content:"telephone=no", name:"format-detection"}
+		%meta{content:"width=device-width, initial-scale=1.0", name:"viewport"}
+		%title Template
+		%link{href:"./css/libs.min.css", rel:"stylesheet"}
+		%link{href:"./css/bundle.css", rel:"stylesheet"}
 	%body
 		%header.header
 			.container
@@ -26,14 +25,14 @@
 							%a.nav__link{href:'#charity'}Благотворительность
 						%li.nav__item
 							%a.nav__link{href:'#contacts'}Контакты
-				%a.callback__btn{href:'#'} Звонок
+				%a.header__callback-btn{href:'#'} Звонок
 		%main
 			%section.title-section
 				.container
 					.title-section__title
 						%img.title-section__img{src:'img/header-img.png'}
 					.title-section__delivery.delivery
-						%img{src:'img/header-tittle.png', alt:''}
+						%img.delivery__img{src:'img/header-tittle.png', alt:''}
 						%p.delivery__text Курьерская доставка по Санкт-Петербургу
 						%p.delivery__text.delivery__text--red всего за 199 рублей
 						%a.delivery__link.btn.btn--flag{href:''} Хочу
@@ -228,4 +227,4 @@
 									%img.contacts-info__icon.contacts-info__icon--instargamm{src:"img/icon5.png", alt:""}
 			%footer.footer
 				.container
-					%p.footer__coperight &#169;
+					%p.footer__coperight &#169; Все права защищены

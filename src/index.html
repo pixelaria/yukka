@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Template</title>
-  <link rel="stylesheet" href="./css/libs.min.css">
-  <link rel="stylesheet" href="./css/bundle.css">
+<meta charset='UTF-8'>
+<meta content='telephone=no' name='format-detection'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<title>Template</title>
+<link href='./css/libs.min.css' rel='stylesheet'>
+<link href='./css/bundle.css' rel='stylesheet'>
 </head>
 <body>
 <header class='header'>
@@ -37,7 +35,7 @@
 </li>
 </ul>
 </nav>
-<a class='callback__btn' href='#'>Звонок</a>
+<a class='header__callback-btn' href='#'>Звонок</a>
 </div>
 </header>
 <main>
@@ -47,7 +45,7 @@
 <img class='title-section__img' src='img/header-img.png'>
 </div>
 <div class='title-section__delivery delivery'>
-<img alt='' src='img/header-tittle.png'>
+<img alt='' class='delivery__img' src='img/header-tittle.png'>
 <p class='delivery__text'>Курьерская доставка по Санкт-Петербургу</p>
 <p class='delivery__text delivery__text--red'>всего за 199 рублей</p>
 <a class='delivery__link btn btn--flag' href=''>Хочу</a>
@@ -263,9 +261,9 @@
 <div class='container'>
 <p class='section-title'>Благотворительность</p>
 <div class='charity__info'>
-<div class='charity__text'>Мы понимаем, что можем сделать этот мир лучше и поэтому активно сотрудничаем с Благотворительным Фондом Константина Хабенского, который оказывает поддержку детям в очень непростых жизненных ситуациях.</div>
-<div class='charity__text'>С каждого приобретенного вами домика мы перечисляем 10 рублей в БФКХ и абсолютно уверены, что это необходимо.</div>
-<div class='charity__text'>Присоединяйтесь к нам, ведь делать добро совсем просто!</div>
+	<p class='charity__text'>Мы понимаем, что можем сделать этот мир лучше и поэтому активно сотрудничаем с Благотворительным Фондом Константина Хабенского, который оказывает поддержку детям в очень непростых жизненных ситуациях.</p>
+	<p class='charity__text'>С каждого приобретенного вами домика мы перечисляем 10 рублей в БФКХ и абсолютно уверены, что это необходимо.</p>
+	<p class='charity__text'>Присоединяйтесь к нам, ведь делать добро совсем просто!</p>
 </div>
 <img alt='' class='charity__img' src='img/char1.png'>
 <div class='charity__read-more'>
@@ -280,7 +278,7 @@
 <p class='form__title'>Остались вопросы?</p>
 <input class='form__text' name='name' placeholder='Ваше Имя' type='text'>
 <input class='form__text' name='name' placeholder='Номер телефона' type='text'>
-<input class='form__submit btn btn--double btn--invert' type='submit' value='Перезвонить'>
+<button class='form__submit btn btn--double btn--invert' type='submit'>Перезвонить</button>
 <p class='form__confid'>*Потилика конфиденциальности</p>
 </form>
 </div>
@@ -316,7 +314,7 @@
 </section>
 <footer class='footer'>
 <div class='container'>
-<p class='footer__copyright'>&#169; Все права защищены</p>
+<p class='footer__coperight'>&#169; Все права защищены</p>
 </div>
 </footer>
 </main>
