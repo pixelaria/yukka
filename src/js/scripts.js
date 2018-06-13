@@ -1,4 +1,4 @@
-$(function (){
+/*$(function (){
   console.log('init');
   
   $('.map__layer').parallax(
@@ -123,3 +123,4 @@ $(function (){
 
 
 
+*/
