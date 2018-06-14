@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
-<meta charset='UTF-8'>
-<meta content='telephone=no' name='format-detection'>
-<meta content='width=device-width, initial-scale=1.0' name='viewport'>
-<title>Template</title>
-<link href='./css/libs.min.css' rel='stylesheet'>
-<link href='./css/bundle.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Template</title>
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/bundle.css">
 </head>
 <body>
 <header class='header'>
@@ -69,7 +71,7 @@
 </div>
 <img alt='' class='present-item__img' src='img/mh1.png'>
 </div>
-<svg class='present-item__line'><use xlink:href="#icon-line1"></use></svg>
+<svg class='present-item__line' src='img/svg/line1.svg'></svg>
 <div class='present-item'>
 <img alt='' class='present-item__img' src='img/mh2.png'>
 <div class='present-item__text'>
@@ -106,7 +108,7 @@
 </div>
 </div>
 </section>
-<section class='products' id='products'>
+<section class='gallery-section' id='products'>
 <div class='container'>
 <p class='section-title'>А вот и домик!</p>
 <div class='gallery'>
@@ -261,9 +263,9 @@
 <div class='container'>
 <p class='section-title'>Благотворительность</p>
 <div class='charity__info'>
-	<p class='charity__text'>Мы понимаем, что можем сделать этот мир лучше и поэтому активно сотрудничаем с Благотворительным Фондом Константина Хабенского, который оказывает поддержку детям в очень непростых жизненных ситуациях.</p>
-	<p class='charity__text'>С каждого приобретенного вами домика мы перечисляем 10 рублей в БФКХ и абсолютно уверены, что это необходимо.</p>
-	<p class='charity__text'>Присоединяйтесь к нам, ведь делать добро совсем просто!</p>
+<div class='charity__text'>Мы понимаем, что можем сделать этот мир лучше и поэтому активно сотрудничаем с Благотворительным Фондом Константина Хабенского, который оказывает поддержку детям в очень непростых жизненных ситуациях.</div>
+<div class='charity__text'>С каждого приобретенного вами домика мы перечисляем 10 рублей в БФКХ и абсолютно уверены, что это необходимо.</div>
+<div class='charity__text'>Присоединяйтесь к нам, ведь делать добро совсем просто!</div>
 </div>
 <img alt='' class='charity__img' src='img/char1.png'>
 <div class='charity__read-more'>
@@ -278,7 +280,7 @@
 <p class='form__title'>Остались вопросы?</p>
 <input class='form__text' name='name' placeholder='Ваше Имя' type='text'>
 <input class='form__text' name='name' placeholder='Номер телефона' type='text'>
-<button class='form__submit btn btn--double btn--invert' type='submit'>Перезвонить</button>
+<input class='form__submit btn btn--double btn--invert' type='submit' value='Перезвонить'>
 <p class='form__confid'>*Потилика конфиденциальности</p>
 </form>
 </div>
@@ -299,13 +301,15 @@
 <img alt='' class='contacts-info__icon contacts-info__icon--mail' src='img/icon3.png'>
 <div class='contacts-info__text'>admin@ad.min</div>
 </div>
-<div class='contacts-info contacts-info--social'>
-<a href="#" class='contacts-info__link'>
+<div class='contacts-info'>
+<div class='contacts-info--social'>
+<a class='contacts-info__link'>
 <img alt='' class='contacts-info__icon contacts-info__icon--vk' src='img/icon4.png'>
 </a>
-<a href="#" class='contacts-info__link'>
+<a class='contacts-info__link'>
 <img alt='' class='contacts-info__icon contacts-info__icon--instargamm' src='img/icon5.png'>
 </a>
+</div>
 </div>
 </div>
 </div>
