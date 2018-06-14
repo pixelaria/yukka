@@ -1,4 +1,4 @@
-$(function (){
+/*$(function (){
   console.log('init');
   $('.scroll-to-target').click(function(e) {
     console.log('scroll-to-target');
@@ -14,3 +14,4 @@ $(function (){
 
 
 
+*/
