@@ -3,8 +3,8 @@
 @import "./imports/_grid.less";
 @import "./imports/_variables.less";
 @import "./imports/_fonts.less";
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Roboto|PT+Sans:regular,italic,bold,bolditalic');
-@import url('http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"');
+ @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Roboto|PT+Sans:regular,italic,bold,bolditalic');
+@import url('http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"'); 
 
 *{
 	margin: 0;
@@ -20,7 +20,7 @@
 }
 
 body{
-	background: @white;
+	background-color: @white;
 }
 
 ul, ul > li{
@@ -32,7 +32,7 @@ ul, ul > li{
 	display: block;
 	text-align: center;
 	padding: 1em 0;
-	font-family: 'Amatic SC', cursive;
+	font-family: 'Amatic SC';
 	font-size: 3em;
 }	
 
@@ -44,7 +44,7 @@ ul, ul > li{
 	justify-content: space-between;
 	-ms-align-items: center;
 	align-items: center;
-	background: @red;
+	background-color: @red;
 	color: @white;
 	cursor: pointer;
 	&:before,
@@ -76,7 +76,7 @@ ul, ul > li{
 			border-bottom-color: @white;
 		}
 		&:hover{
-			background: @dRed;
+			background-color: @dRed;
 			color: @white;
 			&:before{
 				border-top-color:    @dRed;
@@ -114,7 +114,7 @@ ul, ul > li{
 
 		}
 		&:hover{
-			background: @dRed;
+			background-color: @dRed;
 			border-color: @dRed;
 			&:before{
 				-webkit-box-shadow: 2px -2px 0 0 @dRed;
@@ -128,7 +128,7 @@ ul, ul > li{
 	}
 	
 	&--invert{
-		background: none;
+		background-color: none;
 		color: @red;
 	}
 }
@@ -188,7 +188,7 @@ ul, ul > li{
 
 /* домик из детства */
 .magic-house{
-	background: @yellow;
+	background-color: @yellow;
 	padding-bottom: 2em;
 	.magic-house__text{
 		.i-6;
@@ -199,7 +199,7 @@ ul, ul > li{
 /* подарок */
 
 .present{
-	background: @yellow;
+	background-color: @yellow;
 	padding-bottom: 2em;
 	.present-item{
 		.flex;
@@ -234,7 +234,7 @@ ul, ul > li{
 	svg{ display: none; }
 }
 
-.products{
+.gallery-section{
 	.gallery{
 		.flex;
 		-webkit-flex-wrap: wrap;
@@ -264,7 +264,7 @@ ul, ul > li{
 				width: 100%;
 				display: block;
 				padding: 1em;
-				background: rgba(255, 255, 255, 0.5);
+				background-color: rgba(255, 255, 255, 0.5);
 				color: #000;
 				text-align: center;
 				z-index: 3;
@@ -275,7 +275,7 @@ ul, ul > li{
 				display: block;
 				width: 100%;
 				height: 100%;
-				background: #000;
+				background-color: #000;
 				z-index: 3;
 				opacity: 0;
 				.transition;
@@ -310,12 +310,12 @@ ul, ul > li{
 			border: solid 2px grey;
 			border-radius: 1em;
 			cursor: pointer;
-			&:hover{ background: grey; }
+			&:hover{ background-color: grey; }
 			&--active{
 				border-color: @red;
-				background: @red;
+				background-color: @red;
 				position: relative;
-				&:hover{ background: @red; }
+				&:hover{ background-color: @red; }
 			}
 		}
 	}
@@ -365,7 +365,7 @@ ul, ul > li{
 	}
 }
 .order{
-	background: @yellow;
+	background-color: @yellow;
 	&__list{
 		.i-6;
 		.center;
@@ -415,7 +415,7 @@ ul, ul > li{
 		&__confid{
 			width: 100%;
 		}
-		background: @red;
+		background-color: @red;
 		border-radius: 10px;
 		padding: 3em;
 		color: @white;
@@ -435,7 +435,7 @@ ul, ul > li{
 		}
 		&__text{
 			display: block;
-			background: @red;
+			background-color: @red;
 			border:none;
 			border-bottom:solid 1px @white;
 			.center;
@@ -463,15 +463,15 @@ ul, ul > li{
 	}
 	.btn{
 		.center;
-		background: @white;
+		background-color: @white;
 		&--double{
 			&:before,
 			&:after{
-				background: @red;
+				background-color: @red;
 			}
 			&:hover{
 				border-color: @red;
-				background: #fff;
+				background-color: #fff;
 				&:before{
 					left: -16px;
 					-webkit-box-shadow: 2px -2px 0 0 @red;
@@ -518,7 +518,7 @@ ul, ul > li{
 }
 
 .footer{
-	background: @yellow;
+	background-color: @yellow;
 	padding: 1em 0;
 	&__copyright{
 		text-align: center;
