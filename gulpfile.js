@@ -6,6 +6,7 @@
 */
 var gulp = require('gulp'),
   less = require('gulp-less'),
+  ap = require('gulp-autoprefixer'),
   postcss = require('gulp-postcss'),
   mqpacker = require('css-mqpacker'),
   concat = require('gulp-concat'),
@@ -44,6 +45,15 @@ gulp.task('less', function() {
     ]))
     .pipe(gulp.dest('./docs/css/')) // Выгружаем результата в папку docs/css
     .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
+});
+
+gulp.task('default', function () {
+    return gulp.src('docs/css/bundle.css')
+        .pipe(ap({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('dist'));
 });
 
 
@@ -141,7 +151,7 @@ gulp.task('svgSpriteBuild', function () {
 
 
 // LiveReload
-gulp.task('watch', ['browser-sync', 'less'], function() {
+gulp.task('watch', ['browser-sync', 'less', 'default'], function() {
   gulp.watch('src/less/**/*.less', ['less']); // Наблюдение за less файлами
   gulp.watch('src/**/*.html', ['html']); // Наблюдение за HTML файлами в проекте
   gulp.watch('src/js/*.js', ['js']); // Наблюдение за JS файлами в папке js
