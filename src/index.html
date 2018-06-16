@@ -1,322 +1,328 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>test2Template</title>
-  <link rel="stylesheet" href="./css/libs.min.css">
-  <link rel="stylesheet" href="./css/bundle.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Template</title>
+	<link rel="stylesheet" href="./css/libs.min.css">
+	<link rel="stylesheet" href="./css/bundle.css">
 </head>
 <body>
-<header class='header'>
-<div class='container'>
-<div class='header__logo logo'>
-<a class='logo__link' href='#'>
-<img alt='' class='logo__img' src='img/logo.png'>
-</a>
-</div>
-<nav class='header__nav nav'>
-<ul class='nav__list'>
-<li class='nav__item'>
-<a class='nav__link' href='#present'>О домиках</a>
-</li>
-<li class='nav__item'>
-<a class='nav__link' href='#products'>Каталог</a>
-</li>
-<li class='nav__item'>
-<a class='nav__link' href='#callback'>Заказать</a>
-</li>
-<li class='nav__item'>
-<a class='nav__link' href='#charity'>Благотворительность</a>
-</li>
-<li class='nav__item'>
-<a class='nav__link' href='#contacts'>Контакты</a>
-</li>
-</ul>
-</nav>
-<a class='header__callback-btn' href='#'>Звонок</a>
-</div>
-</header>
-<main>
-<section class='title-section'>
-<div class='container'>
-<div class='title-section__title'>
-<img class='title-section__img' src='img/header-img.png'>
-</div>
-<div class='title-section__delivery delivery'>
-<img alt='' class='delivery__img' src='img/header-tittle.png'>
-<p class='delivery__text'>Курьерская доставка по Санкт-Петербургу</p>
-<p class='delivery__text delivery__text--red'>всего за 199 рублей</p>
-<a class='delivery__link btn btn--flag' href=''>Хочу</a>
-</div>
-</div>
-</section>
-<section class='magic-house'>
-<div class='container'>
-<p class='section-title'>Волшебный домик из детства</p>
-<p class='magic-house__text'>Все мы в детстве строили домики и убежища под столами и стульями из подручных одеял и подушек, прятали там самое сокровенное, обязательно внутри должен был быть фонарик и что-то вкусненькое. Там мы чувствовали себя окруженными тайной, в безопасности. Наши домики-раскраски окунут вашего ребёнка или вполне себе взрослого человека в тот мир, который мы давно покинули, а вы сможете составить им компанию.</p>
-</div>
-</section>
-<section class='present' id='present'>
-<div class='container'>
-<p class='section-title'>Прекрасный подарок для вашего ребёнка</p>
-<div class='present__items'>
-<div class='present-item'>
-<div class='present-item__text'>
-<p class='present-item__title'>Безопасно</p>
-<p class='present-item__about'>При конструировании мы учли, чтобы в домиках не было острых углов, а края деталей обработали специальным образом, чтобы ребёнок не мог пораниться.</p>
-</div>
-<img alt='' class='present-item__img' src='img/mh1.png'>
-</div>
-<svg class='present-item__line'><use xlink:href="#icon-line1"></use></svg>
-<div class='present-item'>
-<img alt='' class='present-item__img' src='img/mh2.png'>
-<div class='present-item__text'>
-<p class='present-item__title'>Экологично</p>
-<p class='present-item__about'>Мы используем в производстве только экологически чистый гофрокартон и водные краски, вся продукция производится в строгом соответствии с ГОСТом и имеет все необходимые сертификаты.</p>
-</div>
-</div>
-<svg class='present-item__line'></svg>
-<div class='present-item'>
-<div class='present-item__text'>
-<p class='present-item__title'>Легко собрать</p>
-<p class='present-item__about'>Домик легко собирается интуитивно, но всё же мы приложили подробную инструкцию.</p>
-</div>
-<img alt='' class='present-item__img' src='img/mh3.png'>
-</div>
-<svg class='present-item__line'></svg>
-<div class='present-item'>
-<img alt='' class='present-item__img' src='img/mh4.png'>
-<div class='present-item__text'>
-<p class='present-item__title'>Легко раскрасить</p>
-<p class='present-item__about'>Для раскрашчивания отлично подойдут карандаши, мелки, фломастеры, маркеры или гуашь. Вы можете приобрести их у нас.</p>
-</div>
-</div>
-<svg class='present-item__line'></svg>
-<div class='present-item'>
-<div class='present-item__text'>
-<p class='present-item__title'>Удобная доставка</p>
-<p class='present-item__about'>Мы организуем доставку до удобного вам пункта выдачи или прямо до порога.</p>
-<a class='btn btn--flag'>Хочу!</a>
-</div>
-<img alt='' class='present-item__img' src='img/mh5.png'>
-</div>
-<svg class='present-item__line'></svg>
-</div>
-</div>
-</section>
-<section class='gallery-section' id='products'>
-<div class='container'>
-<p class='section-title'>А вот и домик!</p>
-<div class='gallery'>
-<div class='gallery__item gallery-item'>
-<img alt='' class='gallery-item__img' src='img/g1.png'>
-<p class='gallery-item__about'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, sapiente.</p>
-</div>
-<div class='gallery__item gallery-item'>
-<img alt='' class='gallery-item__img' src='img/g2.png'>
-<p class='gallery-item__about'>Lorem ipsum dolor sit amet, consectetur.</p>
-</div>
-<div class='gallery__item gallery-item'>
-<img alt='' class='gallery-item__img' src='img/g3.png'>
-<p class='gallery-item__about'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-</div>
-<div class='gallery__item gallery-item'>
-<img alt='' class='gallery-item__img' src='img/g4.png'>
-<p class='gallery-item__about'>Lorem ipsum dolor sit amet.</p>
-</div>
-<div class='gallery__item gallery-item'>
-<img alt='' class='gallery-item__img' src='img/g5.png'>
-<p class='gallery-item__about'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-</div>
-<div class='gallery__item gallery-item'>
-<img alt='' class='gallery-item__img' src='img/g6.png'>
-<p class='gallery-item__about'>Lorem ipsum dolor sit amet.</p>
-</div>
-</div>
-<div class='gallery__pagination pagination'>
-<span class='pagination__circle pagination__circle--active'></span>
-<span class='pagination__circle'></span>
-<span class='pagination__circle'></span>
-</div>
-</div>
-</section>
-<section class='choice'>
-<div class='container'>
-<p class='section-title'>Выберите тот, что вам по душе</p>
-<div class='choice__items'>
-<div class='choice-item'>
-<img alt='' class='choice-item__img' src='img/ch1.png'>
-<p class='choice-item__title'>Крепость</p>
-<p class='choice-item__price price'>
-<i class='price__value'>900</i>
-<span class='price__valute'>&#8399;</span>
-</p>
-<a class='btn btn--double'>Заказать</a>
-</div>
-<div class='choice-item'>
-<img alt='' class='choice-item__img' src='img/ch2.png'>
-<p class='choice-item__title'>Шапито</p>
-<p class='choice-item__price price'>
-<i class='price_value'>900</i>
-<span class='price__valute'>&#8399;</span>
-</p>
-<a class='btn btn--double'>Заказать</a>
-</div>
-<div class='choice-item'>
-<img alt='' class='choice-item__img' src='img/ch3.png'>
-<p class='choice-item__title'>Избушка</p>
-<p class='choice-item__price price'>
-<i class='price_value'>900</i>
-<span class='price__valute'>&#8399;</span>
-</p>
-<a class='btn btn--double'>Заказать</a>
-</div>
-</div>
-</div>
-</section>
-<section class='instruments'>
-<div class='container'>
-<p class='section-title'>Для раскраски домиков</p>
-<div class='instruments__items'>
-<div class='instruments-item'>
-<img alt='' class='instruments-item__img' src='img/instr1.png'>
-<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-<p class='instruments-item__price price'>
-<i class='price_value'>900</i>
-<span class='price__valute'>&#8399;</span>
-</p>
-<a class='btn btn--double'>Заказать</a>
-</div>
-<div class='instruments-item'>
-<img alt='' class='instruments-item__img' src='img/instr2.png'>
-<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-<p class='instruments-item__price price'>
-<i class='price_value'>900</i>
-<span class='price__valute'>&#8399;</span>
-</p>
-<a class='btn btn--double'>Заказать</a>
-</div>
-<div class='instruments-item'>
-<img alt='' class='instruments-item__img' src='img/instr3.png'>
-<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-<p class='instruments-item__price price'>
-<i class='price_value'>900</i>
-<span class='price__valute'>&#8399;</span>
-</p>
-<a class='btn btn--double'>Заказать</a>
-</div>
-<div class='instruments-item'>
-<img alt='' class='instruments-item__img' src='img/instr4.png'>
-<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-<p class='instruments-item__price price'>
-<i class='price_value'>900</i>
-<span class='price__valute'>&#8399;</span>
-</p>
-<a class='btn btn--double'>Заказать</a>
-</div>
-<div class='instruments-item'>
-<img alt='' class='instruments-item__img' src='img/instr5.png'>
-<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-<p class='instruments-item__price price'>
-<i class='price_value'>900</i>
-<span class='price__valute'>&#8399;</span>
-</p>
-<a class='btn btn--double'>Заказать</a>
-</div>
-<div class='instruments-item'>
-<img alt='' class='instruments-item__img' src='img/instr6.png'>
-<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-<p class='instruments-item__price price'>
-<i class='price_value'>900</i>
-<span class='price__valute'>&#8399;</span>
-</p>
-<a class='btn btn--double'>Заказать</a>
-</div>
-<div class='instruments-item'>
-<img alt='' class='instruments-item__img' src='img/instr7.png'>
-<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-<p class='instruments-item__price price'>
-<i class='value'>900</i>
-<span class='price__valute'>&#8399;</span>
-</p>
-<a class='btn btn--double'>Заказать</a>
-</div>
-</div>
-</div>
-</section>
-<section class='order' id='order'>
-<div class='container'>
-<p class='section-title'>Как заказать?</p>
-<ol class='order__list'>
-<li class='order__item'>Выберите самый классный домик</li>
-<li class='order__item'>Вам могут пригодится карандаши, маркеры, фломастеры, мелки и фонарик</li>
-<li class='order__item'>Выберите удобный пункт выдачи</li>
-<li class='order__item'>Оставьте контакты и наш менеджер с вами свяжется</li>
-</ol>
-</div>
-</section>
-<section class='charity' id='charity'>
-<div class='container'>
-<p class='section-title'>Благотворительность</p>
-<div class='charity__info'>
-<div class='charity__text'>Мы понимаем, что можем сделать этот мир лучше и поэтому активно сотрудничаем с Благотворительным Фондом Константина Хабенского, который оказывает поддержку детям в очень непростых жизненных ситуациях.</div>
-<div class='charity__text'>С каждого приобретенного вами домика мы перечисляем 10 рублей в БФКХ и абсолютно уверены, что это необходимо.</div>
-<div class='charity__text'>Присоединяйтесь к нам, ведь делать добро совсем просто!</div>
-</div>
-<img alt='' class='charity__img' src='img/char1.png'>
-<div class='charity__read-more'>
-<a class='btn--flag btn--invert' href='#'>Читать больше</a>
-</div>
-</div>
-</section>
-<section class='callback' id='callback'>
-<div class='container'>
-<img alt='' class='callback__img' src='img/form.png'>
-<form class='callback__form form'>
-<p class='form__title'>Остались вопросы?</p>
-<input class='form__text' name='name' placeholder='Ваше Имя' type='text'>
-<input class='form__text' name='name' placeholder='Номер телефона' type='text'>
-<button class='form__submit btn btn--double btn--invert' type='submit' value='Перезвонить'>Перезвонить</button>
-<p class='form__confid'>*Потилика конфиденциальности</p>
-</form>
-</div>
-</section>
-<section class='contacts'>
-<div class='container'>
-<p class='section-title'>Контакты</p>
-<div class='contacts__info'>
-<div class='contacts-info'>
-<img alt='' class='contacts-info__icon contacts-info__icon--address' src='img/icon1.png'>
-<p class='contacts-info__text'>197198, Россия, г. Санкт-Петербург, ул. Съезжинская, 37А</p>
-</div>
-<div class='contacts-info'>
-<img alt='' class='contacts-info__icon contacts-info__icon--tel' src='img/icon2.png'>
-<div class='contacts-info__text'>8-981-777-77-77</div>
-</div>
-<div class='contacts-info'>
-<img alt='' class='contacts-info__icon contacts-info__icon--mail' src='img/icon3.png'>
-<div class='contacts-info__text'>admin@ad.min</div>
-</div>
-<div class='contacts-info contacts-info--social'>
-<a href="#" class='contacts-info__link'>
-<img alt='' class='contacts-info__icon contacts-info__icon--vk' src='img/icon4.png'>
-</a>
-<a href="#" class='contacts-info__link'>
-<img alt='' class='contacts-info__icon contacts-info__icon--instargamm' src='img/icon5.png'>
-</a>
-</div>
-</div>
-</div>
-</section>
-<footer class='footer'>
-<div class='container'>
-<p class='footer__coperight'>&#169; Все права защищены</p>
-</div>
-</footer>
-</main>
+	<header class='header'>
+		<div class='container'>
+			<div class='header__logo logo'>
+				<a class='logo__link' href='#'>
+					<img alt='' class='logo__img' src='img/logo.png'>
+				</a>
+			</div>
+			<nav class='header__nav nav'>
+				<ul class='nav__list'>
+					<li class='nav__item'>
+						<a class='nav__link' href='#present'>О домиках</a>
+					</li>
+					<li class='nav__item'>
+						<a class='nav__link' href='#products'>Каталог</a>
+					</li>
+					<li class='nav__item'>
+						<a class='nav__link' href='#callback'>Заказать</a>
+					</li>
+					<li class='nav__item'>
+						<a class='nav__link' href='#charity'>Благотворительность</a>
+					</li>
+					<li class='nav__item'>
+						<a class='nav__link' href='#contacts'>Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<a class='header__callback-btn' href='#'>Звонок</a>
+		</div>
+	</header>
+	<main>
+		<section class='title-section'>
+			<div class='container'>
+				<div class='title-section__title'>
+					<img class='title-section__img' src='img/header-img.png'>
+				</div>
+				<div class='title-section__delivery delivery'>
+					<svg><use xlink:href="#icon-title-arc"></use></svg>
+
+
+					<p class='delivery__text'>Курьерская доставка по Санкт-Петербургу</p>
+					<p class='delivery__text delivery__text--red'>всегоблять за 199 рублей</p>
+					<a class='delivery__link btn btn--flag' href=''>Хочу</a>
+				</div>
+			</div>
+		</section>
+		<section class='magic-house'>
+			<div class='container'>
+				<p class='section-title'>Волшебный домик из детства</p>
+				<p class='magic-house__text'>Все мы в детстве строили домики и убежища под столами и стульями из подручных одеял и подушек, прятали там самое сокровенное, обязательно внутри должен был быть фонарик и что-то вкусненькое. Там мы чувствовали себя окруженными тайной, в безопасности. Наши домики-раскраски окунут вашего ребёнка или вполне себе взрослого человека в тот мир, который мы давно покинули, а вы сможете составить им компанию.</p>
+			</div>
+		</section>
+		<section class='present' id='present'>
+			<div class='container'>
+				<p class='section-title'>Прекрасный подарок для вашего ребёнка</p>
+				<div class='present__items'>
+					<div class='present-item'>
+						<div class='present-item__text'>
+							<p class='present-item__title'>Безопасно</p>
+							<p class='present-item__about'>При конструировании мы учли, чтобы в домиках не было острых углов, а края деталей обработали специальным образом, чтобы ребёнок не мог пораниться.</p>
+						</div>
+						<img alt='' class='present-item__img' src='img/mh1.png'>
+					</div>
+					<svg><use xlink:href="#icon-line1"></use></svg>
+					<div class='present-item'>
+						<img alt='' class='present-item__img' src='img/mh2.png'>
+						<div class='present-item__text'>
+							<p class='present-item__title'>Экологично</p>
+							<p class='present-item__about'>Мы используем в производстве только экологически чистый гофрокартон и водные краски, вся продукция производится в строгом соответствии с ГОСТом и имеет все необходимые сертификаты.</p>
+						</div>
+					</div>
+					<svg><use xlink:href="#icon-line2"></use></svg>
+					<div class='present-item'>
+						<div class='present-item__text'>
+							<p class='present-item__title'>Легко собрать</p>
+							<p class='present-item__about'>Домик легко собирается интуитивно, но всё же мы приложили подробную инструкцию.</p>
+						</div>
+						<img alt='' class='present-item__img' src='img/mh3.png'>
+					</div>
+					<svg><use xlink:href="#icon-line3"></use></svg>
+					<div class='present-item'>
+						<img alt='' class='present-item__img' src='img/mh4.png'>
+						<div class='present-item__text'>
+							<p class='present-item__title'>Легко раскрасить</p>
+							<p class='present-item__about'>Для раскрашчивания отлично подойдут карандаши, мелки, фломастеры, маркеры или гуашь. Вы можете приобрести их у нас.</p>
+						</div>
+					</div>
+					<svg><use xlink:href="#icon-line4"></use></svg>
+					<div class='present-item'>
+						<div class='present-item__text'>
+							<p class='present-item__title'>Удобная доставка</p>
+							<p class='present-item__about'>Мы организуем доставку до удобного вам пункта выдачи или прямо до порога.</p>
+							<a class='btn btn--flag'>Хочу!</a>
+						</div>
+						<img alt='' class='present-item__img' src='img/mh5.png'>
+					</div>
+					<svg><use xlink:href="#icon-line5"></use></svg>
+				</div>
+			</div>
+		</section>
+		<section class='gallery-section' id='products'>
+			<div class='container'>
+				<p class='section-title'>А вот и домик!</p>
+				<div class='gallery'>
+					<div class='gallery__item gallery-item'>
+						<img alt='' class='gallery-item__img' src='img/g1.png'>
+						<p class='gallery-item__about'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, sapiente.</p>
+					</div>
+					<div class='gallery__item gallery-item'>
+						<img alt='' class='gallery-item__img' src='img/g2.png'>
+						<p class='gallery-item__about'>Lorem ipsum dolor sit amet, consectetur.</p>
+					</div>
+					<div class='gallery__item gallery-item'>
+						<img alt='' class='gallery-item__img' src='img/g3.png'>
+						<p class='gallery-item__about'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+					</div>
+					<div class='gallery__item gallery-item'>
+						<img alt='' class='gallery-item__img' src='img/g4.png'>
+						<p class='gallery-item__about'>Lorem ipsum dolor sit amet.</p>
+					</div>
+					<div class='gallery__item gallery-item'>
+						<img alt='' class='gallery-item__img' src='img/g5.png'>
+						<p class='gallery-item__about'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+					</div>
+					<div class='gallery__item gallery-item'>
+						<img alt='' class='gallery-item__img' src='img/g6.png'>
+						<p class='gallery-item__about'>Lorem ipsum dolor sit amet.</p>
+					</div>
+				</div>
+				<div class='gallery__pagination pagination'>
+					<span class='pagination__circle pagination__circle--active'></span>
+					<span class='pagination__circle'></span>
+					<span class='pagination__circle'></span>
+				</div>
+			</div>
+		</section>
+		<section class='choice'>
+			<div class='container'>
+				<p class='section-title'>Выберите тот, что вам по душе</p>
+				<div class='choice__items'>
+					<div class='choice-item'>
+						<img alt='' class='choice-item__img' src='img/ch1.png'>
+						<p class='choice-item__title'>Крепость</p>
+						<p class='choice-item__price price'>
+							<i class='price__value'>900</i>
+							<span class='price__valute'>&#8399;</span>
+						</p>
+						<a class='btn btn--double'>Заказать</a>
+					</div>
+					<div class='choice-item'>
+						<img alt='' class='choice-item__img' src='img/ch2.png'>
+						<p class='choice-item__title'>Шапито</p>
+						<p class='choice-item__price price'>
+							<i class='price_value'>900</i>
+							<span class='price__valute'>&#8399;</span>
+						</p>
+						<a class='btn btn--double'>Заказать</a>
+					</div>
+					<div class='choice-item'>
+						<img alt='' class='choice-item__img' src='img/ch3.png'>
+						<p class='choice-item__title'>Избушка</p>
+						<p class='choice-item__price price'>
+							<i class='price_value'>900</i>
+							<span class='price__valute'>&#8399;</span>
+						</p>
+						<a class='btn btn--double'>Заказать</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class='instruments'>
+			<div class='container'>
+				<p class='section-title'>Для раскраски домиков</p>
+				<div class='instruments__items'>
+					<div class='instruments-item'>
+						<img alt='' class='instruments-item__img' src='img/instr1.png'>
+						<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<p class='instruments-item__price price'>
+							<i class='price_value'>900</i>
+							<span class='price__valute'>&#8399;</span>
+						</p>
+						<a class='btn btn--double'>Заказать</a>
+					</div>
+					<div class='instruments-item'>
+						<img alt='' class='instruments-item__img' src='img/instr2.png'>
+						<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<p class='instruments-item__price price'>
+							<i class='price_value'>900</i>
+							<span class='price__valute'>&#8399;</span>
+						</p>
+						<a class='btn btn--double'>Заказать</a>
+					</div>
+					<div class='instruments-item'>
+						<img alt='' class='instruments-item__img' src='img/instr3.png'>
+						<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<p class='instruments-item__price price'>
+							<i class='price_value'>900</i>
+							<span class='price__valute'>&#8399;</span>
+						</p>
+						<a class='btn btn--double'>Заказать</a>
+					</div>
+					<div class='instruments-item'>
+						<img alt='' class='instruments-item__img' src='img/instr4.png'>
+						<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<p class='instruments-item__price price'>
+							<i class='price_value'>900</i>
+							<span class='price__valute'>&#8399;</span>
+						</p>
+						<a class='btn btn--double'>Заказать</a>
+					</div>
+					<div class='instruments-item'>
+						<img alt='' class='instruments-item__img' src='img/instr5.png'>
+						<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<p class='instruments-item__price price'>
+							<i class='price_value'>900</i>
+							<span class='price__valute'>&#8399;</span>
+						</p>
+						<a class='btn btn--double'>Заказать</a>
+					</div>
+					<div class='instruments-item'>
+						<img alt='' class='instruments-item__img' src='img/instr6.png'>
+						<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<p class='instruments-item__price price'>
+							<i class='price_value'>900</i>
+							<span class='price__valute'>&#8399;</span>
+						</p>
+						<a class='btn btn--double'>Заказать</a>
+					</div>
+					<div class='instruments-item'>
+						<img alt='' class='instruments-item__img' src='img/instr7.png'>
+						<p class='instruments-item__title'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<p class='instruments-item__price price'>
+							<i class='value'>900</i>
+							<span class='price__valute'>&#8399;</span>
+						</p>
+						<a class='btn btn--double'>Заказать</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class='order' id='order'>
+			<div class='container'>
+				<p class='section-title'>Как заказать?</p>
+				<ol class='order__list'>
+					<li class='order__item'>Выберите самый классный домик</li>
+					<li class='order__item'>Вам могут пригодится карандаши, маркеры, фломастеры, мелки и фонарик</li>
+					<li class='order__item'>Выберите удобный пункт выдачи</li>
+					<li class='order__item'>Оставьте контакты и наш менеджер с вами свяжется</li>
+				</ol>
+			</div>
+		</section>
+		<section class='charity' id='charity'>
+			<div class='container'>
+				<p class='section-title'>Благотворительность</p>
+				<div class='charity__info'>
+					<div class='charity__text'>Мы понимаем, что можем сделать этот мир лучше и поэтому активно сотрудничаем с Благотворительным Фондом Константина Хабенского, который оказывает поддержку детям в очень непростых жизненных ситуациях.</div>
+					<div class='charity__text'>С каждого приобретенного вами домика мы перечисляем 10 рублей в БФКХ и абсолютно уверены, что это необходимо.</div>
+					<div class='charity__text'>Присоединяйтесь к нам, ведь делать добро совсем просто!</div>
+				</div>
+				<div class="charity__img">
+					<img alt='' class='img' src='img/char1.png'>
+				</div>
+				<div class='charity__read-more'>
+					<a class='btn btn--invert' href='#'>Читать больше</a>
+				</div>
+			</div>
+		</section>
+		<section class='callback' id='callback'>
+			<div class='container'>
+				<img alt='' class='callback__img' src='img/form.png'>
+				<form class='callback__form form'>
+					<p class='form__title'>Остались вопросы?</p>
+					<input class='form__text' name='name' placeholder='Ваше Имя' type='text'>
+					<input class='form__text' name='name' placeholder='Номер телефона' type='text'>
+					<button class='form__submit btn btn--double btn--invert' type='submit' value='Перезвонить'>Перезвонить</button>
+					<p class='form__confid'>*Потилика конфиденциальности</p>
+				</form>
+			</div>
+		</section>
+		<section class='contacts'>
+			<div class='container'>
+				<p class='section-title'>Контакты</p>
+				<div class='contacts__info'>
+					<div class='contacts-info'>
+						<img alt='' class='contacts-info__icon contacts-info__icon--address' src='img/icon1.png'>
+						<p class='contacts-info__text'>197198, Россия, г. Санкт-Петербург, ул. Съезжинская, 37А</p>
+					</div>
+					<div class='contacts-info'>
+						<img alt='' class='contacts-info__icon contacts-info__icon--tel' src='img/icon2.png'>
+						<div class='contacts-info__text'>8-981-777-77-77</div>
+					</div>
+					<div class='contacts-info'>
+						<img alt='' class='contacts-info__icon contacts-info__icon--mail' src='img/icon3.png'>
+						<div class='contacts-info__text'>admin@ad.min</div>
+					</div>
+					<div class='contacts-info contacts-info--social'>
+						<a href="#" class='contacts-info__link'>
+							<img alt='' class='contacts-info__icon contacts-info__icon--vk' src='img/icon4.png'>
+						</a>
+						<a href="#" class='contacts-info__link'>
+							<img alt='' class='contacts-info__icon contacts-info__icon--instargamm' src='img/icon5.png'>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class='footer'>
+			<div class='container'>
+				<p class='footer__coperight'>&#169; Все права защищены</p>
+			</div>
+		</footer>
+		<script src="js/libs.min.js"></script>
+		<script src="js/bundle.js"></script>
+	</main>
 </body>
 </html>

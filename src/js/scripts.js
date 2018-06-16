@@ -1,4 +1,4 @@
-/*$(function (){
+$(function (){
   console.log('init');
   $('.scroll-to-target').click(function(e) {
     console.log('scroll-to-target');
@@ -8,10 +8,9 @@
     $('.nav').removeClass('nav--active');
     $.scrollTo(target, 600, { offset: -offset });
     return false;
-  });
+  }); 
 
 });
 
 
 
-*/

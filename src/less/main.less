@@ -2,10 +2,8 @@
 @import "./imports/_mixins.less";
 @import "./imports/_grid.less";
 @import "./imports/_variables.less";
-@import "./imports/_fonts.less";
- @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Roboto|PT+Sans:regular,italic,bold,bolditalic');
-@import url('http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"'); 
-
+	 @import "./imports/_fonts.less";
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|PT+Sans|Roboto&subset=cyrillic'); 
 *{
 	margin: 0;
 	padding: 0;
@@ -13,7 +11,7 @@
 	list-style-type: none;
 	text-decoration: none;
 	line-height: 1.7em;
-	font-size: 1em;
+	font-size: 18px;
 	color:inherit;
 	font-family: 'Roboto', sans-serif;
 	/* font-family: 'Amatic SC', cursive; */
@@ -23,6 +21,8 @@
 body{
 	background-color: @white;
 }
+
+main{ overflow: hidden; }
 
 ul, ul > li{
 	list-style-type: none;
@@ -35,15 +35,14 @@ ul, ul > li{
 	padding: 1em 0;
 	font-family: 'Amatic SC';
 	font-size: 56px;
-}	
+}
 
 .btn{
 	width: 13em;
-	height: 2.5em;
+	height: @btn-height *2;
 	.flex;
-/* 	left: 15px; */
+ 	left: 15px; 
 	justify-content: space-between;
-	-ms-align-items: center;
 	align-items: center;
 	background-color: @red;
 	color: @white;
@@ -55,26 +54,26 @@ ul, ul > li{
 		display: inline-block;
 		width: 0;
 		height: 0;
-		border-left:   solid 20px;
-		border-top:    solid 20px;
-		border-right:  solid 20px;
-		border-bottom: solid 20px;
+		border-left:   solid @btn-height;
+		border-top:    solid @btn-height;
+		border-right:  solid @btn-height;
+		border-bottom: solid @btn-height;
 	}
 	
 	&:after{ left: 16px; }
 	
 	&--flag{
 		&:before{
-			border-left-color:   @white;
+			border-left-color:   none;
 			border-top-color:    @red;
 			border-right-color:  @red;
 			border-bottom-color: @red;
 		}
 		&:after{
 			border-left-color:   @red;
-			border-top-color:    @white;
-			border-right-color:  @white;
-			border-bottom-color: @white;
+			border-top-color:    none;
+			border-right-color:  none;
+			border-bottom-color: none;
 		}
 		&:hover{
 			background-color: @dRed;
@@ -162,7 +161,11 @@ ul, ul > li{
 /* стартовый блок */
 .title-section{
 	padding-top: 2em;
-	.container{ .flex; justify-content: space-between; }
+	.container{
+		.flex;
+		justify-content: space-between;
+		z-index: 5;
+	}
 	&__img-block, &__text-block{
 		width: 100%; 
 		text-align: center;
@@ -189,6 +192,8 @@ ul, ul > li{
 
 /* домик из детства */
 .magic-house{
+	.arc-top(@yellow, 1);
+	.container{ z-index: 3; }
 	background-color: @yellow;
 	padding-bottom: 2em;
 	.magic-house__text{
@@ -203,6 +208,7 @@ ul, ul > li{
 .present{
 	background-color: @yellow;
 	padding-bottom: 2em;
+	z-index: 5;
 	.present-item{
 		.flex;
 		-ms-align-items: center;
@@ -233,10 +239,10 @@ ul, ul > li{
 			}
 		}
 	}
-	svg{ display: none; }
 }
 
 .gallery-section{
+	.arc-top(@white, 6);
 	.gallery{
 		.flex;
 		-webkit-flex-wrap: wrap;
@@ -344,8 +350,12 @@ ul, ul > li{
 }
 
 .instruments{
+	.arc-bottom(@white, 5);
 	padding-bottom: 2em;
 	text-align: center;
+	.container{
+		z-index: 6;
+	}
 	&__items{
 		.flex;
 		-webkit-flex-wrap: wrap;
@@ -359,15 +369,20 @@ ul, ul > li{
 		&__title{
 			font-size: 1.5em;
 		}
+		&:last-child{
+			.center;
+		}
 	}
 	.price__valute{ font-family: 'PT Sans', serif; }
-	.btn{
-		.center;
-		margin-top: 2em;
-	}
 }
 .order{
+	.arc-bottom(@yellow, 5);
 	background-color: @yellow;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	.container{
+		z-index: 6;
+	}
 	&__list{
 		.i-6;
 		.center;
@@ -391,11 +406,17 @@ ul, ul > li{
 	&__info{
 		.i-8;
 	}
-	&__read-more{
+	.charity__read-more{
 		width: 100%;
 	}
-	.btn{
+	.btn--invert{
 		.center;
+		margin-top: 2em;
+		&:before,
+		&:after{
+			border-color: @white;
+		}
+		background: @white;
 	}
 }
 
@@ -442,8 +463,8 @@ ul, ul > li{
 			border-bottom:solid 1px @white;
 			.center;
 			&:focus,
-			&:checked,
-			&:active,
+			/* &:active, */
+			&:checked
 			{
 				border: none;
 				outline:none;
@@ -463,28 +484,28 @@ ul, ul > li{
 			cursor: pointer;
 		}
 	}
+	.form__confid{
+		font-size: 14px;
+	}
 	.btn{
 		.center;
 		text-align: center;
 		background-color: @white;
+		left: 0;
 
 		&--double{
 			&:before,
 			&:after{
-<<<<<<< HEAD
 				background-color: @red;
 				color:@red;
 			}
 			&:hover{
 				border-color: @red;
 				background-color: #fff;
-=======
-				background: @red;
 			}
 			&:hover{
 				border-color: @red;
 				background: #fff;
->>>>>>> master
 				&:before{
 					left: -16px;
 					-webkit-box-shadow: 2px -2px 0 0 @red;

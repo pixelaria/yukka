@@ -51,3 +51,35 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@c1', endColo
   margin-left: auto;
   margin-right: auto;
 }
+
+.arc-top(@bg-color, @z){
+  &:before{
+    content: '';
+    position: absolute;
+    width: 116%;
+    height: 6em;
+    top: -3em;
+    left: -8%;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    background: @bg-color;/* @bg-color */
+    z-index: @z;
+    /* box-shadow: 0 0 0 1px #000; */
+  }
+}
+
+.arc-bottom(@bg-color, @z){
+  &:after{
+    content: '';
+    position: absolute;
+    width: 116%;
+    height: 6em;
+    bottom: -3em;
+    left: -8%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background: @bg-color;/* @bg-color */
+    z-index: @z;
+    /* box-shadow: 0 0 0 1px #000; */
+  }
+}

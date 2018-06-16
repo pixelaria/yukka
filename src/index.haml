@@ -80,22 +80,28 @@
 					%p.section-title А вот и домик!
 					.gallery
 						.gallery__item.gallery-item
-							%img.gallery-item__img{src:"img/g1.png", alt:""}
+							.gallery-item__img
+								%img.img{src:"img/g1.png", alt:""}
 							%p.gallery-item__about Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, sapiente.
 						.gallery__item.gallery-item
-							%img.gallery-item__img{src:"img/g2.png", alt:""}
+							.gallery-item__img
+								%img.img{src:"img/g2.png", alt:""}
 							%p.gallery-item__about Lorem ipsum dolor sit amet, consectetur.
 						.gallery__item.gallery-item
-							%img.gallery-item__img{src:"img/g3.png", alt:""}
+							.gallery-item__img
+								%img.img{src:"img/g3.png", alt:""}
 							%p.gallery-item__about Lorem ipsum dolor sit amet, consectetur adipisicing.
 						.gallery__item.gallery-item
-							%img.gallery-item__img{src:"img/g4.png", alt:""}
+							.gallery-item__img
+								%img.img{src:"img/g4.png", alt:""}
 							%p.gallery-item__about Lorem ipsum dolor sit amet.
 						.gallery__item.gallery-item
-							%img.gallery-item__img{src:"img/g5.png", alt:""}
+							.gallery-item__img
+								%img.img{src:"img/g5.png", alt:""}
 							%p.gallery-item__about Lorem ipsum dolor sit amet, consectetur adipisicing.
 						.gallery__item.gallery-item
-							%img.gallery-item__img{src:"img/g6.png", alt:""}
+							.gallery-item__img
+								%img.img{src:"img/g6.png", alt:""}
 							%p.gallery-item__about Lorem ipsum dolor sit amet.
 					.gallery__pagination.pagination
 						%span.pagination__circle.pagination__circle--active
@@ -106,21 +112,24 @@
 					%p.section-title Выберите тот, что вам по душе
 					.choice__items
 						.choice-item
-							%img.choice-item__img{src:"img/ch1.png", alt:""}
+							.choice-item__img
+								%img.img{src:"img/ch1.png", alt:""}
 							%p.choice-item__title Крепость
 							%p.choice-item__price.price
 								%i.price__value 900
 								%span.price__valute &#8399;
 							%a.btn.btn--double Заказать
 						.choice-item
-							%img.choice-item__img{src:"img/ch2.png", alt:""}
+							.choice-item__img
+								%img.img{src:"img/ch2.png", alt:""}
 							%p.choice-item__title Шапито
 							%p.choice-item__price.price
 								%i.price_value 900
 								%span.price__valute &#8399;
 							%a.btn.btn--double Заказать
 						.choice-item
-							%img.choice-item__img{src:"img/ch3.png", alt:""}
+							.choice-item__img
+								%img.img{src:"img/ch3.png", alt:""}
 							%p.choice-item__title Избушка
 							%p.choice-item__price.price
 								%i.price_value 900
@@ -131,75 +140,98 @@
 					%p.section-title Для раскраски домиков
 					.instruments__items
 						.instruments-item
-							%img.instruments-item__img{src:"img/instr1.png", alt:""}
-							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
-							%p.instruments-item__price.price
-								%i.price_value 900
-								%span.price__valute &#8399;
-							%a.btn.btn--double Заказать
+							.instruments-item__img
+								%img.img{src:"img/instr1.png", alt:""}
+							.instruments-item__about
+								%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+								%p.instruments-item__price.price
+									%i.price_value 900
+									%span.price__valute &#8399;
+								%a.btn.btn--double Заказать
 						.instruments-item
-							%img.instruments-item__img{src:"img/instr2.png", alt:""}
-							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
-							%p.instruments-item__price.price
-								%i.price_value 900
-								%span.price__valute &#8399;
-							%a.btn.btn--double Заказать
+							.instruments-item__img
+								%img.img{src:"img/instr2.png", alt:""}
+							.instruments-item__about
+								%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+								%p.instruments-item__price.price
+									%i.price_value 900
+									%span.price__valute &#8399;
+								%a.btn.btn--double Заказать
 						.instruments-item
-							%img.instruments-item__img{src:"img/instr3.png", alt:""}
-							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
-							%p.instruments-item__price.price
-								%i.price_value 900
-								%span.price__valute &#8399;
-							%a.btn.btn--double Заказать
+							.instruments-item__img
+								%img.img{src:"img/instr3.png", alt:""}
+							.instruments-item__about
+								%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+								%p.instruments-item__price.price
+									%i.price_value 900
+									%span.price__valute &#8399;
+								%a.btn.btn--double Заказать
 						.instruments-item
-							%img.instruments-item__img{src:"img/instr4.png", alt:""}
-							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
-							%p.instruments-item__price.price
-								%i.price_value 900
-								%span.price__valute &#8399;
-							%a.btn.btn--double Заказать
+							.instruments-item__img
+								%img.img{src:"img/instr4.png", alt:""}
+							.instruments-item__about
+								%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+								%p.instruments-item__price.price
+									%i.price_value 900
+									%span.price__valute &#8399;
+								%a.btn.btn--double Заказать
 						.instruments-item
-							%img.instruments-item__img{src:"img/instr5.png", alt:""}
-							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
-							%p.instruments-item__price.price
-								%i.price_value 900
-								%span.price__valute &#8399;
-							%a.btn.btn--double Заказать
+							.instruments-item__img
+								%img.img{src:"img/instr5.png", alt:""}
+							.instruments-item__about
+								%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+								%p.instruments-item__price.price
+									%i.price_value 900
+									%span.price__valute &#8399;
+								%a.btn.btn--double Заказать
 						.instruments-item
-							%img.instruments-item__img{src:"img/instr6.png", alt:""}
-							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
-							%p.instruments-item__price.price
-								%i.price_value 900
-								%span.price__valute &#8399;
-							%a.btn.btn--double Заказать
+							.instruments-item__img
+								%img.img{src:"img/instr6.png", alt:""}
+							.instruments-item__about
+								%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+								%p.instruments-item__price.price
+									%i.price_value 900
+									%span.price__valute &#8399;
+								%a.btn.btn--double Заказать
 						.instruments-item
-							%img.instruments-item__img{src:"img/instr7.png", alt:""}
-							%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
-							%p.instruments-item__price.price
-								%i.value 900
-								%span.price__valute &#8399;
-							%a.btn.btn--double Заказать
+							.instruments-item__img
+								%img.img{src:"img/instr7.png", alt:""}
+							.instruments-item__about
+								%p.instruments-item__title Lorem ipsum dolor sit amet, consectetur adipisicing.
+								%p.instruments-item__price.price
+									%i.price_value 900
+									%span.price__valute &#8399;
+								%a.btn.btn--double Заказать
 			%section#order.order
 				.container
 					%p.section-title Как заказать?
 					%ol.order__list
-						%li.order__item Выберите самый классный домик
-						%li.order__item Вам могут пригодится карандаши, маркеры, фломастеры, мелки и фонарик
-						%li.order__item Выберите удобный пункт выдачи
-						%li.order__item Оставьте контакты и наш менеджер с вами свяжется
+						%li.order__item
+							%p.item__text Выберите самый классный домик
+						%li.order__item
+							%p.item__text Вам могут пригодится карандаши, маркеры, фломастеры, мелки и фонарик
+						%li.order__item
+							%p.item__text Выберите удобный пункт выдачи
+						%li.order__item
+							%p.item__text Оставьте контакты и наш менеджер с вами свяжется
 			%section#charity.charity
 				.container
 					%p.section-title Благотворительность
 					.charity__info
-						.charity__text Мы понимаем, что можем сделать этот мир лучше и поэтому активно сотрудничаем с Благотворительным Фондом Константина Хабенского, который оказывает поддержку детям в очень непростых жизненных ситуациях.
-						.charity__text С каждого приобретенного вами домика мы перечисляем 10 рублей в БФКХ и абсолютно уверены, что это необходимо.
-						.charity__text Присоединяйтесь к нам, ведь делать добро совсем просто!
-					%img.charity__img{src:"img/char1.png", alt:""}
+						.charity__text
+							%p.text Мы понимаем, что можем сделать этот мир лучше и поэтому активно сотрудничаем с Благотворительным Фондом Константина Хабенского, который оказывает поддержку детям в очень непростых жизненных ситуациях.
+						.charity__text
+							%p.text С каждого приобретенного вами домика мы перечисляем 10 рублей в БФКХ и абсолютно уверены, что это необходимо.
+						.charity__text
+							%p.text Присоединяйтесь к нам, ведь делать добро совсем просто!
+					.charity__img
+						%img.img{src:"img/char1.png", alt:""}
 					.charity__read-more
 						%a.btn--flag.btn--invert{href:"#"} Читать больше
 			%section#callback.callback
 				.container
-					%img.callback__img{src:"img/form.png", alt:""}
+					.callback__img
+						%img.img{src:"img/form.png", alt:""}
 					%form.callback__form.form
 						%p.form__title Остались вопросы?
 						%input.form__text{type:'text', name:'name', placeholder:'Ваше Имя'}
