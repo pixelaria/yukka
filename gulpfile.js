@@ -151,7 +151,7 @@ gulp.task('svgSpriteBuild', function () {
 
 
 // LiveReload
-gulp.task('watch', ['browser-sync', 'less', 'default'], function() {
+gulp.task('watch', ['browser-sync', 'less'], function() {
   gulp.watch('src/less/**/*.less', ['less']); // Наблюдение за less файлами
   gulp.watch('src/**/*.html', ['html']); // Наблюдение за HTML файлами в проекте
   gulp.watch('src/js/*.js', ['js']); // Наблюдение за JS файлами в папке js

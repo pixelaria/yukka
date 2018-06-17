@@ -1,7 +1,6 @@
 
-
 $(function(){console.log('init');$('.scroll-to-target').click(function(e){console.log('scroll-to-target');var target=$(this).attr('href');var offset=100;if($(this).data('offset')!=undefined)offset=$(this).data('offset');$('.nav').removeClass('nav--active');$.scrollTo(target,600,{offset:-offset});return false;});});;(function(window,document)
-{'use strict';var file='img/svg/sprite.svg',revision=3;if(!document.createElementNS||!document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect)
+{'use strict';var file='/svg/sprite.svg',revision=3;if(!document.createElementNS||!document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect)
 return true;var isLocalStorage='localStorage'in window&&window['localStorage']!==null,request,data,insertIT=function()
 {document.body.insertAdjacentHTML('afterbegin',data);},insert=function()
 {if(document.body)insertIT();else document.addEventListener('DOMContentLoaded',insertIT);};if(isLocalStorage&&localStorage.getItem('inlineSVGrev')==revision)
