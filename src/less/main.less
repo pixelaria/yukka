@@ -478,28 +478,57 @@ ul, ul > li{
 	padding-top: 4em;
 	.container{
 		.flex;
-		-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
-		-ms-align-items: center;
 		align-items: center;
 	}
-	&__info{
+	.charity__info{
 		.i-8;
+	}
+	.info__text{
+		padding-bottom: 1em;
+	}
+	.charity__img{
+		.i-4;
+		.img{
+			&--responsive{
+				width: 100%;a
+				max-width: 100%;
+				padding: 0 2em;
+			}
+		}
 	}
 	.charity__read-more{
 		width: 100%;
 	}
-	.btn--invert{
+	.btn{
 		.center;
 		margin-top: 2em;
+		background-color: @white;
+		color: @red;
+		border: solid 2px;
+		border-color: lavenderblush;
+		border-top-color: @red;
+		border-bottom-color: @red;
+		left: -16px;
+		padding-left: 1em;
 		&:before,
 		&:after{
 			border-color: @white;
+			.transform(rotate(45deg));
+			border-color: @white;
+			border-left:   solid 16px;
+			border-top:    solid 16px;
+			border-right:  solid 16px;
+			border-bottom: solid 16px;
+			color: rgba(250, 244, 233, 0);
 		}
-		background: @white;
+		&:before{
+			box-shadow: 2px -2px 0 0 @red;
+			left: -36px;
+		}
+		&:after{
+			box-shadow: 2px -2px 0 0 @red;
+		}
 	}
 }
 
