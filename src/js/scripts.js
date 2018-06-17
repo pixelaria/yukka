@@ -8,8 +8,9 @@ $(function (){
     $('.nav').removeClass('nav--active');
     $.scrollTo(target, 600, { offset: -offset });
     return false;
-  }); 
+  });
 
+  
 });
 
 

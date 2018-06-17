@@ -213,6 +213,86 @@ ul, ul > li{
 		}
 	}
 
+	/*--------------------------*/
+	.text__main-text--text-arc{
+			span{
+				position: absolute;
+				font-family: 'Amatic SC';
+				font-weight: bold;
+				color: #f90;
+				left: 46%;
+				top: 0;
+				transform-origin: bottom center;
+			}
+		.text-title{
+			width: 100%;
+			position: relative;
+			display: block;
+			left: -9%;
+			min-height: 9em;
+			span{
+				width: 100px;
+				height: 1000px;
+				font-size: 200px;
+				line-height: 0.5em;
+
+				&:nth-child(1){ .transform(rotate(-12deg)); }
+				&:nth-child(2){ .transform(rotate(-6deg)); }
+				&:nth-child(3){ .transform(rotate(0deg)); }
+				&:nth-child(4){ .transform(rotate(6deg)); }
+				&:nth-child(5){ .transform(rotate(12deg)); }
+			}
+		}
+		.text-desc{
+			position: relative;
+			display: block;
+			min-height: 3em;
+			span{
+				width: 20px;
+				font-size: 30px;
+			}
+			&--line1{
+				span{
+					height: 1000px;
+					&:nth-child(1){ .transform(rotate(-12deg)); }
+					&:nth-child(2){ .transform(rotate(-10.8deg)); }
+					&:nth-child(3){ .transform(rotate(-9.6deg)); }
+					&:nth-child(4){ .transform(rotate(-8.4deg)); }
+					&:nth-child(5){ .transform(rotate(-7.2deg)); }
+					&:nth-child(6){ .transform(rotate(-6deg)); }
+					&:nth-child(7){ .transform(rotate(-4.8deg)); }
+					&:nth-child(8){ .transform(rotate(-3.6deg)); }
+					&:nth-child(9){ .transform(rotate(-2.4deg)); }
+					&:nth-child(10){ .transform(rotate(-1.2deg)); }
+					&:nth-child(11){ .transform(rotate(1.2deg)); }
+					&:nth-child(12){ .transform(rotate(2.4deg)); }
+					&:nth-child(13){ .transform(rotate(3.6deg)); }
+					&:nth-child(14){ .transform(rotate(4.8deg)); }
+					&:nth-child(15){ .transform(rotate(6deg)); }
+					&:nth-child(16){ .transform(rotate(7.2deg)); }
+					&:nth-child(17){ .transform(rotate(8.4deg)); }
+					&:nth-child(18){ .transform(rotate(9.6deg)); }
+					&:nth-child(19){ .transform(rotate(10.8deg)); }
+					&:nth-child(20){ .transform(rotate(12deg)); }
+				}
+			}
+			&--line2{
+				span{
+					height: 400px;
+					&:nth-child(1){ .transform(rotate(-12deg)); }
+					&:nth-child(2){ .transform(rotate(-9deg)); }
+					&:nth-child(3){ .transform(rotate(-6deg)); }
+					&:nth-child(4){ .transform(rotate(-3deg)); }
+					&:nth-child(5){ .transform(rotate(0deg)); }
+					&:nth-child(6){ .transform(rotate(3deg)); }
+					&:nth-child(7){ .transform(rotate(6deg)); }
+					&:nth-child(8){ .transform(rotate(9deg)); }
+					&:nth-child(9){ .transform(rotate(12deg)); }
+				}
+			}
+		}
+	}
+
 }
 
 /* домик из детства */
@@ -552,7 +632,7 @@ ul, ul > li{
 }
 
 .callback{
-	padding: 3em 0;
+	padding: 7em 0 3em;
 	.container{
 		.flex;
 		-webkit-flex-wrap: wrap;
