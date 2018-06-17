@@ -138,6 +138,7 @@ ul, ul > li{
 
 /* шапка */
 .header{
+	padding-bottom: 2em;
 	.container{
 		.flex;
 		justify-content: space-between;
@@ -215,6 +216,10 @@ ul, ul > li{
 
 	/*--------------------------*/
 	.text__main-text--text-arc{
+		width: 110%;
+		left: -15px;
+		overflow: hidden;
+		margin-bottom: 3em;
 			span{
 				position: absolute;
 				font-family: 'Amatic SC';
@@ -229,6 +234,7 @@ ul, ul > li{
 			position: relative;
 			display: block;
 			left: -9%;
+			top: 15px;
 			min-height: 9em;
 			span{
 				width: 100px;
@@ -419,21 +425,21 @@ ul, ul > li{
 				opacity: 0;
 				.transition;
 			}
-			&:hover{
-				.transition;
-				.gallery-item__img{
-					.transform(scale(1.1));
-					.transition;
-				}
-				.gallery-item__about{
-					bottom: 0;
-					.transition;
-				}
-				&:before{
-					opacity: 0.5;
-					.transition;
-				}
-			}
+/* 			&:hover{
+	.transition;
+	.gallery-item__img{
+		.transform(scale(1.1));
+		.transition;
+	}
+	.gallery-item__about{
+		bottom: 0;
+		.transition;
+	}
+	&:before{
+		opacity: 0.5;
+		.transition;
+	}
+} */
 		}
 	}
 	.pagination{
@@ -476,11 +482,6 @@ ul, ul > li{
 		.img--responsive{
 			width: 100%;
 		}
-
-		.price__valute{
-			font-family:'PT Sans', serif;
-			font-size: 1.15em;
-		}
 		.btn{
 			.center;
 			margin-top: 2em;
@@ -520,7 +521,6 @@ ul, ul > li{
 		}
 	}
 	.img--responsive{width: 100%;}
-	.price__valute{ font-family: 'PT Sans', serif; font-size: 1.15em;}
 	.btn{
 		.center;
 		margin-top: 2em;
@@ -543,7 +543,6 @@ ul, ul > li{
 		background-image: url('../img/o1.png'), url('../img/o2.png');
 		background-repeat: no-repeat, no-repeat;
 		background-position: 5em 20em, 100% 23em;
-		background-attachment: fixed, fixed;
 		z-index: 7;
 	}
 
@@ -627,6 +626,12 @@ ul, ul > li{
 		}
 		&:after{
 			box-shadow: 2px -2px 0 0 @red;
+		}
+		&:hover{
+			background: @red;
+			color:  @white;
+			&:before{ color: inherit; }
+			&:after{ color: @red; }
 		}
 	}
 }
