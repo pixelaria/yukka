@@ -191,7 +191,26 @@ ul, ul > li{
 	.btn{
 		.center;
 		margin-top: 2.5em;
-		left: 15px; 
+	}
+
+	/*--------------------------*/
+	.text__main-text--img{}
+	.text__main-text--text{
+		p{
+			font-family: 'Amatic SC';
+			color: #f90;
+			font-size: 10em;
+			font-weight: bold;
+			line-height: 0.5em;
+		}
+		span{
+			font-family: 'Amatic SC';
+			display: block;
+			padding-top: 1em;
+			padding-bottom: 2em;
+			font-size: 0.24em;
+			left: -15px;
+		}
 	}
 
 }
@@ -637,27 +656,27 @@ ul, ul > li{
 }
 
 .contacts{
-	&__info{
+	padding-bottom: 4em;
+	.contacts__info{
 		.flex;
 		justify-content: space-between;
 	}
-	&__info{
+	.contacts__info{
 		.flex;
 		-ms-align-items: center;
 		align-items: center;
 		justify-content: space-between;
 	}
-	&-info{
+	.contacts-info{
 		.flex;
 		-ms-align-items: center;
 		align-items: center;
 		justify-content: center;
 		.i-3;
-		&__icon{ padding-right: 5px; }
-		&__text{ display: block; }
+		&__icon{ padding-right: 1em; width: 3em;}
+		&__text{ display: block;  }
 		&--social{
 			.flex;
-			/* .i-1; */
 		}
 		&__link{
 			display: block;
