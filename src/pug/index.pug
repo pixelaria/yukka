@@ -91,7 +91,7 @@ html(lang='ru')
           .section__row.section__row--reverse
             .section__part
               .section__img
-                img.img(alt='', src='img/mh1.png')
+                img.img.img--responsive(alt='', src='img/mh1.png')
             .section__part
               h3.section__subtitle Безопасно
               p.section__text При конструировании мы учли, чтобы в домиках не было острых углов, а края деталей обработали специальным образом, чтобы ребёнок не мог пораниться.
@@ -99,7 +99,7 @@ html(lang='ru')
           .section__row
             .section__part
               .section__img
-                img.img(alt='', src='img/mh2.png')
+                img.img.img--responsive(alt='', src='img/mh2.png')
             .section__part
               h3.section__subtitle Экологично
               p.section__text Мы используем в производстве только экологически чистый гофрокартон и водные краски, вся продукция производится в строгом соответствии с ГОСТом и имеет все необходимые сертификаты.
@@ -107,7 +107,7 @@ html(lang='ru')
           .section__row.section__row--reverse
             .section__part
               .section__img
-                img.img(alt='', src='img/mh3.png')
+                img.img.img--responsive(alt='', src='img/mh3.png')
             .section__part
               h3.section__subtitle Легко собрать
               p.section__text Домик легко собирается интуитивно, но всё же мы приложили подробную инструкцию.
@@ -116,25 +116,27 @@ html(lang='ru')
           .section__row
             .section__part
               .section__img
-                img.img(alt='', src='img/mh4.png')
+                img.img.img--responsive(alt='', src='img/mh4.png')
             .section__part
               h3.section__subtitle Легко раскрасить
               p.section__text Для раскрашчивания отлично подойдут карандаши, мелки, фломастеры, маркеры или гуашь. Вы можете приобрести их у нас.
             
-          .section__row
+          .section__row.section__row--reverse
             .section__part
               .section__img
-                img.img(alt='', src='img/mh5.png')
+                img.img.img--responsive(alt='', src='img/mh5.png')
             .section__part
               h3.section__subtitle Удобная доставка
               p.section__text Мы организуем доставку до удобного вам пункта выдачи или прямо до порога.
 
-          .section__row.section__row--reverse
+          .section__row
+            .section__part
+              .space
             .section__part
               h3.section__subtitle Лучшие цены
               p.section__text Предлагаем вам самые умеренные цены на самые классные домики в нашей стране, ведь мы являемся производителями и не делаем лишних наценок.
               a.btn.btn--flag Хочу!
-            .section__part
+
         
       section.section.section--gallery
         .container
@@ -162,3 +164,126 @@ html(lang='ru')
             span.pagination__circle.pagination__circle--active
             span.pagination__circle
             span.pagination__circle
+
+      section.section.section--products
+        .container
+          h2.section__title Выберите тот, что вам по душе
+          .products
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/ch1.png')
+              .product__text
+                p.product__title.product__title--big Крепость
+                p.product__price
+                  span 900
+                a.product__btn.btn.btn--double Заказать
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/ch2.png')
+              .product__text
+                p.product__title.product__title--big Шапито
+                p.product__price
+                  span 900
+                a.product__btn.btn.btn--double Заказать
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/ch3.png')
+              .product__text
+                p.product__title.product__title--big Избушка
+                p.product__price
+                  span 900
+                a.product__btn.btn.btn--double Заказать
+
+      section.section.section--products
+        .container
+          h2.section__title Для раскраски домиков
+          .products
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/instr1.png')
+              .product__text
+                p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
+                p.product__price
+                  span 900
+                a.product__btn.btn.btn--double Заказать
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/instr2.png')
+              .product__text
+                p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
+                p.product__price
+                  span 900
+                a.product__btn.btn.btn--double Заказать
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/instr3.png')
+              .product__text
+                p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
+                p.product__price
+                  span 900
+                a.product__btn.btn.btn--double Заказать
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/instr4.png')
+              .product__text
+                p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
+                p.product__price
+                  span 900
+                a.product__btn.btn.btn--double Заказать
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/instr5.png')
+              .product__text
+                p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
+                p.product__price
+                  span 900
+                a.product__btn.btn.btn--double Заказать
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/instr6.png')
+              .product__text
+                p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
+                p.product__price
+                  span 900
+                a.product__btn.btn.btn--double Заказать
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/instr7.png')
+              .product__text
+                p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
+                p.product__price
+                  span 900
+                a.product__btn.btn.btn--double Заказать
+      section.section.section--order
+        .container
+          p.section__title Как заказать?
+          ul.list
+            li.list__item
+              span.list__number 1
+              span.list__text Выберите самый классный домик
+            li.list__item
+              span.list__number 2
+              span.list__text Вам могут пригодится карандаши, маркеры, фломастеры, мелки и фонарик
+            li.list__item
+              span.list__number 3
+              span.list__text Выберите удобный пункт выдачи
+            li.list__item
+              span.list__number 4
+              span.list__text Оставьте контакты и наш менеджер с вами свяжется
+
+      section.section.section--charity
+        .container
+          p.section__title Благотворительность
+          .charity
+            .charity__info
+              p.charity__text
+                | Мы понимаем, что можем сделать этот мир лучше и поэтому активно сотрудничаем с Благотворительным Фондом Константина Хабенского, который оказывает поддержку детям в очень непростых жизненных ситуациях.
+              p.charity__text
+                | С каждого приобретенного вами домика мы перечисляем 10 рублей в БФКХ и абсолютно уверены, что это необходимо.
+              p.charity__text Присоединяйтесь к нам, ведь делать добро совсем просто!
+            .charity__img
+              img.img.img--responsive(alt='', src='img/char1.png')
+            .charity__btn
+              a.btn.btn--flag(href='#') Читать больше
+            
+
