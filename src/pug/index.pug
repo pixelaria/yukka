@@ -1,0 +1,164 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='format-detection', content='telephone=no')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Yukka
+    // <link rel="stylesheet" href="fonts/Amatic_SC/AmaticSC-Regular.ttf" type="application/x-font-ttf">
+    // <link rel="stylesheet" href="fonts/Roboto/Roboto-Regular.ttf" type="application/x-font-ttf">
+    link(rel='stylesheet', href='./css/libs.min.css')
+    link(rel='stylesheet', href='./css/bundle.css')
+  body
+    header.header
+      .container.header__container
+        .header__logo.logo
+          a.logo__link(href='#')
+            img.logo__img(alt='', src='img/logo.png')
+        nav.header__nav.nav
+          ul.nav__list
+            li.nav__item
+              a.link.nav__link.scroll-to-target(href='#present') О домиках
+            li.nav__item
+              a.link.nav__link.scroll-to-target(href='#products') Каталог
+            li.nav__item
+              a.link.nav__link.scroll-to-target(href='#callback') Заказать
+            li.nav__item
+              a.link.nav__link.scroll-to-target(href='#charity') Благотворительность
+            li.nav__item
+              a.link.nav__link.scroll-to-target(href='#contacts') Контакты
+        a.header__callback-btn(href='#') Звонок
+    main.main
+      section.section.section--title
+        .container
+          .page
+            .page__img
+              img.img(src='img/header-img.png')
+            .page__desc
+              .rounded
+                .rounded__line.rounded__line--1
+                  .rounded__text
+                    span д
+                    span о
+                    span м
+                    span и
+                    span к
+                .rounded__line.rounded__line--2
+                  .rounded__text
+                    span о
+                    span(role='space')
+                    span к
+                    span о
+                    span т
+                    span о
+                    span р
+                    span о
+                    span м
+                    span(role='space')
+                    span в
+                    span ы
+                    span(role='space')
+                    span м
+                    span е
+                    span ч
+                    span т
+                    span а
+                    span л
+                    span и
+                .rounded__line.rounded__line--3
+                  .rounded__text
+                    span в
+                    span(role='space')
+                    span д
+                    span е
+                    span т
+                    span с
+                    span т
+                    span в
+                    span е
+              p.page__text Курьерская доставка по Санкт-Петербургу
+              p.page__text.page__text--red всего за 199 рублей
+              a.btn.btn--flag(href='') Хочу
+      section.section.section--magic
+        .container
+          h2.section__title Волшебный домик из детства
+          p.section__text
+            | Все мы в детстве строили домики и убежища под столами и стульями из подручных одеял и подушек, прятали там самое сокровенное, обязательно внутри должен был быть фонарик и что-то вкусненькое. Там мы чувствовали себя окруженными тайной, в безопасности. Наши домики-раскраски окунут вашего ребёнка или вполне себе взрослого человека в тот мир, который мы давно покинули, а вы сможете составить им компанию.
+      section.section.section--present
+        .container
+          h2.section__title Прекрасный подарок для вашего ребёнка
+          .section__row.section__row--reverse
+            .section__part
+              .section__img
+                img.img(alt='', src='img/mh1.png')
+            .section__part
+              h3.section__subtitle Безопасно
+              p.section__text При конструировании мы учли, чтобы в домиках не было острых углов, а края деталей обработали специальным образом, чтобы ребёнок не мог пораниться.
+            
+          .section__row
+            .section__part
+              .section__img
+                img.img(alt='', src='img/mh2.png')
+            .section__part
+              h3.section__subtitle Экологично
+              p.section__text Мы используем в производстве только экологически чистый гофрокартон и водные краски, вся продукция производится в строгом соответствии с ГОСТом и имеет все необходимые сертификаты.
+            
+          .section__row.section__row--reverse
+            .section__part
+              .section__img
+                img.img(alt='', src='img/mh3.png')
+            .section__part
+              h3.section__subtitle Легко собрать
+              p.section__text Домик легко собирается интуитивно, но всё же мы приложили подробную инструкцию.
+            
+
+          .section__row
+            .section__part
+              .section__img
+                img.img(alt='', src='img/mh4.png')
+            .section__part
+              h3.section__subtitle Легко раскрасить
+              p.section__text Для раскрашчивания отлично подойдут карандаши, мелки, фломастеры, маркеры или гуашь. Вы можете приобрести их у нас.
+            
+          .section__row
+            .section__part
+              .section__img
+                img.img(alt='', src='img/mh5.png')
+            .section__part
+              h3.section__subtitle Удобная доставка
+              p.section__text Мы организуем доставку до удобного вам пункта выдачи или прямо до порога.
+
+          .section__row.section__row--reverse
+            .section__part
+              h3.section__subtitle Лучшие цены
+              p.section__text Предлагаем вам самые умеренные цены на самые классные домики в нашей стране, ведь мы являемся производителями и не делаем лишних наценок.
+              a.btn.btn--flag Хочу!
+            .section__part
+        
+      section.section.section--gallery
+        .container
+          h2.section__title А вот и домик!
+          .gallery
+            .gallery__item.gallery-item
+              img.gallery-item__img(alt='', src='img/g1.png')
+              p.gallery-item__about Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, sapiente.
+            .gallery__item.gallery-item
+              img.gallery-item__img(alt='', src='img/g2.png')
+              p.gallery-item__about Lorem ipsum dolor sit amet, consectetur.
+            .gallery__item.gallery-item
+              img.gallery-item__img(alt='', src='img/g3.png')
+              p.gallery-item__about Lorem ipsum dolor sit amet, consectetur adipisicing.
+            .gallery__item.gallery-item
+              img.gallery-item__img(alt='', src='img/g4.png')
+              p.gallery-item__about Lorem ipsum dolor sit amet.
+            .gallery__item.gallery-item
+              img.gallery-item__img(alt='', src='img/g5.png')
+              p.gallery-item__about Lorem ipsum dolor sit amet, consectetur adipisicing.
+            .gallery__item.gallery-item
+              img.gallery-item__img(alt='', src='img/g6.png')
+              p.gallery-item__about Lorem ipsum dolor sit amet.
+          .gallery__pagination.pagination
+            span.pagination__circle.pagination__circle--active
+            span.pagination__circle
+            span.pagination__circle

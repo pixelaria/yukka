@@ -4,9 +4,10 @@
   * Description: default gulpfile.js for most typical projects
   *
 */
+
 var gulp = require('gulp'),
+  pug = require('gulp-pug'),
   less = require('gulp-less'),
-  ap = require('gulp-autoprefixer'),
   postcss = require('gulp-postcss'),
   mqpacker = require('css-mqpacker'),
   concat = require('gulp-concat'),
@@ -98,6 +99,18 @@ gulp.task('html', function() {
     .pipe(browserSync.reload({stream: true}));
 });
 
+// Pug
+gulp.task('pug', function () {
+  return gulp.src('./src/pug/*.pug')
+  .pipe(pug({
+      pretty: true
+  }))
+  .pipe(gulp.dest('./docs/'))           
+  .pipe(browserSync.reload({
+      stream: true              
+  }));
+});
+
 // Оптимизация изображений
 gulp.task('img', function() {
   console.log('---------- Копирование и оптимизация картинок');
@@ -154,6 +167,7 @@ gulp.task('svgSpriteBuild', function () {
 gulp.task('watch', ['browser-sync', 'less'], function() {
   gulp.watch('src/less/**/*.less', ['less']); // Наблюдение за less файлами
   gulp.watch('src/**/*.html', ['html']); // Наблюдение за HTML файлами в проекте
+  gulp.watch('src/**/*.pug', ['pug']); // Наблюдение за HTML файлами в проекте
   gulp.watch('src/js/*.js', ['js']); // Наблюдение за JS файлами в папке js
   gulp.watch('src/img/*', ['img']); // Наблюдение за JS файлами в папке js
 });
