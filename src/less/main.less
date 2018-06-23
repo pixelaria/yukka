@@ -192,8 +192,105 @@ h1,h2,h3,h4,ul,p {
 }
 
 
-
 .btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 50px;
+  width: 250px;
+  
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--red {
+    background-color: @red;
+    color:@white;
+  }
+
+  &--right {
+    
+    &:before,
+    &:after {
+      content: '';
+      position: relative;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      transition: border-color 0.3s ease;
+    }
+    
+    &:before {
+      border-left:   solid 25px;
+      border-top:    solid 25px;
+      border-bottom: solid 25px;
+      border-left-color:   none;
+      border-top-color:    @red;
+      border-bottom-color: @red;
+    }
+    
+    &:after {
+      border-top:    solid 25px;
+      border-bottom: solid 25px;
+      border-left:   solid 25px;
+      border-left-color:   @red;
+      border-top-color:    none;
+      border-bottom-color: none;
+    }
+    /*
+    &:hover {
+      background-color: @dRed;
+      color: @white;
+      &:before {
+        border-top-color:    @dRed;
+        border-right-color:  @dRed;
+        border-bottom-color: @dRed;
+      }
+      &:after {
+        border-left-color:   @dRed;
+      }
+    }
+    */
+  }
+  &--double, &--invert {
+    &:before,
+    &:after {
+      content: '';
+      position: relative;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      transition: border-color 0.3s ease;
+    }
+    
+    &:before {
+      border-left:   solid 25px;
+      border-top:    solid 25px;
+      border-bottom: solid 25px;
+      border-left-color:   none;
+      border-top-color:    @red;
+      border-bottom-color: @red;
+    }
+    
+    &:after {
+      border-left:   solid 25px;
+      border-top:    solid 25px;
+      border-bottom: solid 25px;
+      border-left-color:   none;
+      border-top-color:    @red;
+      border-bottom-color: @red;
+      transform: rotateZ(180deg);
+    }
+  }
+}
+
+
+.btn1 {
   display: flex;
   width: 13em;
   
@@ -511,7 +608,7 @@ h1,h2,h3,h4,ul,p {
   }
   
   &__btn {
-    margin:auto;
+    
   }
 }
 
