@@ -99,11 +99,31 @@ h1,h2,h3,h4,ul,p {
     padding-top: 30px;
   }
 
+  &--gallery {
+    position: relative;
+    padding-top: 0;
+    .container {
+      z-index: 2;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 120%;
+      height: 320px;
+      top: -100px;
+      left: -10%;
+      border-top-left-radius: 100%;
+      border-top-right-radius: 100%;
+      background: #faf4e9;
+      z-index: 1;
+    }
+    
+  }
   &--products {
     padding-bottom: 0;
     z-index: 2;
   }
-
+  
   &--order {
     background-color: #ffcc66;
     padding-top: 300px;
@@ -179,26 +199,97 @@ h1,h2,h3,h4,ul,p {
 		text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 	}
 
 	&__row {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-    
+    align-items: center;
     margin-bottom: 150px;
+    position: relative;
+  
 		&--reverse {
 			flex-direction: row-reverse;
 		}
+    
+    &:after {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      background-size: contain;
+    }
+    &--line-1 {
+      margin-bottom: 200px;
+      &:after {
+        background-image: url('../img/line-big.png');
+        height: 250px;
+        bottom: -250px;
+      }
+    }
+    &--line-2 {
+      &:after {
+        background-image: url('../img/line-big-2.png');
+        height: 220px;
+        bottom: -220px;
+      }
+    }
+    &--line-3 {
+      &:after {
+        background-image: url('../img/line-small.png');
+        height: 180px;
+        bottom: -180px;
+      }
+    }
+    &--line-4 {
+      &:after {
+        background-image: url('../img/line-small-2.png');
+        height: 170px;
+        bottom: -170px;
+      }
+    }
+    &--line-5 {
+      margin-bottom: 100px;
+      &:after {
+        background-image: url('../img/line-small-3.png');
+        height: 170px;  
+        bottom: -170px;
+        width: 60%;
+        left: 0;
+      }
+    }
 	}
   
 
   &__part {
-    width: 50%;
-    min-width: 50%;
+    &--text {
+      width: 55%;
+      min-width: 55%;
+    }
+    &--img {
+      width: 40%;
+      min-width: 40%;
+
+      
+    }
   }
   &__img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
+    img {
+      width: auto !important;
+      height: 100% !important;;
+    }
   }
 
 	&--present {
