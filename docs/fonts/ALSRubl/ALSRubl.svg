@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg>
+<metadata>
+Created by FontForge 20090622 at Fri Jun 22 15:46:23 2018
+ By deploy user
+Copyright 2012 Adobe Systems Incorporated. All rights reserved.
+</metadata>
+<defs>
+<font id="ALSRubl-Regular" horiz-adv-x="1024" >
+  <font-face 
+    font-family="ALS Rubl"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="2048"
+    panose-1="0 0 0 0 0 0 0 0 0 0"
+    ascent="1638"
+    descent="-410"
+    bbox="0 0 1196 1434"
+    underline-thickness="102"
+    underline-position="-102"
+    unicode-range="U+0020-U+E000"
+  />
+<missing-glyph 
+ />
+    <glyph glyph-name=".notdef" 
+ />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="681" 
+ />
+    <glyph glyph-name="space" unicode=" " 
+ />
+    <glyph glyph-name="uni00A0" unicode="&#xa0;" 
+ />
+    <glyph glyph-name="afii10034" unicode="&#x420;" horiz-adv-x="1308" 
+d="M123 236v161h135v135h-135v164h135v738h387q248 0 379 -91q172 -117 172 -342q0 -197 -127 -319q-147 -147 -430 -147h-190v-138h688v-161h-688v-236h-191v236h-135zM449 696h159q217 0 307 88q82 82 82 211q0 147 -104 217q-88 57 -256 58h-188v-574z" />
+    <glyph glyph-name="uni2000" unicode="&#x2000;" horiz-adv-x="716" 
+ />
+    <glyph glyph-name="uni2001" unicode="&#x2001;" horiz-adv-x="1433" 
+ />
+    <glyph glyph-name="uni2002" unicode="&#x2002;" horiz-adv-x="716" 
+ />
+    <glyph glyph-name="uni2003" unicode="&#x2003;" horiz-adv-x="1433" 
+ />
+    <glyph glyph-name="uni2004" unicode="&#x2004;" horiz-adv-x="477" 
+ />
+    <glyph glyph-name="uni2005" unicode="&#x2005;" horiz-adv-x="358" 
+ />
+    <glyph glyph-name="uni2006" unicode="&#x2006;" horiz-adv-x="237" 
+ />
+    <glyph glyph-name="uni2007" unicode="&#x2007;" horiz-adv-x="237" 
+ />
+    <glyph glyph-name="uni2008" unicode="&#x2008;" horiz-adv-x="178" 
+ />
+    <glyph glyph-name="uni2009" unicode="&#x2009;" horiz-adv-x="286" 
+ />
+    <glyph glyph-name="uni200A" unicode="&#x200a;" horiz-adv-x="77" 
+ />
+    <glyph glyph-name="uni202F" unicode="&#x202f;" horiz-adv-x="286" 
+ />
+    <glyph glyph-name="uni205F" unicode="&#x205f;" horiz-adv-x="358" 
+ />
+    <glyph glyph-name="uniE000" unicode="&#xe000;" horiz-adv-x="500" 
+d="M0 0v0v0v0v0z" />
+  </font>
+</defs></svg>
