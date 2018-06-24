@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yukka</title>
+    <link rel="stylesheet" href="./css/libs.min.css">
+    <link rel="stylesheet" href="./css/bundle.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__logo logo"><a class="logo__link" href="#"><img class="logo__img" alt="" src="img/logo.png"></a></div>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="link nav__link scroll-to-target" href="#present">О домиках</a></li>
+            <li class="nav__item nav__item--active"><a class="link nav__link scroll-to-target" href="#products">Каталог</a></li>
+            <li class="nav__item"><a class="link nav__link scroll-to-target" href="#callback">Заказать</a></li>
+            <li class="nav__item nav__item--active"><a class="link nav__link scroll-to-target" href="#charity">Благотворительность</a></li>
+            <li class="nav__item"><a class="link nav__link scroll-to-target" href="#contacts">Контакты</a></li>
+          </ul>
+        </nav><a class="header__callback-btn" href="#">Звонок</a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">Выберите домик</h2>
+          <div class="catalog">
+            <div class="catalog__item"></div>
+            <div class="catalog__item"></div>
+            <div class="catalog__item"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--catalog">
+        <div class="container">
+          <h2 class="section__title">Вместе с домиком также берут</h2>
+          <div class="products">
+            <div class="product products__item">
+              <div class="product__img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
+              <div class="product__desc">
+                <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
+                <p class="product__price">900<span>Р</span></p>
+                <p class="product__text">Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.</p><a class="product__btn btn btn--red btn--double">Заказать</a>
+              </div>
+            </div>
+            <div class="product products__item">
+              <div class="product__img"><img class="img img--responsive" alt="" src="img/ch2.png"></div>
+              <div class="product__desc">
+                <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
+                <p class="product__price">900<span>Р</span></p>
+                <p class="product__text">Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.</p><a class="product__btn btn btn--red btn--double">Заказать</a>
+              </div>
+            </div>
+            <div class="product products__item">
+              <div class="product__img"><img class="img img--responsive" alt="" src="img/ch3.png"></div>
+              <div class="product__desc">
+                <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
+                <p class="product__price">900<span>Р</span></p>
+                <p class="product__text">Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.</p><a class="product__btn btn btn--red btn--double">Заказать</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--cart">
+        <div class="container">
+          <h2 class="section__title">Ваша корзина</h2>
+          <div class="cart">
+            <div class="cart__row">
+              <div class="cart__cell cart__cell--img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
+              <div class="cart__cell cart__cell--name">Шапито</div>
+              <div class="cart__cell cart__cell--price"> 
+                <div class="price">1200 <span></span></div>
+              </div>
+              <div class="cart__cell cart__cell--quantity">
+                <div class="spinner">
+                  <input class="spinner__input" value="1" type="hidden">
+                  <div class="spinner__placeholder">1</div>
+                  <div class="spinner__buttons"><span class="spinner__button spinner__button--up">-</span><span class="spinner__button spinner__button--down">+</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="cart__row">
+              <div class="cart__cell cart__cell--img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
+              <div class="cart__cell cart__cell--name">Шапито</div>
+              <div class="cart__cell cart__cell--price"> 
+                <div class="price">1200 <span></span></div>
+              </div>
+              <div class="cart__cell cart__cell--quantity">
+                <div class="spinner">
+                  <input class="spinner__input" value="1" type="hidden">
+                  <div class="spinner__placeholder">1</div>
+                  <div class="spinner__buttons"><span class="spinner__button spinner__button--up">-</span><span class="spinner__button spinner__button--down">+</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <p class="footer__copyright">© Yukka 2018. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

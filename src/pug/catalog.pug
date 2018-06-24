@@ -1,0 +1,107 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='format-detection', content='telephone=no')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Yukka
+    link(rel='stylesheet', href='./css/libs.min.css')
+    link(rel='stylesheet', href='./css/bundle.css')
+  body
+    header.header
+      .container.header__container
+        .header__logo.logo
+          a.logo__link(href='#')
+            img.logo__img(alt='', src='img/logo.png')
+        nav.header__nav.nav
+          ul.nav__list
+            li.nav__item
+              a.link.nav__link.scroll-to-target(href='#present') О домиках
+            li.nav__item.nav__item--active
+              a.link.nav__link.scroll-to-target(href='#products') Каталог
+            li.nav__item
+              a.link.nav__link.scroll-to-target(href='#callback') Заказать
+            li.nav__item.nav__item--active
+              a.link.nav__link.scroll-to-target(href='#charity') Благотворительность
+            li.nav__item
+              a.link.nav__link.scroll-to-target(href='#contacts') Контакты
+        a.header__callback-btn(href='#') Звонок
+    main.main
+      section.section
+        .container
+          h2.section__title Выберите домик
+          .catalog
+            .catalog__item
+            .catalog__item
+            .catalog__item
+      section.section.section--catalog
+        .container
+          h2.section__title Вместе с домиком также берут
+          .products
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/ch1.png')
+              .product__desc
+                p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
+                p.product__price 900
+                  span Р
+                p.product__text Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.
+                a.product__btn.btn.btn--red.btn--double Заказать
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/ch2.png')
+              .product__desc
+                p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
+                p.product__price 900
+                  span Р
+                p.product__text Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.
+                a.product__btn.btn.btn--red.btn--double Заказать
+            .product.products__item
+              .product__img
+                img.img.img--responsive(alt='', src='img/ch3.png')
+              .product__desc
+                p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
+                p.product__price 900
+                  span Р
+                p.product__text Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.
+                a.product__btn.btn.btn--red.btn--double Заказать
+      section.section.section--cart
+        .container
+          h2.section__title Ваша корзина
+          .cart
+            .cart__row
+              .cart__cell.cart__cell--img
+                img.img.img--responsive(alt='', src='img/ch1.png')
+              .cart__cell.cart__cell--name Шапито
+              .cart__cell.cart__cell--price 
+                .price 1200 
+                  span
+              .cart__cell.cart__cell--quantity
+                .spinner
+                  input.spinner__input(value='1' type='hidden')
+                  .spinner__placeholder 1
+                  .spinner__buttons
+                    span.spinner__button.spinner__button--up -
+                    span.spinner__button.spinner__button--down +
+            .cart__row
+              .cart__cell.cart__cell--img
+                img.img.img--responsive(alt='', src='img/ch1.png')
+              .cart__cell.cart__cell--name Шапито
+              .cart__cell.cart__cell--price 
+                .price 1200 
+                  span
+              .cart__cell.cart__cell--quantity
+                .spinner
+                  input.spinner__input(value='1' type='hidden')
+                  .spinner__placeholder 1
+                  .spinner__buttons
+                    span.spinner__button.spinner__button--up -
+                    span.spinner__button.spinner__button--down +
+
+
+
+      footer.footer
+        .container
+          p.footer__copyright © Yukka 2018. All rights reserved.
+

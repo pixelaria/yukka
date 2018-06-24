@@ -25,9 +25,7 @@ h1,h2,h3,h4,ul,p {
 
 /* шапка */
 .header{
-	padding: 15px 0;
-
-  &__container {
+	&__container {
   	display:flex;
     justify-content: space-between;
     -ms-align-items: center;
@@ -61,7 +59,8 @@ h1,h2,h3,h4,ul,p {
 
   &__link {
     display: block;
-    padding: 5px 20px;
+    padding: 30px 20px;
+    height: 90px;
     text-decoration: none;
     color:@text;
     transition: color 0.3s ease;
@@ -69,6 +68,16 @@ h1,h2,h3,h4,ul,p {
     	color: @red; 
     }
   }	
+
+
+  &__item {
+    border-top: 5px solid transparent;
+    transition: border-color 0.3s ease;
+    
+    &:hover, &--active {
+      border-top: 5px solid @red;
+    }
+  }
 }
 
 .section {
@@ -671,22 +680,28 @@ h1,h2,h3,h4,ul,p {
     line-height: 24px;
     
     margin-bottom: 40px;
-    span {
-      display: inline-block;
-      font-family: 'Rouble',sans-serif;
-      position: relative;
-      margin-left: 5px;
-    }
-    
-    
   }
   
   &__btn {
     
   }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 35px;
+  }
 }
 
-
+.price {
+  span {
+    display: inline-block;
+    font-family: 'Rouble',sans-serif;
+    position: relative;
+    margin-left: 5px;
+  }
+}
 .list {
   list-style: none;
   width: 50%;
@@ -852,7 +867,7 @@ h1,h2,h3,h4,ul,p {
     
     position: relative;
     cursor: pointer;
-    
+
 
     &:before {
       content: '';
@@ -934,6 +949,90 @@ h1,h2,h3,h4,ul,p {
   &__text {
     color: @text;
     text-decoration: none;
+  }
+}
+
+.cart {
+  border-top: 1px solid #cc3517;
+  border-bottom: 1px solid #cc3517;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  } 
+
+  &__cell {
+    display: flex;
+    align-items: center;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    &--img {
+      width: 170px;
+      min-width: 170px;
+    }
+  }
+}
+
+.spinner {
+  position: relative;
+  width: 170px;
+  &__input {
+
+  }
+
+  &__placeholder {
+    position: absolute;
+    width: 100%;
+    line-height: 50px;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 18.28px;
+    text-align: center;
+  }
+
+  &__buttons {
+
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    border:1px solid @red;
+    background-color: transparent;
+
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    
+    font-size: 24px;
+    font-weight: 400;
+    color: @text;
+    
+    cursor: pointer;
+
+    &:hover {
+      background-color: @red;
+      color: @white;
+    }
+    &--up {
+      right: 0;
+        
+
+    }
+    &--down {
+      left: 0;
+
+    }
   }
 }
 
