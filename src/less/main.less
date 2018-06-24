@@ -439,6 +439,7 @@ h1,h2,h3,h4,ul,p {
 		&--red {
 			color: #cc3517;
 			letter-spacing: 3px;
+      margin-bottom: 45px;
 		}
 	}
 }
@@ -447,58 +448,83 @@ h1,h2,h3,h4,ul,p {
 	font-family: 'Amatic SC';
   color: #f90;
 	font-weight: 700;
-	margin-bottom: 70px;
+	margin-bottom: 45px;
+  overflow: hidden;
+  padding-top: 15px;
 
 	&__line {
-		&--1 {
-			span{
-				font-size: 159px;
-        &:nth-child(1) { .transform(rotate(-12deg)); }
-        &:nth-child(2) { .transform(rotate(-6deg)); }
+    width: 100%;
+    position: relative;
+    display: block;
+    span {
+      position: absolute;
+      top: 0;
+      transform-origin: bottom center;
+      width: 100px;
+    }
+
+    &--1 {
+      min-height: 170px;
+      span{
+        width: 100px;
+        height: 1000px;
+        font-size: 190px;
+        line-height: 120px;
+        left: 37%;  
+        &:nth-child(1) { .transform(rotate(-10deg)); }
+        &:nth-child(2) { .transform(rotate(-5.2deg)); }
         &:nth-child(3) { .transform(rotate(0deg)); }
-        &:nth-child(4) { .transform(rotate(6deg)); }
-        &:nth-child(5) { .transform(rotate(12deg)); }
+        &:nth-child(4) { .transform(rotate(6.2deg)); }
+        &:nth-child(5) { .transform(rotate(10.6deg)); }
+        &:nth-child(6) { .transform(rotate(13.5deg)); }
       }
-		}
+    }
+    
 		&--2 {
+      min-height: 70px;
 			span {
-				font-size: 66px;
-        &:nth-child(1) { .transform(rotate(-12deg)); }
-        &:nth-child(2) { .transform(rotate(-10.8deg)); }
-        &:nth-child(3) { .transform(rotate(-9.6deg)); }
-        &:nth-child(4) { .transform(rotate(-8.4deg)); }
-        &:nth-child(5) { .transform(rotate(-7.2deg)); }
-        &:nth-child(6) { .transform(rotate(-6deg)); }
-        &:nth-child(7) { .transform(rotate(-4.8deg)); }
-        &:nth-child(8) { .transform(rotate(-3.6deg)); }
-        &:nth-child(9) { .transform(rotate(-2.4deg)); }
-        &:nth-child(10) { .transform(rotate(-1.2deg)); }
-        &:nth-child(11) { .transform(rotate(1.2deg)); }
-        &:nth-child(12) { .transform(rotate(2.4deg)); }
-        &:nth-child(13) { .transform(rotate(3.6deg)); }
-        &:nth-child(14) { .transform(rotate(4.8deg)); }
-        &:nth-child(15) { .transform(rotate(6deg)); }
-        &:nth-child(16) { .transform(rotate(7.2deg)); }
-        &:nth-child(17) { .transform(rotate(8.4deg)); }
-        &:nth-child(18) { .transform(rotate(9.6deg)); }
-        &:nth-child(19) { .transform(rotate(10.8deg)); }
-        &:nth-child(20) { .transform(rotate(12deg)); }
+			  font-size: 70px;
+        width: 20px;
+        height: 900px;
+        left: 46%;
+        &:nth-child(1) { .transform(rotate(-14deg)); }
+        &:nth-child(3) { .transform(rotate(-11.5deg)); }
+        &:nth-child(4) { .transform(rotate(-10deg)); }
+        &:nth-child(5) { .transform(rotate(-8.5deg)); }
+        &:nth-child(6) { .transform(rotate(-7.2deg)); }
+        &:nth-child(7) { .transform(rotate(-5.8deg)); }
+        &:nth-child(8) { .transform(rotate(-4.5deg)); }
+        &:nth-child(9) { .transform(rotate(-3deg)); }
+        &:nth-child(11) { .transform(rotate(0.5deg)); }
+        &:nth-child(12) { .transform(rotate(1.8deg)); }
+        &:nth-child(14) { .transform(rotate(4.2deg)); }
+        &:nth-child(15) { .transform(rotate(6.8deg)); }
+        &:nth-child(16) { .transform(rotate(8deg)); }
+        &:nth-child(17) { .transform(rotate(9.2deg)); }
+        &:nth-child(18) { .transform(rotate(10.5deg)); }
+        &:nth-child(19) { .transform(rotate(12deg)); }
+        &:nth-child(20) { .transform(rotate(13.5deg)); }
        }
 		}
 		&--3 {
+      min-height: 55px;
 			span {
 				font-size: 66px;
-				&:nth-child(1) { .transform(rotate(-12deg)); }
-	      &:nth-child(2) { .transform(rotate(-9deg)); }
-	      &:nth-child(3) { .transform(rotate(-6deg)); }
-	      &:nth-child(4) { .transform(rotate(-3deg)); }
+        width: 20px;
+        height: 1000px;
+        left: 48%;  
+				&:nth-child(1) { .transform(rotate(-5.5deg)); }
+	      &:nth-child(2) { .transform(rotate(-4.5deg)); }
+	      &:nth-child(3) { .transform(rotate(-3deg)); }
+	      &:nth-child(4) { .transform(rotate(-1.5deg)); }
 	      &:nth-child(5) { .transform(rotate(0deg)); }
-	      &:nth-child(6) { .transform(rotate(3deg)); }
-	      &:nth-child(7) { .transform(rotate(6deg)); }
-	      &:nth-child(8) { .transform(rotate(9deg)); }
-	      &:nth-child(9) { .transform(rotate(12deg)); }
+	      &:nth-child(6) { .transform(rotate(1.5deg)); }
+	      &:nth-child(7) { .transform(rotate(3deg)); }
+	      &:nth-child(8) { .transform(rotate(4.5deg)); }
+	      &:nth-child(9) { .transform(rotate(6deg)); }
 	    }
 		}
+    
 	}
 
 	&__text {
