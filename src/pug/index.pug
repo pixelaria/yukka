@@ -30,7 +30,7 @@ html(lang='ru')
               a.link.nav__link.scroll-to-target(href='#contacts') Контакты
         a.header__callback-btn(href='#') Звонок
     main.main
-      section.section.section--title
+      section.section.section--page
         .container
           .page
             .page__img
@@ -275,16 +275,17 @@ html(lang='ru')
         .container
           p.section__title Благотворительность
           .charity
-            .charity__info
-              p.charity__text
-                | Мы понимаем, что можем сделать этот мир лучше и поэтому активно сотрудничаем с Благотворительным Фондом Константина Хабенского, который оказывает поддержку детям в очень непростых жизненных ситуациях.
-              p.charity__text
-                | С каждого приобретенного вами домика мы перечисляем 10 рублей в БФКХ и абсолютно уверены, что это необходимо.
-              p.charity__text Присоединяйтесь к нам, ведь делать добро совсем просто!
-            .charity__img
-              img.img.img--responsive(alt='', src='img/char1.png')
+            .charity__desc
+              .charity__info
+                p.charity__text
+                  | Мы понимаем, что можем сделать этот мир лучше и поэтому активно сотрудничаем с Благотворительным Фондом Константина Хабенского, который оказывает поддержку детям в очень непростых жизненных ситуациях.
+                p.charity__text
+                  | С каждого приобретенного вами домика мы перечисляем 10 рублей в БФКХ и абсолютно уверены, что это необходимо.
+                p.charity__text Присоединяйтесь к нам, ведь делать добро совсем просто!
+              .charity__img
+                img.img.img--responsive(alt='', src='img/char1.png')
             .charity__btn
-              a.btn.btn--flag(href='#') Читать больше
+              a.btn.btn--red.btn--right(href='#') Читать больше
       section.section.section--callback
         .container
           .callback
@@ -294,23 +295,24 @@ html(lang='ru')
               .form__fields
                 input.form__input(name='name', placeholder='Ваше Имя', type='text')
                 input.form__input(name='name', placeholder='Номер телефона', type='text')
-              button.form__submit.btn(type='submit', value='Перезвонить') Перезвонить
-              p.form__text *Потилика конфиденциальности
+              
+              button.form__submit.btn.btn--white(type='submit', value='Перезвонить') Перезвонить
+              a.form__text(href="#" title="Политика конфиденциальности") * Потилика конфиденциальности
       section.section.section--contacts
         .container
           p.section__title Контакты
           .contacts
             .contacts__item.contacts__item--address
-              p.contacts__text 197198, Россия, г. Санкт-Петербург, ул. Съезжинская, 37А
+              p.contacts__text 197198, Россия, <br/>г. Санкт-Петербург, <br/>ул. Съезжинская, 37А
             .contacts__item.contacts__item--phone
-              p.contacts__text 8-981-777-77-77
+              a.contacts__text(href="tel:88005513320" title="Позвоните нам") 8 800 551-33-20
             .contacts__item.contacts__item--mail
-              p.contacts__text admin@ad.min
-            a.contacts__item.contacts__item--vk
-            a.contacts__item.contacts__item--insta
+              a.contacts__text(href="mailto:yukkakid@gmail.com" title="Напишите нам") yukkakid@gmail.com
+            a.contacts__item.contacts__item--vk(href="#" title="Наша группа Вконтакте")
+            a.contacts__item.contacts__item--insta(href="#" title="Наш Instagram")
               
               
       footer.footer
         .container
-          p.footer__coperight © Все права защищены
+          p.footer__copyright © Yukka 2018. All rights reserved.
 
