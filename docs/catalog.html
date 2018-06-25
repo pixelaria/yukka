@@ -29,9 +29,41 @@
         <div class="container">
           <h2 class="section__title">Выберите домик</h2>
           <div class="catalog">
-            <div class="catalog__item"></div>
-            <div class="catalog__item"></div>
-            <div class="catalog__item"></div>
+            <div class="catalog__row">
+              <div class="catalog__cell catalog__cell--img">
+                <div class="catalog__img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
+              </div>
+              <div class="catalog__cell catalog__cell--name">Крепость</div>
+              <div class="catalog__cell catalog__cell--price"> 
+                <div class="price">900 <span>Р</span></div>
+              </div>
+              <div class="catalog__cell catalog__cell--quantity">
+                <div class="spinner">
+                  <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--up">-</span>
+                  <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--down">+</span>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__row">
+              <div class="catalog__cell catalog__cell--img">
+                <div class="catalog__img"><img class="img img--responsive" alt="" src="img/ch2.png"></div>
+              </div>
+              <div class="catalog__cell catalog__cell--name">Шапито</div>
+              <div class="catalog__cell catalog__cell--price"> 
+                <div class="price">1200 <span>Р</span></div>
+              </div>
+              <div class="catalog__cell catalog__cell--quantity"><a class="product__btn btn btn--red btn--double">Заказать</a></div>
+            </div>
+            <div class="catalog__row">
+              <div class="catalog__cell catalog__cell--img">
+                <div class="catalog__img"><img class="img img--responsive" alt="" src="img/ch3.png"></div>
+              </div>
+              <div class="catalog__cell catalog__cell--name">Избушка</div>
+              <div class="catalog__cell catalog__cell--price"> 
+                <div class="price">900 <span>Р</span></div>
+              </div>
+              <div class="catalog__cell catalog__cell--quantity"><a class="product__btn btn btn--red btn--double">Заказать</a></div>
+            </div>
           </div>
         </div>
       </section>
@@ -40,7 +72,7 @@
           <h2 class="section__title">Вместе с домиком также берут</h2>
           <div class="products">
             <div class="product products__item">
-              <div class="product__img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
+              <div class="product__img"><img class="img img--responsive" alt="" src="img/markers.png"></div>
               <div class="product__desc">
                 <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
                 <p class="product__price price">900<span>Р</span></p>
@@ -48,7 +80,7 @@
               </div>
             </div>
             <div class="product products__item">
-              <div class="product__img"><img class="img img--responsive" alt="" src="img/ch2.png"></div>
+              <div class="product__img"><img class="img img--responsive" alt="" src="img/markers.png"></div>
               <div class="product__desc">
                 <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
                 <p class="product__price price">900<span>Р</span></p>
@@ -56,7 +88,7 @@
               </div>
             </div>
             <div class="product products__item">
-              <div class="product__img"><img class="img img--responsive" alt="" src="img/ch3.png"></div>
+              <div class="product__img"><img class="img img--responsive" alt="" src="img/markers.png"></div>
               <div class="product__desc">
                 <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
                 <p class="product__price price">900<span>Р</span></p>
@@ -72,7 +104,9 @@
           <div class="checkout">
             <div class="checkout__cart cart">
               <div class="cart__row">
-                <div class="cart__cell cart__cell--img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
+                <div class="cart__cell cart__cell--img">
+                  <div class="cart__img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
+                </div>
                 <div class="cart__cell cart__cell--name">Шапито</div>
                 <div class="cart__cell cart__cell--price"> 
                   <div class="price">1200 <span>Р</span></div>
@@ -83,12 +117,15 @@
                     <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--down">+</span>
                   </div>
                 </div>
+                <div class="cart__cell cart__cell--remove"><span class="cart__remove"></span></div>
               </div>
               <div class="cart__row">
-                <div class="cart__cell cart__cell--img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
-                <div class="cart__cell cart__cell--name">Шапито</div>
+                <div class="cart__cell cart__cell--img">
+                  <div class="cart__img"><img class="img img--responsive" alt="" src="img/markers.png"></div>
+                </div>
+                <div class="cart__cell cart__cell--name">Фломастеры</div>
                 <div class="cart__cell cart__cell--price"> 
-                  <div class="price">1200 <span>Р</span></div>
+                  <div class="price">159 <span>Р</span></div>
                 </div>
                 <div class="cart__cell cart__cell--quantity">
                   <div class="spinner">
@@ -96,19 +133,20 @@
                     <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--down">+</span>
                   </div>
                 </div>
+                <div class="cart__cell cart__cell--remove"><span class="cart__remove"></span></div>
               </div>
             </div>
             <div class="checkout__delivery delivery">
-              <p class="delivery__title"></p>
+              <p class="delivery__title">Доставка Boxberry</p>
               <div class="delivery__data">
                 <div class="delivery__logo"></div>
                 <div class="delivery__map"></div>
               </div>
               <div class="delivery__totals totals">
                 <div class="totals__row">
-                  <div class="totals__cell">Доставка до пвз</div>
+                  <div class="totals__cell">Доставка до ПВЗ:</div>
                   <div class="totals__cell">
-                    <div class="price">0<span>Р</span></div>
+                    <div class="price">350<span>Р</span></div>
                   </div>
                 </div>
               </div>
@@ -117,8 +155,9 @@
               <div class="totals__row">
                 <div class="totals__cell">Итого:</div>
                 <div class="totals__cell">
-                  <div class="price">1700<span>Р</span></div>
+                  <div class="price">1709<span>Р</span></div>
                 </div>
+                <div class="totals__cell"><a class="checkout__btn btn btn--red btn--right">Оформить</a></div>
               </div>
             </div>
           </div>
