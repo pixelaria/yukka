@@ -1,5 +1,6 @@
 $(function (){
   console.log('init');
+  
   $('.scroll-to-target').click(function(e) {
     console.log('scroll-to-target');
     var target = $(this).attr('href');
@@ -10,7 +11,22 @@ $(function (){
     return false;
   });
 
-  
+  $('.gallery').slick({
+    dots: true,
+    slidesPerRow: 3,
+    slidesToScroll: 1,
+    rows: 2,
+    responsive: [
+      {
+        breakpoint: 478,
+        settings: {
+          slidesPerRow: 1,
+          rows: 1,
+          dots: false
+        }
+      }
+    ]
+  });  
 });
 
 

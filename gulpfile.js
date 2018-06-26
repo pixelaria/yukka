@@ -51,7 +51,10 @@ gulp.task('less', function() {
 gulp.task('default', function () {
     return gulp.src('docs/css/bundle.css')
         .pipe(ap({
-            browsers: ['last 2 versions'],
+            browsers: [
+              '>2%',
+              'last 2 versions'
+            ],
             cascade: false
         }))
         .pipe(gulp.dest('dist'));
@@ -69,6 +72,7 @@ gulp.task('libs', function() {
 
   console.log('---------- Минификация CSS библиотек закончена');
   console.log('---------- Минификация JS библиотек');
+  
   gulp.src('src/libs/js/*.js') // Берем less только с первого уровня
       .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.css
       .pipe(jsmin()) // Сжимаем

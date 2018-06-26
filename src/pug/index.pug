@@ -31,8 +31,6 @@ html(lang='ru')
       section.section.section--page
         .container
           .page
-            .page__img
-              img.img(src='img/header-img.png')
             .page__desc
               .rounded
                 .rounded__line.rounded__line--1
@@ -75,7 +73,10 @@ html(lang='ru')
                   span е
               p.page__text Курьерская доставка по Санкт-Петербургу
               p.page__text.page__text--red всего за 199 рублей
-              a.btn.btn--red.btn--right(href='#') Хочу
+              a.page__btn.btn.btn--red.btn--right(href='#') Хочу
+            .page__img
+              img.img.img--responsive(src='img/header-img.png')
+            
       section.section.section--magic#present
         .container
           h2.section__title Волшебный домик из детства
@@ -84,54 +85,54 @@ html(lang='ru')
       section.section.section--present
         .container
           h2.section__title Прекрасный подарок для вашего ребёнка
-          .section__row.section__row--reverse.section__row--line-1
-            .section__part.section__part--img
-              .section__img
-                img.img(alt='', src='img/mh1.png')
+          .section__row.section__row--line-1
             .section__part.section__part--text
               h3.section__subtitle Безопасно
               p.section__text При конструировании мы учли, чтобы в домиках не было острых углов, а края деталей обработали специальным образом, чтобы ребёнок не мог пораниться.
-            
-          .section__row.section__row--line-2
             .section__part.section__part--img
               .section__img
-                img.img(alt='', src='img/mh2.png')
+                img.img(alt='', src='img/mh1.png')
+            
+          .section__row.section__row--line-2.section__row--reverse
             .section__part.section__part--text
               h3.section__subtitle Экологично
               p.section__text Мы используем в производстве только экологически чистый гофрокартон и водные краски, вся продукция производится в строгом соответствии с ГОСТом и имеет все необходимые сертификаты.
-            
-          .section__row.section__row--reverse.section__row--line-3
             .section__part.section__part--img
               .section__img
-                img.img(alt='', src='img/mh3.png')
+                img.img(alt='', src='img/mh2.png')
+
+          .section__row.section__row--line-3
             .section__part.section__part--text
               h3.section__subtitle Легко собрать
               p.section__text Домик легко собирается интуитивно, но всё же мы приложили подробную инструкцию.
-            
-
-          .section__row.section__row--line-4
             .section__part.section__part--img
               .section__img
-                img.img(alt='', src='img/mh4.png')
+                img.img(alt='', src='img/mh3.png')
+
+          .section__row.section__row--line-4.section__row--reverse
             .section__part.section__part--text
               h3.section__subtitle Легко раскрасить
               p.section__text Для раскрашчивания отлично подойдут карандаши, мелки, фломастеры, маркеры или гуашь. Вы можете приобрести их у нас.
-            
-          .section__row.section__row--reverse.section__row--line-5
             .section__part.section__part--img
               .section__img
-                img.img(alt='', src='img/mh5.png')
+                img.img(alt='', src='img/mh4.png')
+          .section__row.section__row--line-5
             .section__part.section__part--text
               h3.section__subtitle Удобная доставка
               p.section__text Мы организуем доставку до удобного вам пункта выдачи или прямо до порога.
-
-          .section__row
             .section__part.section__part--img
-              .space
+              .section__img
+                img.img(alt='', src='img/mh5.png')
+            
+          .section__row.section__row--reverse
             .section__part.section__part--text
               h3.section__subtitle Лучшие цены
               p.section__text Предлагаем вам самые умеренные цены на самые классные домики в нашей стране, ведь мы являемся производителями и не делаем лишних наценок.
               a.btn.btn--red.btn--right(href='#') Хочу
+              
+            .section__part.section__part--img
+              .space
+            
 
         
       section.section.section--gallery
@@ -140,27 +141,28 @@ html(lang='ru')
           .gallery
             .gallery__item.gallery-item
               img.gallery-item__img(alt='', src='img/g1.png')
-              p.gallery-item__about Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, sapiente.
             .gallery__item.gallery-item
               img.gallery-item__img(alt='', src='img/g2.png')
-              p.gallery-item__about Lorem ipsum dolor sit amet, consectetur.
             .gallery__item.gallery-item
               img.gallery-item__img(alt='', src='img/g3.png')
-              p.gallery-item__about Lorem ipsum dolor sit amet, consectetur adipisicing.
             .gallery__item.gallery-item
               img.gallery-item__img(alt='', src='img/g4.png')
-              p.gallery-item__about Lorem ipsum dolor sit amet.
             .gallery__item.gallery-item
               img.gallery-item__img(alt='', src='img/g5.png')
-              p.gallery-item__about Lorem ipsum dolor sit amet, consectetur adipisicing.
             .gallery__item.gallery-item
               img.gallery-item__img(alt='', src='img/g6.png')
-              p.gallery-item__about Lorem ipsum dolor sit amet.
-          .gallery__pagination.pagination
-            span.pagination__circle.pagination__circle--active
-            span.pagination__circle
-            span.pagination__circle
-
+            .gallery__item.gallery-item
+              img.gallery-item__img(alt='', src='img/g1.png')
+            .gallery__item.gallery-item
+              img.gallery-item__img(alt='', src='img/g2.png')
+            .gallery__item.gallery-item
+              img.gallery-item__img(alt='', src='img/g3.png')
+            .gallery__item.gallery-item
+              img.gallery-item__img(alt='', src='img/g4.png')
+            .gallery__item.gallery-item
+              img.gallery-item__img(alt='', src='img/g5.png')
+            .gallery__item.gallery-item
+              img.gallery-item__img(alt='', src='img/g6.png')
       section.section.section--products#products
         .container
           h2.section__title Выберите тот, что вам по душе
@@ -308,7 +310,8 @@ html(lang='ru')
             a.contacts__item.contacts__item--vk(href="#" title="Наша группа Вконтакте")
             a.contacts__item.contacts__item--insta(href="#" title="Наш Instagram")
               
-              
+      script(src='./js/libs.min.js')
+      script(src='./js/bundle.js')
       footer.footer
         .container
           p.footer__copyright © Yukka 2018. All rights reserved.
