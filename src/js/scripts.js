@@ -1,6 +1,24 @@
 $(function (){
   console.log('init');
   
+  // Slideout
+  var slideoutBtn = document.querySelector('.navbar-toggler');
+  var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('navbar'),
+    'padding': 250,
+    'tolerance': 70,
+    'side': 'right',
+    'tolerance': 70,
+    'touch': false
+
+  });
+
+  // Slideout toggler
+  slideoutBtn.addEventListener('click', function() {
+    slideout.toggle();
+  });
+
   $('.scroll-to-target').click(function(e) {
     console.log('scroll-to-target');
     var target = $(this).attr('href');

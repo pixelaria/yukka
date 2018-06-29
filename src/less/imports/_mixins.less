@@ -1,19 +1,3 @@
-.gradient(@to, @c1, @c2){
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
-background: @c1; /* Old browsers */
-background: -moz-linear-gradient(to @to, @c1 0%, @c2 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(to @to, @c1 0%,@c2 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to @to, @c1 0%, @c2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@c1', endColorstr='@c2',GradientType=1 ); /* IE6-9 */
-}
-
-.transition(){
-  transition: 0.2s;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -ms-transition: 0.2s;
-  -o-transition: 0.2s;
-}
 .transform(@v){
   -webkit-transform: @v;
   -moz-transform: @v;
@@ -22,28 +6,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@c1', endColo
   transform: @v;
 }
 
-.uppercase(){
-  text-transform: uppercase;
-}
+//media 
 
-.strong(){
-  font-weight: bold;
-}
 
-.uppercase(){
-  text-transform: uppercase;
-}
-
-.hide(){
-  display: none;
-}
-
-.center(){
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@desktop-xl:  ~"only screen and (min-width : 1200px)";
-@desktop:     ~"only screen and (min-width : 992px) and (max-width: 1199px)";
-@tablet:    ~"only screen and (min-width : 768px) and (max-width: 991px)";
 @mobile:    ~"only screen and (max-width: 767px)";
+@tablet:    ~"only screen and (min-width : 768px) and (max-width: 991px)";
+@desktop:   ~"only screen and (min-width : 992px) and (max-width: 1199px)";
+@large:     ~"only screen and (min-width : 1200px)";
+
+
