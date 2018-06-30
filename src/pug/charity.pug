@@ -8,41 +8,48 @@ html(lang='ru')
     title Yukka
     link(rel='stylesheet', href='./css/libs.min.css')
     link(rel='stylesheet', href='./css/bundle.css')
-  body
-    header.header
-      .container.header__container
-        .header__logo.logo
-          a.logo__link(href='#')
-            img.logo__img(alt='', src='img/logo.png')
-        nav.header__nav.nav
-          ul.nav__list
-            li.nav__item
-              a.link.nav__link.scroll-to-target(href='#present') О домиках
-            li.nav__item
-              a.link.nav__link.scroll-to-target(href='#products') Каталог
-            li.nav__item
-              a.link.nav__link.scroll-to-target(href='#callback') Заказать
-            li.nav__item.nav__item--active
-              a.link.nav__link.scroll-to-target(href='#charity') Благотворительность
-            li.nav__item
-              a.link.nav__link.scroll-to-target(href='#contacts') Контакты
-        a.header__callback-btn(href='#') Звонок
-    main.main
-      section.section
-        .container
-          p.section__text «Дорогие друзья! На сегодняшний день благотворительность — это, пожалуй, единственная территория, где люди не пытаются реализовывать свои амбиции и достигать каких-либо целей, кроме одной — бескорыстная помощь человеку.
-          p.section__text Деятельность нашего Фонда направлена на спасение детей с заболеваниями головного мозга. Любой, даже самый скромный ваш вклад очень важен. Ведь каждая спасенная жизнь — бесценна!»
-          .section__banner
-            img.img.img--responsive(src='img/banner.png')
-          p.section__text Благотворительный Фонд Константина Хабенского был создан в 2008 году. 
-          p.section__text Фонд занимается организацией помощи детям с онкологическими и другими тяжёлыми заболеваниями головного мозга. Основные направления работы Фонда: помощь в организации обследования и лечения детей, покупка медикаментов, организация реабилитационных программ, помощь профильным отделениям российских медицинских учреждений, повышение квалификации врачей и информационная работа с родителями, направленная на улучшение ранней диагностики тяжелых заболеваний головного мозга.
-          p.section__text Наша миссия — вовремя оказаться рядом и помочь, ведь тогда ребенка с заболеванием головного мозга можно спасти!
-          .contacts.contacts--center
-            a.contacts__item.contacts__item--vk(href="#" title="Наша группа Вконтакте")
-            a.contacts__item.contacts__item--fb(href="#" title="Наша страница Facebook")
-            a.contacts__item.contacts__item--insta(href="#" title="Наш Instagram")
-            a.contacts__item.contacts__item--you(href="#" title="Наш канал на Youtube")
-      footer.footer
-        .container
-          p.footer__copyright © Yukka 2018. All rights reserved.
+  body.body
+    include includes/aside.pug
+    .wrapper#panel
+      include includes/callback.pug
+      include includes/success.pug
+      header.header
+        .container.header__container
+          .header__logo.logo
+            a.logo__link(href='#')
+              img.logo__img(alt='', src='img/logo.png')
+          nav.header__nav.nav
+            ul.nav__list
+              li.nav__item
+                a.link.nav__link.scroll-to-target(href='#present') О домиках
+              li.nav__item
+                a.link.nav__link.scroll-to-target(href='#products') Каталог
+              li.nav__item
+                a.link.nav__link.scroll-to-target(href='#callback') Заказать
+              li.nav__item.nav__item--active
+                a.link.nav__link.scroll-to-target(href='#charity') Благотворительность
+              li.nav__item
+                a.link.nav__link.scroll-to-target(href='#contacts') Контакты
+          a.header__callback-btn(href='#') Звонок
+          .navbar-toggler
+            span
+            span
+            span
+      main.main
+        section.section
+          .container
+            p.section__text «Дорогие друзья! На сегодняшний день благотворительность — это, пожалуй, единственная территория, где люди не пытаются реализовывать свои амбиции и достигать каких-либо целей, кроме одной — бескорыстная помощь человеку.
+            p.section__text Деятельность нашего Фонда направлена на спасение детей с заболеваниями головного мозга. Любой, даже самый скромный ваш вклад очень важен. Ведь каждая спасенная жизнь — бесценна!»
+            .section__banner.banner
+              .banner__inner
+
+            p.section__text Благотворительный Фонд Константина Хабенского был создан в 2008 году. 
+            p.section__text Фонд занимается организацией помощи детям с онкологическими и другими тяжёлыми заболеваниями головного мозга. Основные направления работы Фонда: помощь в организации обследования и лечения детей, покупка медикаментов, организация реабилитационных программ, помощь профильным отделениям российских медицинских учреждений, повышение квалификации врачей и информационная работа с родителями, направленная на улучшение ранней диагностики тяжелых заболеваний головного мозга.
+            p.section__text Наша миссия — вовремя оказаться рядом и помочь, ведь тогда ребенка с заболеванием головного мозга можно спасти!
+            .contacts.contacts--center
+              a.contacts__item.contacts__item--vk(href="#" title="Наша группа Вконтакте")
+              a.contacts__item.contacts__item--fb(href="#" title="Наша страница Facebook")
+              a.contacts__item.contacts__item--insta(href="#" title="Наш Instagram")
+              a.contacts__item.contacts__item--you(href="#" title="Наш канал на Youtube")
+        include includes/footer.pug
 

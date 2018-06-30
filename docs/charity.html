@@ -9,38 +9,77 @@
     <link rel="stylesheet" href="./css/libs.min.css">
     <link rel="stylesheet" href="./css/bundle.css">
   </head>
-  <body>
-    <header class="header">
-      <div class="container header__container">
-        <div class="header__logo logo"><a class="logo__link" href="#"><img class="logo__img" alt="" src="img/logo.png"></a></div>
-        <nav class="header__nav nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a class="link nav__link scroll-to-target" href="#present">О домиках</a></li>
-            <li class="nav__item"><a class="link nav__link scroll-to-target" href="#products">Каталог</a></li>
-            <li class="nav__item"><a class="link nav__link scroll-to-target" href="#callback">Заказать</a></li>
-            <li class="nav__item nav__item--active"><a class="link nav__link scroll-to-target" href="#charity">Благотворительность</a></li>
-            <li class="nav__item"><a class="link nav__link scroll-to-target" href="#contacts">Контакты</a></li>
+  <body class="body">
+    <aside class="navbar" id="navbar">
+      <nav class="navbar__nav">
+        <div class="navbar__inner">
+          <ul class="navbar__list">
+            <li class="navbar__item"><a class="navbar__link" href="#present">О домиках</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#products">Каталог</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#callback">Заказать</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#charity">Благотворительность</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#contacts">Контакты</a></li>
           </ul>
-        </nav><a class="header__callback-btn" href="#">Звонок</a>
+        </div>
+      </nav>
+    </aside>
+    <div class="wrapper" id="panel">
+      <div class="popup" id="callback">
+        <form class="popup__form form form--popup">
+          <div class="popup__close"></div>
+          <p class="form__title">Напишите свой номер, и мы вам перезвоним</p>
+          <div class="form__fields">
+            <input class="form__input" name="name" placeholder="Ваше Имя" type="text">
+            <input class="form__input" name="name" placeholder="Номер телефона" type="text">
+          </div>
+          <button class="form__submit btn btn--white" type="submit" value="Перезвонить">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
+        </form>
       </div>
-    </header>
-    <main class="main">
-      <section class="section">
-        <div class="container">
-          <p class="section__text">«Дорогие друзья! На сегодняшний день благотворительность — это, пожалуй, единственная территория, где люди не пытаются реализовывать свои амбиции и достигать каких-либо целей, кроме одной — бескорыстная помощь человеку.</p>
-          <p class="section__text">Деятельность нашего Фонда направлена на спасение детей с заболеваниями головного мозга. Любой, даже самый скромный ваш вклад очень важен. Ведь каждая спасенная жизнь — бесценна!»</p>
-          <div class="section__banner"><img class="img img--responsive" src="img/banner.png"></div>
-          <p class="section__text">Благотворительный Фонд Константина Хабенского был создан в 2008 году. </p>
-          <p class="section__text">Фонд занимается организацией помощи детям с онкологическими и другими тяжёлыми заболеваниями головного мозга. Основные направления работы Фонда: помощь в организации обследования и лечения детей, покупка медикаментов, организация реабилитационных программ, помощь профильным отделениям российских медицинских учреждений, повышение квалификации врачей и информационная работа с родителями, направленная на улучшение ранней диагностики тяжелых заболеваний головного мозга.</p>
-          <p class="section__text">Наша миссия — вовремя оказаться рядом и помочь, ведь тогда ребенка с заболеванием головного мозга можно спасти!</p>
-          <div class="contacts contacts--center"><a class="contacts__item contacts__item--vk" href="#" title="Наша группа Вконтакте"></a><a class="contacts__item contacts__item--fb" href="#" title="Наша страница Facebook"></a><a class="contacts__item contacts__item--insta" href="#" title="Наш Instagram"></a><a class="contacts__item contacts__item--you" href="#" title="Наш канал на Youtube"></a></div>
+      <div class="popup" id="success">
+        <div class="popup__form popup__form--success form">
+          <div class="popup__close"></div>
+          <div class="popup__title">Ваш заявка успешно оформлена.</div>
+          <div class="popup__subtitle">В скором времени наш менежер свяжется с вами.</div>
         </div>
-      </section>
-      <footer class="footer">
-        <div class="container">
-          <p class="footer__copyright">© Yukka 2018. All rights reserved.</p>
+      </div>
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__logo logo"><a class="logo__link" href="#"><img class="logo__img" alt="" src="img/logo.png"></a></div>
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#present">О домиках</a></li>
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#products">Каталог</a></li>
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#callback">Заказать</a></li>
+              <li class="nav__item nav__item--active"><a class="link nav__link scroll-to-target" href="#charity">Благотворительность</a></li>
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#contacts">Контакты</a></li>
+            </ul>
+          </nav><a class="header__callback-btn" href="#">Звонок</a>
+          <div class="navbar-toggler"><span></span><span></span><span></span></div>
         </div>
-      </footer>
-    </main>
+      </header>
+      <main class="main">
+        <section class="section">
+          <div class="container">
+            <p class="section__text">«Дорогие друзья! На сегодняшний день благотворительность — это, пожалуй, единственная территория, где люди не пытаются реализовывать свои амбиции и достигать каких-либо целей, кроме одной — бескорыстная помощь человеку.</p>
+            <p class="section__text">Деятельность нашего Фонда направлена на спасение детей с заболеваниями головного мозга. Любой, даже самый скромный ваш вклад очень важен. Ведь каждая спасенная жизнь — бесценна!»</p>
+            <div class="section__banner banner">
+              <div class="banner__inner"></div>
+            </div>
+            <p class="section__text">Благотворительный Фонд Константина Хабенского был создан в 2008 году. </p>
+            <p class="section__text">Фонд занимается организацией помощи детям с онкологическими и другими тяжёлыми заболеваниями головного мозга. Основные направления работы Фонда: помощь в организации обследования и лечения детей, покупка медикаментов, организация реабилитационных программ, помощь профильным отделениям российских медицинских учреждений, повышение квалификации врачей и информационная работа с родителями, направленная на улучшение ранней диагностики тяжелых заболеваний головного мозга.</p>
+            <p class="section__text">Наша миссия — вовремя оказаться рядом и помочь, ведь тогда ребенка с заболеванием головного мозга можно спасти!</p>
+            <div class="contacts contacts--center"><a class="contacts__item contacts__item--vk" href="#" title="Наша группа Вконтакте"></a><a class="contacts__item contacts__item--fb" href="#" title="Наша страница Facebook"></a><a class="contacts__item contacts__item--insta" href="#" title="Наш Instagram"></a><a class="contacts__item contacts__item--you" href="#" title="Наш канал на Youtube"></a></div>
+          </div>
+        </section>
+        <script src="https://yastatic.net/jquery/3.1.1/jquery.min.js"></script>
+        <script src="./js/libs.min.js"></script>
+        <script src="./js/bundle.js"></script>
+        <footer class="footer">
+          <div class="container">
+            <p class="footer__copyright">© Yukka 2018. All rights reserved.</p>
+          </div>
+        </footer>
+      </main>
+    </div>
   </body>
 </html>

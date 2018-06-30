@@ -440,7 +440,7 @@ h1,h2,h3,h4,ul,p {
       font-size: 18px;
       font-weight: 400;
       line-height: 28px;
-      text-align: center;
+      text-align: left;
       
       &:last-child {
         margin-bottom: 30px;
@@ -451,7 +451,16 @@ h1,h2,h3,h4,ul,p {
   &__banner {
     margin-bottom: 150px;
     margin-top: 100px;
-
+    height: 230px;
+    overflow: hidden;
+    
+    @media @mobile {
+      margin-top: 60px;
+      margin-bottom: 40px;
+      height: 570px;
+      margin-right: -18px;
+      margin-left: -18px;
+    }
   }
 
 	&__row {
@@ -561,6 +570,28 @@ h1,h2,h3,h4,ul,p {
 	}
 }
 
+
+.banner {
+  &__inner {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  
+  
+  
+  
+    @media @mobile {
+      background-image: url('../img/banner-mob.png');
+      background-position: center;
+      max-width: 400px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
 .clouds {
   position: absolute;
   top: 0;
@@ -1145,6 +1176,15 @@ h1,h2,h3,h4,ul,p {
   
   &--center {
     justify-content: center;
+    @media @mobile {
+      display: flex;
+      .contacts__item {
+        justify-content: center;
+        &:before {
+          margin-right: 0;
+        }
+      }
+    }  
   }
 
   &__item {
