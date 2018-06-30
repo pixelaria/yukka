@@ -8,9 +8,10 @@ html(lang='ru')
     title Yukka
     link(rel='stylesheet', href='./css/libs.min.css')
     link(rel='stylesheet', href='./css/bundle.css')
-  body
+  body.body
     include includes/aside.pug
     .wrapper#panel
+      include includes/callback.pug
       header.header
         .container.header__container
           .header__logo.logo
@@ -28,7 +29,7 @@ html(lang='ru')
                 a.link.nav__link.scroll-to-target(href='#charity') Благотворительность
               li.nav__item
                 a.link.nav__link.scroll-to-target(href='#contacts') Контакты
-          a.header__callback-btn(href='#') Звонок
+          a.header__callback-btn(href='#' data-event="popup" data-popup="callback") Звонок
           .navbar-toggler
             span
             span
@@ -79,7 +80,7 @@ html(lang='ru')
                     span е
                 p.page__text Курьерская доставка по Санкт-Петербургу
                 p.page__text.page__text--red всего за 199 рублей
-                a.page__btn.btn.btn--red.btn--right(href='#') Хочу
+                a.page__btn.btn.btn--red.btn--right(href='#' data-event="popup" data-popup="callback") Хочу
               .page__img
                 img.img.img--responsive(src='img/header-img.png')
         section.section.section--magic#present

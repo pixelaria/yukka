@@ -44,7 +44,31 @@ $(function (){
         }
       }
     ]
-  });  
+  });
+
+  // Popup callbacks
+  $('body').delegate('*[data-event="popup"]', 'click', function(e) {
+    console.log('popup event');
+    var popup = $(this).data('popup');
+    if (popup) {
+      $('body').addClass('body--noscroll');
+      $('#'+popup).addClass('popup--active');
+    }
+    return false;
+  });
+
+  $('body').delegate('.popup__close', 'click', function(e) {
+    var $popup = $(this).closest('.popup');
+    
+    $('body').removeClass('body--noscroll');
+    $popup.removeClass('popup--active');
+    
+    if ($(this).hasClass('popup__close--remove')) {
+      $popup.remove();
+    }
+    return false;
+  });
+
 });
 
 
