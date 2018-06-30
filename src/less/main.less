@@ -1072,7 +1072,7 @@ h1,h2,h3,h4,ul,p {
   
   border-radius: 10px;
   overflow: hidden;
-  padding: 70px 110px;
+  padding: 70px 90px;
   
   @media @mobile {
     padding: 35px;
@@ -1554,6 +1554,13 @@ h1,h2,h3,h4,ul,p {
     margin-left: auto;
     margin-right: auto;
     position: relative;
+
+    background-color: @red;
+    color: @white;
+    
+    &--success {
+      padding: 60px 70px;
+    }
   }
   
   &__close {
@@ -1577,6 +1584,22 @@ h1,h2,h3,h4,ul,p {
       right: 10px;
       top: 10px;
     }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 0;
   }
 }
 

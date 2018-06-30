@@ -12,6 +12,7 @@ html(lang='ru')
     include includes/aside.pug
     .wrapper#panel
       include includes/callback.pug
+      include includes/success.pug
       header.header
         .container.header__container
           .header__logo.logo
@@ -134,7 +135,7 @@ html(lang='ru')
               .section__part.section__part--text
                 h3.section__subtitle Лучшие цены
                 p.section__text Предлагаем вам самые умеренные цены на самые классные домики в нашей стране, ведь мы являемся производителями и не делаем лишних наценок.
-                a.btn.btn--red.btn--right(href='#') Хочу
+                a.btn.btn--red.btn--right(href="#" data-event="popup" data-popup="callback") Хочу
                 
               .section__part.section__part--img
                 .space
@@ -177,7 +178,7 @@ html(lang='ru')
                   p.product__title.product__title--big Крепость
                   p.product__price 900
                     span Р
-                  a.product__btn.btn.btn--red.btn--double Заказать
+                  a.product__btn.btn.btn--red.btn--double(href="catalog.html") Заказать
               .product.products__item
                 .product__img
                   img.img.img--responsive(alt='', src='img/ch2.png')
@@ -185,7 +186,7 @@ html(lang='ru')
                   p.product__title.product__title--big Шапито
                   p.product__price 900
                     span Р
-                  a.product__btn.btn.btn--red.btn--double Заказать
+                  a.product__btn.btn.btn--red.btn--double(href="catalog.html") Заказать
               .product.products__item
                 .product__img
                   img.img.img--responsive(alt='', src='img/ch3.png')
@@ -193,7 +194,7 @@ html(lang='ru')
                   p.product__title.product__title--big Избушка
                   p.product__price 900
                     span Р
-                  a.product__btn.btn.btn--red.btn--double Заказать
+                  a.product__btn.btn.btn--red.btn--double(href="catalog.html") Заказать
         section.section.section--products
           .container
             h2.section__title Для раскраски домиков
@@ -205,7 +206,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price 900
                     span Р
-                  a.product__btn.btn.btn--red.btn--double Заказать
+                  a.product__btn.btn.btn--red.btn--double(href="catalog.html") Заказать
               .product.products__item
                 .product__img
                   img.img.img--responsive(alt='', src='img/instr2.png')
@@ -213,7 +214,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price 900
                     span Р
-                  a.product__btn.btn.btn--red.btn--double Заказать
+                  a.product__btn.btn.btn--red.btn--double(href="catalog.html") Заказать
               .product.products__item
                 .product__img
                   img.img.img--responsive(alt='', src='img/instr3.png')
@@ -221,7 +222,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price 900
                     span Р
-                  a.product__btn.btn.btn--red.btn--double Заказать
+                  a.product__btn.btn.btn--red.btn--double(href="catalog.html") Заказать
               .product.products__item
                 .product__img
                   img.img.img--responsive(alt='', src='img/instr4.png')
@@ -229,7 +230,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price 900
                     span Р
-                  a.product__btn.btn.btn--red.btn--double Заказать
+                  a.product__btn.btn.btn--red.btn--double(href="catalog.html") Заказать
               .product.products__item
                 .product__img
                   img.img.img--responsive(alt='', src='img/instr5.png')
@@ -237,7 +238,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price 900
                     span Р
-                  a.product__btn.btn.btn--red.btn--double Заказать
+                  a.product__btn.btn.btn--red.btn--double(href="catalog.html") Заказать
               .product.products__item
                 .product__img
                   img.img.img--responsive(alt='', src='img/instr6.png')
@@ -245,7 +246,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price 900
                     span Р
-                  a.product__btn.btn.btn--red.btn--double Заказать
+                  a.product__btn.btn.btn--red.btn--double(href="catalog.html") Заказать
               .product.products__item
                 .product__img
                   img.img.img--responsive(alt='', src='img/instr7.png')
@@ -253,7 +254,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price 900
                     span Р
-                  a.product__btn.btn.btn--red.btn--double Заказать
+                  a.product__btn.btn.btn--red.btn--double(href="catalog.html") Заказать
         section.section.section--order#callback
           .clouds
           .container
@@ -296,7 +297,7 @@ html(lang='ru')
                   input.form__input(name='name', placeholder='Ваше Имя', type='text')
                   input.form__input(name='name', placeholder='Номер телефона', type='text')
                 
-                button.form__submit.btn.btn--white(type='submit', value='Перезвонить') Перезвонить
+                button.form__submit.btn.btn--white(type='submit' value='Перезвонить' data-event="popup" data-popup="success") Перезвонить
                 a.form__text(href="#" title="Политика конфиденциальности") * Потилика конфиденциальности
         section.section.section--contacts#contacts
           .container
@@ -311,11 +312,5 @@ html(lang='ru')
               a.contacts__item.contacts__item--vk(href="#" title="Наша группа Вконтакте")
               a.contacts__item.contacts__item--insta(href="#" title="Наш Instagram")
                 
-      script(src='https://yastatic.net/jquery/3.1.1/jquery.min.js')
-      script(src='./js/libs.min.js')
-      script(src='./js/bundle.js')
-
-      footer.footer
-        .container
-          p.footer__copyright © Yukka 2018. All rights reserved.
+      include includes/footer.pug
 

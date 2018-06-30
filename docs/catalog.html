@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+  <head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
@@ -9,177 +9,207 @@
     <link rel="stylesheet" href="./css/libs.min.css">
     <link rel="stylesheet" href="./css/bundle.css">
   </head>
-  <body>
-    <header class="header">
-      <div class="container header__container">
-        <div class="header__logo logo"><a class="logo__link" href="#"><img class="logo__img" alt="" src="img/logo.png"></a></div>
-        <nav class="header__nav nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a class="link nav__link scroll-to-target" href="#present">О домиках</a></li>
-            <li class="nav__item nav__item--active"><a class="link nav__link scroll-to-target" href="#products">Каталог</a></li>
-            <li class="nav__item"><a class="link nav__link scroll-to-target" href="#callback">Заказать</a></li>
-            <li class="nav__item"><a class="link nav__link scroll-to-target" href="#charity">Благотворительность</a></li>
-            <li class="nav__item"><a class="link nav__link scroll-to-target" href="#contacts">Контакты</a></li>
+  <body class="body">
+    <aside class="navbar" id="navbar">
+      <nav class="navbar__nav">
+        <div class="navbar__inner">
+          <ul class="navbar__list">
+            <li class="navbar__item"><a class="navbar__link" href="#present">О домиках</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#products">Каталог</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#callback">Заказать</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#charity">Благотворительность</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#contacts">Контакты</a></li>
           </ul>
-        </nav><a class="header__callback-btn" href="#">Звонок</a>
+        </div>
+      </nav>
+    </aside>
+    <div class="wrapper" id="panel">
+      <div class="popup" id="callback">
+        <form class="popup__form form form--popup">
+          <div class="popup__close"></div>
+          <p class="form__title">Напишите свой номер, и мы вам перезвоним</p>
+          <div class="form__fields">
+            <input class="form__input" name="name" placeholder="Ваше Имя" type="text">
+            <input class="form__input" name="name" placeholder="Номер телефона" type="text">
+          </div>
+          <button class="form__submit btn btn--white" type="submit" value="Перезвонить">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
+        </form>
       </div>
-    </header>
-    <main class="main">
-      <section class="section">
-        <div class="container">
-          <h2 class="section__title">Выберите домик</h2>
-          <div class="catalog">
-            <div class="catalog__row">
-              <div class="catalog__cell catalog__cell--img">
-                <div class="catalog__img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
-              </div>
-              <div class="catalog__cell catalog__cell--name">Крепость</div>
-              <div class="catalog__cell catalog__cell--price"> 
-                <div class="price">900 <span>Р</span></div>
-              </div>
-              <div class="catalog__cell catalog__cell--quantity">
-                <div class="spinner">
-                  <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--up">-</span>
-                  <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--down">+</span>
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__logo logo"><a class="logo__link" href="#"><img class="logo__img" alt="" src="img/logo.png"></a></div>
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#present">О домиках</a></li>
+              <li class="nav__item nav__item--active"><a class="link nav__link scroll-to-target" href="#products">Каталог</a></li>
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#callback">Заказать</a></li>
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#charity">Благотворительность</a></li>
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#contacts">Контакты</a></li>
+            </ul>
+          </nav><a class="header__callback-btn" href="#">Звонок</a>
+          <div class="navbar-toggler"><span></span><span></span><span></span></div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="section">
+          <div class="container">
+            <h2 class="section__title">Выберите домик</h2>
+            <div class="catalog">
+              <div class="catalog__row">
+                <div class="catalog__cell catalog__cell--img">
+                  <div class="catalog__img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
+                </div>
+                <div class="catalog__cell catalog__cell--name">Крепость</div>
+                <div class="catalog__cell catalog__cell--price"> 
+                  <div class="price">900 <span>Р</span></div>
+                </div>
+                <div class="catalog__cell catalog__cell--quantity">
+                  <div class="spinner">
+                    <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--up">-</span>
+                    <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--down">+</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="catalog__row">
-              <div class="catalog__cell catalog__cell--img">
-                <div class="catalog__img"><img class="img img--responsive" alt="" src="img/ch2.png"></div>
-              </div>
-              <div class="catalog__cell catalog__cell--name">Шапито</div>
-              <div class="catalog__cell catalog__cell--price"> 
-                <div class="price">1200 <span>Р</span></div>
-              </div>
-              <div class="catalog__cell catalog__cell--quantity"><a class="product__btn btn btn--red btn--double">Заказать</a></div>
-            </div>
-            <div class="catalog__row">
-              <div class="catalog__cell catalog__cell--img">
-                <div class="catalog__img"><img class="img img--responsive" alt="" src="img/ch3.png"></div>
-              </div>
-              <div class="catalog__cell catalog__cell--name">Избушка</div>
-              <div class="catalog__cell catalog__cell--price"> 
-                <div class="price">900 <span>Р</span></div>
-              </div>
-              <div class="catalog__cell catalog__cell--quantity"><a class="product__btn btn btn--red btn--double">Заказать</a></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section section--catalog">
-        <div class="container">
-          <h2 class="section__title">Вместе с домиком также берут</h2>
-          <div class="products">
-            <div class="product products__item">
-              <div class="product__img"><img class="img img--responsive" alt="" src="img/markers.png"></div>
-              <div class="product__desc">
-                <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
-                <p class="product__price price">900<span>Р</span></p>
-                <p class="product__text">Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.</p><a class="product__btn btn btn--red btn--double">Заказать</a>
-              </div>
-            </div>
-            <div class="product products__item">
-              <div class="product__img"><img class="img img--responsive" alt="" src="img/markers.png"></div>
-              <div class="product__desc">
-                <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
-                <p class="product__price price">900<span>Р</span></p>
-                <p class="product__text">Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.</p><a class="product__btn btn btn--red btn--double">Заказать</a>
-              </div>
-            </div>
-            <div class="product products__item">
-              <div class="product__img"><img class="img img--responsive" alt="" src="img/markers.png"></div>
-              <div class="product__desc">
-                <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
-                <p class="product__price price">900<span>Р</span></p>
-                <p class="product__text">Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.</p><a class="product__btn btn btn--red btn--double">Заказать</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section section--cart">
-        <div class="container">
-          <h2 class="section__title">Ваша корзина</h2>
-          <div class="checkout">
-            <div class="checkout__cart cart">
-              <div class="cart__row">
-                <div class="cart__cell cart__cell--img">
-                  <div class="cart__img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
+              <div class="catalog__row">
+                <div class="catalog__cell catalog__cell--img">
+                  <div class="catalog__img"><img class="img img--responsive" alt="" src="img/ch2.png"></div>
                 </div>
-                <div class="cart__cell cart__cell--name">Шапито</div>
-                <div class="cart__cell cart__cell--price"> 
+                <div class="catalog__cell catalog__cell--name">Шапито</div>
+                <div class="catalog__cell catalog__cell--price"> 
                   <div class="price">1200 <span>Р</span></div>
                 </div>
-                <div class="cart__cell cart__cell--quantity">
-                  <div class="spinner">
-                    <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--up">-</span>
-                    <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--down">+</span>
-                  </div>
-                </div>
-                <div class="cart__cell cart__cell--remove"><span class="cart__remove"></span></div>
+                <div class="catalog__cell catalog__cell--quantity"><a class="product__btn btn btn--red btn--double">Заказать</a></div>
               </div>
-              <div class="cart__row">
-                <div class="cart__cell cart__cell--img">
-                  <div class="cart__img"><img class="img img--responsive" alt="" src="img/markers.png"></div>
+              <div class="catalog__row">
+                <div class="catalog__cell catalog__cell--img">
+                  <div class="catalog__img"><img class="img img--responsive" alt="" src="img/ch3.png"></div>
                 </div>
-                <div class="cart__cell cart__cell--name">Фломастеры</div>
-                <div class="cart__cell cart__cell--price"> 
-                  <div class="price">159 <span>Р</span></div>
+                <div class="catalog__cell catalog__cell--name">Избушка</div>
+                <div class="catalog__cell catalog__cell--price"> 
+                  <div class="price">900 <span>Р</span></div>
                 </div>
-                <div class="cart__cell cart__cell--quantity">
-                  <div class="spinner">
-                    <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--up">-</span>
-                    <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--down">+</span>
-                  </div>
-                </div>
-                <div class="cart__cell cart__cell--remove"><span class="cart__remove"></span></div>
+                <div class="catalog__cell catalog__cell--quantity"><a class="product__btn btn btn--red btn--double">Заказать</a></div>
               </div>
             </div>
-            <div class="checkout__delivery delivery">
-              <p class="delivery__title">Доставка Boxberry</p>
-              <div class="delivery__data">
-                <div class="delivery__logo"></div>
-                <div class="delivery__map"></div>
+          </div>
+        </section>
+        <section class="section section--catalog">
+          <div class="container">
+            <h2 class="section__title">Вместе с домиком также берут</h2>
+            <div class="products">
+              <div class="product products__item">
+                <div class="product__img"><img class="img img--responsive" alt="" src="img/markers.png"></div>
+                <div class="product__desc">
+                  <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
+                  <p class="product__price price">900<span>Р</span></p>
+                  <p class="product__text">Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.</p><a class="product__btn btn btn--red btn--double">Заказать</a>
+                </div>
               </div>
-              <div class="delivery__totals totals">
+              <div class="product products__item">
+                <div class="product__img"><img class="img img--responsive" alt="" src="img/markers.png"></div>
+                <div class="product__desc">
+                  <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
+                  <p class="product__price price">900<span>Р</span></p>
+                  <p class="product__text">Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.</p><a class="product__btn btn btn--red btn--double">Заказать</a>
+                </div>
+              </div>
+              <div class="product products__item">
+                <div class="product__img"><img class="img img--responsive" alt="" src="img/markers.png"></div>
+                <div class="product__desc">
+                  <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
+                  <p class="product__price price">900<span>Р</span></p>
+                  <p class="product__text">Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.</p><a class="product__btn btn btn--red btn--double">Заказать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--cart">
+          <div class="container">
+            <h2 class="section__title">Ваша корзина</h2>
+            <div class="checkout">
+              <div class="checkout__cart cart">
+                <div class="cart__row">
+                  <div class="cart__cell cart__cell--img">
+                    <div class="cart__img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
+                  </div>
+                  <div class="cart__cell cart__cell--name">Шапито</div>
+                  <div class="cart__cell cart__cell--price"> 
+                    <div class="price">1200 <span>Р</span></div>
+                  </div>
+                  <div class="cart__cell cart__cell--quantity">
+                    <div class="spinner">
+                      <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--up">-</span>
+                      <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--down">+</span>
+                    </div>
+                  </div>
+                  <div class="cart__cell cart__cell--remove"><span class="cart__remove"></span></div>
+                </div>
+                <div class="cart__row">
+                  <div class="cart__cell cart__cell--img">
+                    <div class="cart__img"><img class="img img--responsive" alt="" src="img/markers.png"></div>
+                  </div>
+                  <div class="cart__cell cart__cell--name">Фломастеры</div>
+                  <div class="cart__cell cart__cell--price"> 
+                    <div class="price">159 <span>Р</span></div>
+                  </div>
+                  <div class="cart__cell cart__cell--quantity">
+                    <div class="spinner">
+                      <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--up">-</span>
+                      <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--down">+</span>
+                    </div>
+                  </div>
+                  <div class="cart__cell cart__cell--remove"><span class="cart__remove"></span></div>
+                </div>
+              </div>
+              <div class="checkout__delivery delivery">
+                <p class="delivery__title">Доставка Boxberry</p>
+                <div class="delivery__data">
+                  <div class="delivery__logo"></div>
+                  <div class="delivery__map"></div>
+                </div>
+                <div class="delivery__totals totals">
+                  <div class="totals__row">
+                    <div class="totals__cell">Доставка до ПВЗ:</div>
+                    <div class="totals__cell">
+                      <div class="price">350<span>Р</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__totals totals">
                 <div class="totals__row">
-                  <div class="totals__cell">Доставка до ПВЗ:</div>
+                  <div class="totals__cell">Итого:</div>
                   <div class="totals__cell">
-                    <div class="price">350<span>Р</span></div>
+                    <div class="price">1709<span>Р</span></div>
                   </div>
+                  <div class="totals__cell"><a class="checkout__btn btn btn--red btn--right">Оформить</a></div>
                 </div>
               </div>
             </div>
-            <div class="checkout__totals totals">
-              <div class="totals__row">
-                <div class="totals__cell">Итого:</div>
-                <div class="totals__cell">
-                  <div class="price">1709<span>Р</span></div>
-                </div>
-                <div class="totals__cell"><a class="checkout__btn btn btn--red btn--right">Оформить</a></div>
+          </div>
+        </section>
+        <section class="section section--contacts">
+          <div class="container">
+            <p class="section__title">Контакты</p>
+            <div class="contacts">
+              <div class="contacts__item contacts__item--address">
+                <p class="contacts__text">197198, Россия, <br/>г. Санкт-Петербург, <br/>ул. Съезжинская, 37А</p>
               </div>
+              <div class="contacts__item contacts__item--phone"><a class="contacts__text" href="tel:88005513320" title="Позвоните нам">8 800 551-33-20</a></div>
+              <div class="contacts__item contacts__item--mail"><a class="contacts__text" href="mailto:yukkakid@gmail.com" title="Напишите нам">yukkakid@gmail.com</a></div><a class="contacts__item contacts__item--vk" href="#" title="Наша группа Вконтакте"></a><a class="contacts__item contacts__item--insta" href="#" title="Наш Instagram"></a>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section section--contacts">
-        <div class="container">
-          <p class="section__title">Контакты</p>
-          <div class="contacts">
-            <div class="contacts__item contacts__item--address">
-              <p class="contacts__text">197198, Россия, <br/>г. Санкт-Петербург, <br/>ул. Съезжинская, 37А</p>
-            </div>
-            <div class="contacts__item contacts__item--phone"><a class="contacts__text" href="tel:88005513320" title="Позвоните нам">8 800 551-33-20</a></div>
-            <div class="contacts__item contacts__item--mail"><a class="contacts__text" href="mailto:yukkakid@gmail.com" title="Напишите нам">yukkakid@gmail.com</a></div><a class="contacts__item contacts__item--vk" href="#" title="Наша группа Вконтакте"></a><a class="contacts__item contacts__item--insta" href="#" title="Наш Instagram"></a>
+        </section>
+        <script src="https://yastatic.net/jquery/3.1.1/jquery.min.js"></script>
+        <script src="./js/libs.min.js"></script>
+        <script src="./js/bundle.js"></script>
+        <footer class="footer">
+          <div class="container">
+            <p class="footer__copyright">© Yukka 2018. All rights reserved.</p>
           </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="container">
-          <p class="footer__copyright">© Yukka 2018. All rights reserved.</p>
-        </div>
-      </footer>
-    </main>
+        </footer>
+      </main>
+    </div>
   </body>
 </html>
