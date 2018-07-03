@@ -25,33 +25,26 @@
     </aside>
     <div class="wrapper" id="panel">
       <div class="popup" id="callback">
-        <form class="popup__form form form--popup">
+        <form class="popup__form form form--popup" name="form-callback" action="" id="form-callback">
           <div class="popup__close"></div>
           <p class="form__title">Напишите свой номер, и мы вам перезвоним</p>
           <div class="form__fields">
             <input class="form__input" name="name" placeholder="Ваше Имя" type="text">
-            <input class="form__input" name="name" placeholder="Номер телефона" type="text">
+            <input class="form__input" name="phone" placeholder="Номер телефона" type="text">
           </div>
-          <button class="form__submit btn btn--white" type="submit" value="Перезвонить">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
+          <button class="form__submit btn btn--white feedback" value="Перезвонить">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
         </form>
-      </div>
-      <div class="popup" id="success">
-        <div class="popup__form popup__form--success form">
-          <div class="popup__close"></div>
-          <div class="popup__title">Ваш заявка успешно оформлена.</div>
-          <div class="popup__subtitle">В скором времени наш менежер свяжется с вами.</div>
-        </div>
       </div>
       <header class="header">
         <div class="container header__container">
           <div class="header__logo logo"><a class="logo__link" href="#"><img class="logo__img" alt="" src="img/logo.png"></a></div>
           <nav class="header__nav nav">
             <ul class="nav__list">
-              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#present">О домиках</a></li>
-              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#products">Каталог</a></li>
-              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#callback">Заказать</a></li>
-              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#charity">Благотворительность</a></li>
-              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#contacts">Контакты</a></li>
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#present" data-target="#present">О домиках</a></li>
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#products" data-target="#products">Каталог</a></li>
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#callback" data-target="#callback">Заказать</a></li>
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#charity" data-target="#charity" data-offset="-100">Благотворительность</a></li>
+              <li class="nav__item"><a class="link nav__link scroll-to-target" href="#contacts" data-target="#contacts">Контакты</a></li>
             </ul>
           </nav><a class="header__callback-btn" href="#" data-event="popup" data-popup="callback">Звонок</a>
           <div class="navbar-toggler"><span></span><span></span><span></span></div>
@@ -166,21 +159,21 @@
                 <div class="product__img"><img class="img img--responsive" alt="" src="img/ch1.png"></div>
                 <div class="product__text">
                   <p class="product__title product__title--big">Крепость</p>
-                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="catalog.html">Заказать</a>
+                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="#" data-event="popup" data-popup="callback">Заказать</a>
                 </div>
               </div>
               <div class="product products__item">
                 <div class="product__img"><img class="img img--responsive" alt="" src="img/ch2.png"></div>
                 <div class="product__text">
                   <p class="product__title product__title--big">Шапито</p>
-                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="catalog.html">Заказать</a>
+                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="#" data-event="popup" data-popup="callback">Заказать</a>
                 </div>
               </div>
               <div class="product products__item">
                 <div class="product__img"><img class="img img--responsive" alt="" src="img/ch3.png"></div>
                 <div class="product__text">
                   <p class="product__title product__title--big">Избушка</p>
-                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="catalog.html">Заказать</a>
+                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="#" data-event="popup" data-popup="callback">Заказать</a>
                 </div>
               </div>
             </div>
@@ -194,49 +187,49 @@
                 <div class="product__img"><img class="img img--responsive" alt="" src="img/instr1.png"></div>
                 <div class="product__text">
                   <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
-                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="catalog.html">Заказать</a>
+                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="#" data-event="popup" data-popup="callback">Заказать</a>
                 </div>
               </div>
               <div class="product products__item">
                 <div class="product__img"><img class="img img--responsive" alt="" src="img/instr2.png"></div>
                 <div class="product__text">
                   <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
-                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="catalog.html">Заказать</a>
+                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="#" data-event="popup" data-popup="callback">Заказать</a>
                 </div>
               </div>
               <div class="product products__item">
                 <div class="product__img"><img class="img img--responsive" alt="" src="img/instr3.png"></div>
                 <div class="product__text">
                   <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
-                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="catalog.html">Заказать</a>
+                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="#" data-event="popup" data-popup="callback">Заказать</a>
                 </div>
               </div>
               <div class="product products__item">
                 <div class="product__img"><img class="img img--responsive" alt="" src="img/instr4.png"></div>
                 <div class="product__text">
                   <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
-                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="catalog.html">Заказать</a>
+                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="#" data-event="popup" data-popup="callback">Заказать</a>
                 </div>
               </div>
               <div class="product products__item">
                 <div class="product__img"><img class="img img--responsive" alt="" src="img/instr5.png"></div>
                 <div class="product__text">
                   <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
-                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="catalog.html">Заказать</a>
+                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="#" data-event="popup" data-popup="callback">Заказать</a>
                 </div>
               </div>
               <div class="product products__item">
                 <div class="product__img"><img class="img img--responsive" alt="" src="img/instr6.png"></div>
                 <div class="product__text">
                   <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
-                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="catalog.html">Заказать</a>
+                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="#" data-event="popup" data-popup="callback">Заказать</a>
                 </div>
               </div>
               <div class="product products__item">
                 <div class="product__img"><img class="img img--responsive" alt="" src="img/instr7.png"></div>
                 <div class="product__text">
                   <p class="product__title">Фломастеры утолщенные BRAUBERG, 12 цветов</p>
-                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="catalog.html">Заказать</a>
+                  <p class="product__price">900<span>Р</span></p><a class="product__btn btn btn--red btn--double" href="#" data-event="popup" data-popup="callback">Заказать</a>
                 </div>
               </div>
             </div>
@@ -273,13 +266,13 @@
         <section class="section section--callback" id="callback">
           <div class="container">
             <div class="callback"><img class="callback__img" alt="" src="img/form.png">
-              <form class="callback__form form">
+              <form class="callback__form form" name="form-callback" action="" id="form-callback-footer">
                 <p class="form__title">Остались вопросы?</p>
                 <div class="form__fields">
                   <input class="form__input" name="name" placeholder="Ваше Имя" type="text">
                   <input class="form__input" name="name" placeholder="Номер телефона" type="text">
                 </div>
-                <button class="form__submit btn btn--white" type="submit" value="Перезвонить" data-event="popup" data-popup="success">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
+                <button class="form__submit btn btn--white feedback" value="Перезвонить">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
               </form>
             </div>
           </div>
@@ -300,6 +293,7 @@
       <script src="https://yastatic.net/jquery/3.1.1/jquery.min.js"></script>
       <script src="./js/libs.min.js"></script>
       <script src="./js/bundle.js"></script>
+      <script src="./js/feedback.js"></script>
       <footer class="footer">
         <div class="container">
           <p class="footer__copyright">© Yukka 2018. All rights reserved.</p>

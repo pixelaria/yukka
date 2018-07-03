@@ -25,14 +25,14 @@
     </aside>
     <div class="wrapper" id="panel">
       <div class="popup" id="callback">
-        <form class="popup__form form form--popup">
+        <form class="popup__form form form--popup" name="form-callback" action="" id="form-callback">
           <div class="popup__close"></div>
           <p class="form__title">Напишите свой номер, и мы вам перезвоним</p>
           <div class="form__fields">
             <input class="form__input" name="name" placeholder="Ваше Имя" type="text">
-            <input class="form__input" name="name" placeholder="Номер телефона" type="text">
+            <input class="form__input" name="phone" placeholder="Номер телефона" type="text">
           </div>
-          <button class="form__submit btn btn--white" type="submit" value="Перезвонить">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
+          <button class="form__submit btn btn--white feedback" value="Перезвонить">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
         </form>
       </div>
       <header class="header">
@@ -208,6 +208,7 @@
         <script src="https://yastatic.net/jquery/3.1.1/jquery.min.js"></script>
         <script src="./js/libs.min.js"></script>
         <script src="./js/bundle.js"></script>
+        <script src="./js/feedback.js"></script>
         <footer class="footer">
           <div class="container">
             <p class="footer__copyright">© Yukka 2018. All rights reserved.</p>
