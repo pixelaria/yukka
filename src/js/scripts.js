@@ -69,6 +69,40 @@ $(function (){
     return false;
   });
 
+
+  $(document).on('click','.spinner__button', function(e){
+    console.log('.spinner__button');
+
+    var $spinner = $(this).closest('.spinner');
+    var $target = $spinner.find('.spinner__input');
+    var $placeholder = $spinner.find('.spinner__placeholder');
+    
+    console.log($target);
+    
+    var change = 1,min = 1, max=200, uom = '';
+    if ($target.data('change') != undefined) change = parseInt($target.data('change'));
+    if ($target.data('min') != undefined) min = parseInt($target.data('min'));
+    if ($target.data('max') != undefined) max = parseInt($target.data('max'));
+    if ($target.data('uom') != undefined) uom = $target.data('uom');
+    
+    var val;
+    
+    if ($(this).hasClass('spinner__button--up')) {
+      val=parseInt($target.val()) + change;
+    } else {
+      val=parseInt($target.val()) - change;
+    }
+    
+    if (val<min) val=min;
+    if (val>max) val=max;
+
+    $target.val(val).change();
+    $target.trigger('change');
+    $placeholder.html(val+' '+uom);
+    console.log(val+' '+uom);
+    return false;
+  });
+
 });
 
 
