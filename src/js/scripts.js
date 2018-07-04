@@ -103,6 +103,11 @@ $(function (){
     return false;
   });
 
+  $(document).on('click','.product__btn', function(e){
+    $(this).addClass('product__btn--hide');
+    $(this).siblings('.product__spinner').addClass('product__spinner--active');
+  });
+
 });
 
 

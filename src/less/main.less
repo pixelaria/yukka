@@ -993,17 +993,57 @@ h1,h2,h3,h4,ul,p {
       margin-bottom: 40px;
     }
   }
-  
-  &__btn {
-    width: ~'calc(100% - 50px)';
-    max-width: 230px;
-  }
 
   &__text {
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     margin-bottom: 35px;
+  }
+
+  &__order {
+    width: 100%;
+    position: relative;
+  }
+  
+  &__btn {
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    margin: auto;
+    width: ~'calc(100% - 50px)';
+    max-width: 230px;
+
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
+
+    &--hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+ 
+
+  &__spinner {
+    position: absolute;
+    
+    top: 0;
+    left:0;
+    right: 0;
+    margin: auto;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
+
   }
 }
 
