@@ -1873,20 +1873,43 @@ h1,h2,h3,h4,ul,p {
 
 
 .cart-widget {
+  height: 45px;
   position: fixed;
   left: 0;
   bottom: 0;
   display: inline-block;
   background-color: @red;
-  padding: 5px 15px;
+  padding: 7px 15px 7px 50px;
 
   color: #ffffff;
   z-index: 99;
   opacity: 0;
   visibility: hidden;
 
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
   
+  text-decoration: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/icon-cart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+  }
+  
+  &:hover {
+    background-color: @dRed;
+  }
+
   &--active {
     opacity: 1;
     visibility: visible;

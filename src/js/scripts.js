@@ -82,7 +82,7 @@ $(function (){
     
     console.log($target);
     
-    var change = 1,min = 1, max=200, uom = '';
+    var change = 1,min = 0, max=200, uom = '';
     if ($target.data('change') != undefined) change = parseInt($target.data('change'));
     if ($target.data('min') != undefined) min = parseInt($target.data('min'));
     if ($target.data('max') != undefined) max = parseInt($target.data('max'));
