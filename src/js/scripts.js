@@ -1,6 +1,9 @@
 $(function (){
   console.log('init');
-  
+
+  // Init Cart    
+  Cart.init();
+
   // Slideout
   var slideoutBtn = document.querySelector('.navbar-toggler');
   var slideout = new Slideout({
