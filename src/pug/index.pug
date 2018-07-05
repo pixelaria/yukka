@@ -9,8 +9,10 @@ html(lang='ru')
     link(rel='stylesheet', href='./css/libs.min.css')
     link(rel='stylesheet', href='./css/bundle.css')
   body.body
+    
     include includes/aside.pug
     .wrapper#panel
+      .cart-widget 3 товара
       include includes/callback.pug
       header.header
         .container.header__container
@@ -177,7 +179,7 @@ html(lang='ru')
                   p.product__title.product__title--big Крепость
                   p.product__price.price 900
                     span Р
-                .product__order
+                .product__order(data-product='50' data-name='Крепость' data-price='900' data-quantity='0')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -
@@ -192,7 +194,7 @@ html(lang='ru')
                   p.product__title.product__title--big Шапито
                   p.product__price.price 900
                     span Р
-                .product__order
+                .product__order(data-product='51' data-name='Шапито' data-price='900' data-quantity='0')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -
@@ -207,7 +209,7 @@ html(lang='ru')
                   p.product__title.product__title--big Избушка
                   p.product__price.price 900
                     span Р
-                .product__order
+                .product__order(data-product='52' data-name='Избушка' data-price='900' data-quantity='0')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -
@@ -226,7 +228,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price.price 900
                     span Р
-                .product__order
+                .product__order(data-product='53' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -
@@ -241,7 +243,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price.price 900
                     span Р
-                .product__order
+                .product__order(data-product='54' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -
@@ -256,7 +258,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price.price 900
                     span Р
-                .product__order
+                .product__order(data-product='55' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -
@@ -271,7 +273,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price.price 900
                     span Р
-                .product__order
+                .product__order(data-product='56' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -
@@ -286,7 +288,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price.price 900
                     span Р
-                .product__order
+                .product__order(data-product='57' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -
@@ -301,7 +303,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price.price 900
                     span Р
-                .product__order
+                .product__order(data-product='58' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -
@@ -316,7 +318,7 @@ html(lang='ru')
                   p.product__title Фломастеры утолщенные BRAUBERG, 12 цветов
                   p.product__price.price 900
                     span Р
-                .product__order
+                .product__order(data-product='59' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -

@@ -1,39 +1,56 @@
 var Cart;
 Cart = {
   attrs: {
-    buttons: '.card__add',
-    quantity: '.cart__quantity' 
+    buttons: '.product__btn',
+    quantity: '.cart__quantity',
+    currency: 'Р' 
   },
   
-  currency: '$',
-
+  widget: {},
+  
   init: function() {
     console.log('autoload init');
-    $(document).on('click', Cart.attrs.buttons, Cart.addProduct);
+
+    $(document).on('click',Cart.attrs.buttons, function(e) {
+      console.log('product__btn click');
+
+      var $order = $(this).closest('.product__order');
+      
+      var product_id = $order.data('product');
+
+      if (product_id != undefined && product_id) {
+        console.log('product_id: '+product_id);
+
+        $(this).addClass('product__btn--hide');
+        $(this).siblings('.product__spinner').addClass('product__spinner--active');  
+
+        Cart.addProduct(product_id);
+      }
+    });
   },
 
-  addProduct: function(e) {
+  addProduct: function(product_id) {
     e.preventDefault();
-    var product = $(this).data();
-    
-    if(typeof product.id === 'undefined') {
-      console.log('Отсутствует ID товара');
-      return false;
-    }
     
     var cart_data = Cart.getStorage() || {};
     
-    if (cart_data.hasOwnProperty(product.id)) {
-      cart_data[product.id].count++;
+    if (cart_data.hasOwnProperty(product_id)) {
+      cart_data[product_id].count++;
     } else {
       product.count = 1;
-      cart_data[product.id] = product;
+      cart_data[product_id] = product;
     }
     Cart.setStorage(cart_data);
     return false;
   },
 
-  deleteProduct: function(e) {
+  deleteProduct: function(product_id) {
+    var cart_data = Cart.getStorage();
+    delete cart_data[product_id];
+    Cart.setStorage(product_id);
+    
+    Cart.widget.refresh();
+    return false;
 
   },
 
@@ -49,8 +66,26 @@ Cart = {
     }
     Cart.setStorage(cart_data);
     
-    Cart.recalcSum();
+    Cart.refresh();
     return false;
+  },
+  
+
+  /* Recalc Functions */
+
+  refresh: function() {
+
+  },
+
+
+  /* Widget functions */
+  initWidget: function(e) {
+    console.log('widget.init');
+
+  },
+  
+  refreshWidget:function(e){
+    console.log('widget.refresh');
   },
 
   /* Local Strorage functions */
@@ -62,6 +97,3 @@ Cart = {
     return JSON.parse(localStorage.getItem('pxcart'));
   }
 };
-
-
-

@@ -96,17 +96,15 @@ $(function (){
     if (val<min) val=min;
     if (val>max) val=max;
 
-    $target.val(val).change();
+    $target.val(val);
     $target.trigger('change');
+    
     $placeholder.html(val+' '+uom);
     console.log(val+' '+uom);
     return false;
   });
 
-  $(document).on('click','.product__btn', function(e){
-    $(this).addClass('product__btn--hide');
-    $(this).siblings('.product__spinner').addClass('product__spinner--active');
-  });
+  
 
 });
 
