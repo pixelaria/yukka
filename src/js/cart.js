@@ -35,8 +35,9 @@ Cart = {
     });
 
     // Binds product quantity spinners
-    $(document).on('change','.spinner__input',function(e){
+    $(document).delegate('.spinner__input','change',function(e){
       console.log('cart spinner__input');
+      
       var $product_order = $(this).closest('.product__order');
       var val = $(this).val();
       if (val == 0) {
@@ -154,11 +155,13 @@ Cart = {
       }
     }
   },
+  
+  //.product__order(data-product='50' data-name='Крепость' data-price='900' data-quantity='0')
 
   drawProduct:function(product_data) {
     var cart_row = $('<div/>',{
       appendTo:  $('.cart'),
-      class: 'cart__row',
+      class: 'cart__row product__order',
       html: [
         $('<div/>',{
           class: 'cart__cell cart__cell--img',
@@ -196,7 +199,7 @@ Cart = {
                 }),
                 $('<span/>',{
                   class: 'spinner__button spinner__button--down',
-                  html: '+'
+                  html: '-'
                 }),
                 $('<div/>',{
                   class: 'spinner__placeholder',
@@ -216,8 +219,11 @@ Cart = {
         }),
       ]
     });
+    console.log(cart_row);
     
     cart_row.data('product',product_data.product);
+    
+    console.log(cart_row.data());
 
     $('#subtotal').html('<div class="price">'+Cart.subtotal+' <span>Р</span></div>');
   },

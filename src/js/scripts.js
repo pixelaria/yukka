@@ -73,7 +73,7 @@ $(function (){
   });
 
 
-  $(document).on('click','.spinner__button', function(e){
+  $(document).delegate('.spinner__button','click', function(e){
     console.log('.spinner__button');
 
     var $spinner = $(this).closest('.spinner');
