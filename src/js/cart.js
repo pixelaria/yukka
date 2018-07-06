@@ -11,14 +11,9 @@ Cart = {
   init: function() {
     console.log('Cart initialize');
 
-    
-
     // Refresh Widget
     Cart.initWidget();
     Cart.refresh();
-
-
-
 
     // Binds product buttons
     $(document).on('click',Cart.attrs.buttons, function(e) {
