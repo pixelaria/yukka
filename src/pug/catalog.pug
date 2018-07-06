@@ -139,62 +139,16 @@ html(lang='ru')
                     .spinner__placeholder 1
                     span.spinner__button.spinner__button--up +
                   a.product__btn.btn.btn--red.btn--double Заказать
+        
         section.section.section--cart
           .container
             h2.section__title Ваша корзина
             .checkout
               .checkout__cart.cart
-                .cart__row
-                  .cart__cell.cart__cell--img
-                    .cart__img
-                      img.img.img--responsive(alt='', src='img/ch1.png')
-                  .cart__cell.cart__cell--name Шапито
-                    .price 1200 
-                      span Р
-                  .cart__cell.cart__cell--price 
-                    .price 1200 
-                      span Р
-                  .cart__cell.cart__cell--quantity
-                    .spinner
-                      input.spinner__input(value='1' type='hidden')
-                      span.spinner__button.spinner__button--up -
-                      .spinner__placeholder 1
-                      span.spinner__button.spinner__button--down +
-                  .cart__cell.cart__cell--remove
-                    span.cart__remove
-                .cart__row
-                  .cart__cell.cart__cell--img
-                    .cart__img
-                      img.img.img--responsive(alt='', src='img/markers.png')
-                  .cart__cell.cart__cell--name Фломастеры
-                    .price 1200 
-                      span Р
-                  .cart__cell.cart__cell--price 
-                    .price 159 
-                      span Р
-                  .cart__cell.cart__cell--quantity
-                    .spinner
-                      input.spinner__input(value='1' type='hidden')
-                      span.spinner__button.spinner__button--up -
-                      .spinner__placeholder 1
-                      span.spinner__button.spinner__button--down +
-                  .cart__cell.cart__cell--remove
-                    span.cart__remove
-              .checkout__delivery.delivery
-                p.delivery__title Доставка Boxberry
-                .delivery__data
-                  .delivery__logo
-                  .delivery__map
-                .delivery__totals.totals
-                  .totals__row
-                    .totals__cell Доставка до ПВЗ:
-                    .totals__cell
-                      .price 350
-                        span Р
               .checkout__totals.totals
                 .totals__row
                   .totals__cell Итого:
-                  .totals__cell
+                  .totals__cell#subtotal
                     .price 1709
                       span Р
                   .totals__cell

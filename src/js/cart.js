@@ -6,7 +6,7 @@ Cart = {
     quantity: '.cart__quantity',
     currency: 'Р' 
   },
-  totals:0,
+  amount:0,
   
   init: function() {
     console.log('Cart initialize');
@@ -16,6 +16,9 @@ Cart = {
     // Refresh Widget
     Cart.initWidget();
     Cart.refresh();
+
+
+
 
     // Binds product buttons
     $(document).on('click',Cart.attrs.buttons, function(e) {
@@ -104,6 +107,10 @@ Cart = {
   refresh: function() {
     Cart.loadProducts();
     Cart.refreshWidget();
+
+    if ($('.cart').length) {
+      Cart.redrawCart();
+    }
   },
 
 
@@ -126,10 +133,10 @@ Cart = {
    */
   refreshWidget:function(){
     console.log('widget.refresh');
-    if (Cart.totals>0) {
+    if (Cart.amount>0) {
       Cart.$widget.addClass('cart-widget--active');
-      var text = Cart.endings(Cart.totals, ['товар', 'товара', 'товаров']);
-      Cart.$widget.html(Cart.totals+' '+text);
+      var text = Cart.endings(Cart.amount, ['товар', 'товара', 'товаров']);
+      Cart.$widget.html(Cart.amount+' '+text);
 
     } else {
       Cart.$widget.html('Корзина');
@@ -137,22 +144,110 @@ Cart = {
     }
   },
 
+
+  redrawCart:function() {
+    if (!$('.cart').length) return;
+    
+    $('.cart').empty();
+    
+    var cart_data = Cart.getStorage();
+    if (cart_data !== null && Object.keys(cart_data).length) {
+      for (var key in cart_data) {
+        if (cart_data.hasOwnProperty(key)) {
+          Cart.drawProduct(cart_data[key]);
+        }
+      }
+    }
+  },
+
+  drawProduct:function(product_data) {
+    var cart_row = $('<div/>',{
+      appendTo:  $('.cart'),
+      class: 'cart__row',
+      html: [
+        $('<div/>',{
+          class: 'cart__cell cart__cell--img',
+          html: [
+            $('<div/>',{
+              class: 'cart__img',
+              html: [
+                $('<img/>',{
+                  class: 'img img--responsive',
+                  alt: product_data.name,
+                  src: 'img/product-'+product_data.product+'.png'
+                })
+              ]
+            })
+          ]
+        }),
+        $('<div/>',{
+          class: 'cart__cell cart__cell--name',
+          html: product_data.name+' <div class="price">'+product_data.price+' <span>Р</span></div>'
+        }),
+        $('<div/>',{
+          class: 'cart__cell cart__cell--price',
+          html: '<div class="price">'+product_data.price+' <span>Р</span></div>'
+        }),
+        $('<div/>',{
+          class: 'cart__cell cart__cell--quantity',
+          html: [
+            $('<div/>',{
+              class: 'spinner',
+              html: [
+                $('<input/>',{
+                  class: 'spinner__input',
+                  type: 'hidden',
+                  value: product_data.quantity
+                }),
+                $('<span/>',{
+                  class: 'spinner__button spinner__button--down',
+                  html: '+'
+                }),
+                $('<div/>',{
+                  class: 'spinner__placeholder',
+                  html: product_data.quantity
+                }),
+                $('<span/>',{
+                  class: 'spinner__button spinner__button--up',
+                  html: '+'
+                }),
+              ]
+            })
+          ]
+        }),
+        $('<div/>',{
+          class: 'cart__cell cart__cell--remove',
+          html: '<span class="cart__remove"></span>'
+        }),
+      ]
+    });
+    
+    cart_row.data('product',product_data.product);
+
+    $('#subtotal').html('<div class="price">'+Cart.subtotal+' <span>Р</span></div>');
+  },
+
+
   loadProducts:function(){
     console.log('loadProducts');
     var cart_data = Cart.getStorage();
-    var totals = 0;
+    var amount = 0;
+    var subtotal = 0;
 
     if (cart_data !== null && Object.keys(cart_data).length) {
       for (var key in cart_data) {
         if (cart_data.hasOwnProperty(key)) {
-          totals += parseInt(cart_data[key].quantity);
+          amount += parseInt(cart_data[key].quantity);
+          subtotal += parseInt(cart_data[key].price) * parseInt(cart_data[key].quantity);
           Cart.bindProduct(cart_data[key]);
         }
       }
     }
-    console.log('totals: '+totals)
+    console.log('amount: '+amount)
+    console.log('subtotal: '+subtotal)
 
-    Cart.totals = totals;
+    Cart.amount = amount;
+    Cart.subtotal = subtotal;
   },
 
   bindProduct:function(product_data) {
