@@ -61,10 +61,7 @@ Cart = {
     if ($('#boxberry_map').length) {
       boxberry.openOnPage('boxberry_map'); 
       boxberry.open(Cart.boxberry_callback); 
-
-      
     }
-
   },
 
   // Adds product to cart
@@ -139,7 +136,7 @@ Cart = {
     Cart.$widget = $('<a/>',{
       appendTo:  $wrapper,
       class: 'cart-widget',
-      href: '/catalog/',
+      href: '/catalog.html',
       html: 'Корзина'
     });
 
@@ -287,6 +284,22 @@ Cart = {
   
   boxberry_callback: function(result) {
     console.log(result);
+
+    /*
+    id: "78931", 
+    zip: "198206", 
+    name: "Санкт-Петербург", 
+    address: "198206, Санкт-Петербург г, Петергофское ш, д.55, корпус 1", 
+    phone: "+7(812)930-09-15", 
+    workschedule: "пн-пт:10.00-21.00, сб-вс:11.00-20.00", 
+    period: "", 
+    price: "", 
+    prepaid: "0", 
+    loadlimit: "15" 
+    */
+
+
+
     if (result.prepaid=='1') {
       alert('Отделение работает только по предоплате!');
     }
