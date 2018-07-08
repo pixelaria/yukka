@@ -9,6 +9,7 @@ html(lang='ru')
     link(rel='stylesheet', href='./css/libs.min.css')
     link(rel='stylesheet', href='./css/bundle.css')
   body.body
+    script(src="//points.boxberry.ru/js/boxberry.js")
     include includes/aside.pug
     .wrapper#panel
       include includes/callback.pug
@@ -142,9 +143,22 @@ html(lang='ru')
         
         section.section.section--cart
           .container
+            
             h2.section__title Ваша корзина
             .checkout
               .checkout__cart.cart
+              .checkout__delivery.delivery
+                p.delivery__title Доставка Boxberry
+                #boxberry_map
+                .delivery__data
+                  .delivery__logo
+                  .delivery__map
+                .delivery__totals.totals
+                  .totals__row
+                    .totals__cell Доставка до ПВЗ:
+                    .totals__cell
+                      .price 350
+                        span Р
               .checkout__totals.totals
                 .totals__row
                   .totals__cell Итого:
@@ -153,7 +167,7 @@ html(lang='ru')
                       span Р
                   .totals__cell
                     a.checkout__btn.btn.btn--red.btn--right Оформить
-
+            
         section.section.section--contacts
           .container
             p.section__title Контакты

@@ -22,7 +22,7 @@ Cart = {
       var $product_order = $(this).closest('.product__order');
       
       var product_data = $product_order.data();
-      console.log('product_data: ');
+      console.log('product_data:');
       console.log(product_data);
 
       if (product_data != undefined && product_data) {
@@ -56,6 +56,14 @@ Cart = {
       var $product_order = $(this).closest('.product__order');
       Cart.deleteProduct($product_order.data('product'));
     });
+
+    // Boxberry
+    if ($('#boxberry_map').length) {
+      boxberry.openOnPage('boxberry_map'); 
+      boxberry.open(Cart.boxberry_callback); 
+
+      
+    }
 
   },
 
@@ -131,7 +139,7 @@ Cart = {
     Cart.$widget = $('<a/>',{
       appendTo:  $wrapper,
       class: 'cart-widget',
-      href: '/catalog.html',
+      href: '/catalog/',
       html: 'Корзина'
     });
 
@@ -185,7 +193,7 @@ Cart = {
                 $('<img/>',{
                   class: 'img img--responsive',
                   alt: product_data.name,
-                  src: 'img/product-'+product_data.product+'.png'
+                  src: product_data.image
                 })
               ]
             })
@@ -274,6 +282,14 @@ Cart = {
     $product_order.find('.spinner__input').val(product_data.quantity);
     $product_order.find('.spinner__placeholder').html(product_data.quantity);
     
+  },
+
+  
+  boxberry_callback: function(result) {
+    console.log(result);
+    if (result.prepaid=='1') {
+      alert('Отделение работает только по предоплате!');
+    }
   },
 
   /* Local Strorage functions */

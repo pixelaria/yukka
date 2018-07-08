@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/bundle.css">
   </head>
   <body class="body">
+    <script src="//points.boxberry.ru/js/boxberry.js"></script>
     <aside class="navbar" id="navbar">
       <nav class="navbar__nav">
         <div class="navbar__inner">
@@ -163,6 +164,22 @@
             <h2 class="section__title">Ваша корзина</h2>
             <div class="checkout">
               <div class="checkout__cart cart"></div>
+              <div class="checkout__delivery delivery">
+                <p class="delivery__title">Доставка Boxberry</p>
+                <div id="boxberry_map"></div>
+                <div class="delivery__data">
+                  <div class="delivery__logo"></div>
+                  <div class="delivery__map"></div>
+                </div>
+                <div class="delivery__totals totals">
+                  <div class="totals__row">
+                    <div class="totals__cell">Доставка до ПВЗ:</div>
+                    <div class="totals__cell">
+                      <div class="price">350<span>Р</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="checkout__totals totals">
                 <div class="totals__row">
                   <div class="totals__cell">Итого:</div>
