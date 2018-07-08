@@ -47,7 +47,7 @@
               <li class="nav__item"><a class="link nav__link" href="charity.html">Благотворительность</a></li>
               <li class="nav__item"><a class="link nav__link scroll-to-target" href="#contacts">Контакты</a></li>
             </ul>
-          </nav><a class="header__callback-btn" href="#">Звонок</a>
+          </nav><a class="header__callback-btn" href="#" data-event="popup" data-popup="callback">Звонок</a>
           <div class="navbar-toggler"><span></span><span></span><span></span></div>
         </div>
       </header>
@@ -173,20 +173,16 @@
                 </div>
                 <div class="delivery__totals totals">
                   <div class="totals__row">
-                    <div class="totals__cell">Доставка до ПВЗ:</div>
-                    <div class="totals__cell">
-                      <div class="price">350<span>Р</span></div>
-                    </div>
+                    <div class="totals__cell">Доставка</div>
+                    <div class="totals__cell totals__cell--full" id="pickpoint">Выберите желаемый ПВЗ Boxberry</div>
                   </div>
                 </div>
               </div>
               <div class="checkout__totals totals">
                 <div class="totals__row">
                   <div class="totals__cell">Итого:</div>
-                  <div class="totals__cell" id="subtotal">
-                    <div class="price">1709<span>Р</span></div>
-                  </div>
-                  <div class="totals__cell"><a class="checkout__btn btn btn--red btn--right">Оформить</a></div>
+                  <div class="totals__cell" id="subtotal"></div>
+                  <div class="totals__cell"><a class="checkout__btn btn btn--red btn--right" href="#" data-event="popup" data-popup="callback">Оформить</a></div>
                 </div>
               </div>
             </div>

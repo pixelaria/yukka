@@ -284,7 +284,7 @@ Cart = {
   
   boxberry_callback: function(result) {
     console.log(result);
-
+    
     /*
     id: "78931", 
     zip: "198206", 
@@ -298,7 +298,21 @@ Cart = {
     loadlimit: "15" 
     */
 
-
+    if (result) {
+      var $pickpoint = $('#pickpoint');
+      var _pickpoint = '';
+      
+      if (result.address)
+        _pickpoint+='<span>'+result.address+'</span><br />';
+      
+      if (result.phone)
+        _pickpoint+='<span>'+result.phone+'</span><br />';
+      
+      if (result.workschedule)
+        _pickpoint+='<span>'+result.workschedule+'</span>';
+      
+      $pickpoint.html(_pickpoint);
+    }
 
     if (result.prepaid=='1') {
       alert('Отделение работает только по предоплате!');

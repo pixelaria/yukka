@@ -30,7 +30,7 @@ html(lang='ru')
                 a.link.nav__link(href='charity.html') Благотворительность
               li.nav__item
                 a.link.nav__link.scroll-to-target(href='#contacts') Контакты
-          a.header__callback-btn(href='#') Звонок
+          a.header__callback-btn(href='#' data-event="popup" data-popup="callback") Звонок
           .navbar-toggler
             span
             span
@@ -155,19 +155,15 @@ html(lang='ru')
                   .delivery__map
                 .delivery__totals.totals
                   .totals__row
-                    .totals__cell Доставка до ПВЗ:
-                    .totals__cell
-                      .price 350
-                        span Р
+                    .totals__cell Доставка
+                    .totals__cell.totals__cell--full#pickpoint Выберите желаемый ПВЗ Boxberry
+                      
               .checkout__totals.totals
                 .totals__row
                   .totals__cell Итого:
                   .totals__cell#subtotal
-                    .price 1709
-                      span Р
                   .totals__cell
-                    a.checkout__btn.btn.btn--red.btn--right Оформить
-            
+                    a.checkout__btn.btn.btn--red.btn--right(href='#' data-event="popup" data-popup="callback") Оформить
         section.section.section--contacts
           .container
             p.section__title Контакты
