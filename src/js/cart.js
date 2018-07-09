@@ -57,11 +57,7 @@ Cart = {
       Cart.deleteProduct($product_order.data('product'));
     });
 
-    // Boxberry
-    if ($('#boxberry_map').length) {
-      boxberry.openOnPage('boxberry_map'); 
-      boxberry.open(Cart.boxberry_callback); 
-    }
+    
   },
 
   // Adds product to cart
@@ -121,7 +117,6 @@ Cart = {
   refresh: function() {
     Cart.loadProducts();
     Cart.refreshWidget();
-
     if ($('.cart').length) {
       Cart.redrawCart();
     }
@@ -136,7 +131,7 @@ Cart = {
     Cart.$widget = $('<a/>',{
       appendTo:  $wrapper,
       class: 'cart-widget',
-      href: '/catalog.html',
+      href: '/catalog/',
       html: 'Корзина'
     });
 
@@ -161,16 +156,26 @@ Cart = {
 
   redrawCart:function() {
     if (!$('.cart').length) return;
-    
+    var $section = $('.section--cart');
     $('.cart').empty();
+    $('#boxberry_map').empty();
     
-    var cart_data = Cart.getStorage();
-    if (cart_data !== null && Object.keys(cart_data).length) {
-      for (var key in cart_data) {
-        if (cart_data.hasOwnProperty(key)) {
-          Cart.drawProduct(cart_data[key]);
+    if (Cart.amount > 0) {
+      $section.removeClass('section--hide');
+      
+      boxberry.openOnPage('boxberry_map'); 
+      boxberry.open(Cart.boxberry_callback); 
+
+      var cart_data = Cart.getStorage();
+      if (cart_data !== null && Object.keys(cart_data).length) {
+        for (var key in cart_data) {
+          if (cart_data.hasOwnProperty(key)) {
+            Cart.drawProduct(cart_data[key]);
+          }
         }
       }
+    } else {
+      $section.addClass('section--hide');
     }
   },
   

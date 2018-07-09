@@ -9,8 +9,8 @@ html(lang='ru')
     link(rel='stylesheet', href='./css/libs.min.css')
     link(rel='stylesheet', href='./css/bundle.css')
   body.body
-    script(src="//points.boxberry.ru/js/boxberry.js")
-    include includes/aside.pug
+    script(src="")
+    include includes/aside.pug//points.boxberry.ru/js/boxberry.js
     .wrapper#panel
       include includes/callback.pug
       header.header
@@ -141,9 +141,8 @@ html(lang='ru')
                     span.spinner__button.spinner__button--up +
                   a.product__btn.btn.btn--red.btn--double Заказать
         
-        section.section.section--cart
+        section.section.section--cart.section--hide
           .container
-            
             h2.section__title Ваша корзина
             .checkout
               .checkout__cart.cart
