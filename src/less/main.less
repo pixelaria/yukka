@@ -1296,6 +1296,18 @@ h1,h2,h3,h4,ul,p {
   }
 }
 
+
+.order {
+  margin-bottom: 30px;
+  margin-top: -30px;
+  
+  &__text {
+    text-align: center;
+    &:last-child {
+      font-size: 24px;
+    }
+  }
+}
 .contacts {
   display: flex;
   flex-direction: row;
@@ -1908,7 +1920,7 @@ h1,h2,h3,h4,ul,p {
   bottom: 0;
   display: inline-block;
   background-color: @red;
-  padding: 7px 15px 7px 50px;
+  padding: 10px 15px 10px 50px;
 
   color: #ffffff;
   z-index: 99;

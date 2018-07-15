@@ -21,6 +21,10 @@ Cart = {
       pickup:Cart.order.find('#pickup'),
       subtotal:Cart.order.find('#subtotal'),
       delivery:Cart.order.find('#delivery'),
+
+      o_subtotal:Cart.order.find('#order_subtotal'),
+      o_delivery:Cart.order.find('#order_delivery'),
+      o_total:Cart.order.find('#order_total'),
     };
 
     // Refresh Widget
@@ -72,13 +76,68 @@ Cart = {
     $(document).on('click','.checkout__btn',function(e){
       console.log('checkout__btn clicked');
 
-      //prepare fields
-      Cart.fields.product.val();
-      Cart.fields.pickup.val(Cart.pickup);
-      Cart.fields.subtotal.val(Cart.subtotal);
-      Cart.fields.delivery.val(Cart.delivery);
+      if (Cart.delivery) { //If we have pickup point
+        console.log();
+        var cart_data = Cart.getStorage();
+        var products = '';
+        if (cart_data !== null && Object.keys(cart_data).length) {
+          for (var key in cart_data) {
+            if (cart_data.hasOwnProperty(key)) {
+              products += cart_data[key].name + ' x ' +cart_data[key].quantity+'; <br />';
+            }
+          }
+        }
 
+        //prepare fields
+        Cart.fields.product.val(products);
+        Cart.fields.pickup.val(Cart.pickup);
+        Cart.fields.subtotal.val(Cart.subtotal);
+        Cart.fields.delivery.val(Cart.delivery);
+
+        var _total = parseInt(Cart.subtotal) + parseInt(Cart.delivery);
+
+        $('<div/>',{
+          appendTo:  Cart.fields.o_subtotal,
+          class: 'price',
+          html: 'Cумма: '+Cart.subtotal+'<span>Р</span>'
+        });
+
+        $('<div/>',{
+          appendTo:  Cart.fields.o_delivery,
+          class: 'price',
+          html: 'Доставка: '+Cart.delivery+'<span>Р</span>'
+        });
+        $('<div/>',{
+          appendTo:  Cart.fields.o_total,
+          class: 'price',
+          html: 'Итого: '+_total+'<span>Р</span>'
+        });
+
+
+        Cart.order.addClass('popup--active');
+
+
+
+
+
+      } else {
+        var $popup = $('<div/>',{
+          appendTo:  $('body'),
+          class: 'popup popup--remove popup--success',
+          html: [
+            $('<div/>',{
+              class: 'popup__form popup__form--success form',
+              html: '<div class="popup__close"></div><p class="popup__subtitle">Для оформления заказа веберите, пожалуйста, пункт выдачи boxberry!</p>'
+            })
+          ]
+        });
+
+        $('body').addClass('body--noscroll');
+        $popup.addClass('popup--active');
+      }
     });
+    
+    
     
   },
 
@@ -359,7 +418,7 @@ Cart = {
 
     console.log(_total);
 
-    $('#subtotal').html('<div class="price">'+_total+' <span>Р</span></div>');
+    $('#totals').html('<div class="price">'+_total+' <span>Р</span></div>');
   },
 
   /* Local Strorage functions */

@@ -25,7 +25,7 @@
     <div class="popup" id="order">
       <form class="popup__form form form--popup" name="form-order" action="" id="form-order">
         <div class="popup__close"></div>
-        <p class="form__title">Напишите свой номер, и мы вам перезвоним</p>
+        <p class="form__title">Оформление заказа</p>
         <div class="form__fields">
           <input class="form__input" id="name" name="name" placeholder="Ваше Имя" type="text">
           <input class="form__input im--phone" id="phone" name="phone" placeholder="Номер телефона" type="text">
@@ -34,7 +34,12 @@
           <input type="hidden" id="subtotal" name="pickup">
           <input type="hidden" id="delivery" name="delivery">
         </div>
-        <button class="form__submit btn btn--white feedback" value="Перезвонить">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
+        <div class="form__data order">
+          <div class="order__text" id="order_subtotal">       </div>
+          <div class="order__text" id="order_delivery"></div>
+          <div class="order__text" id="order_total"> </div>
+        </div>
+        <button class="form__submit btn btn--white feedback" value="Перезвонить">Оформить заказ</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
       </form>
     </div>
     <aside class="navbar" id="navbar">
@@ -196,8 +201,10 @@
               <div class="checkout__totals totals">
                 <div class="totals__row">
                   <div class="totals__cell">Итого:</div>
-                  <div class="totals__cell" id="subtotal"></div>
-                  <div class="totals__cell"><a class="checkout__btn btn btn--red btn--right" href="#" data-event="popup" data-popup="callback">Оформить</a></div>
+                  <div class="totals__cell" id="totals"></div>
+                  <div class="totals__cell">
+                    <div class="checkout__btn btn btn--red btn--right">Оформить</div>
+                  </div>
                 </div>
               </div>
             </div>
