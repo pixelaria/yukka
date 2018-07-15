@@ -1,0 +1,13 @@
+.popup#order
+  form.popup__form.form.form--popup(name='form-order' action='' id='form-order')
+    .popup__close
+    p.form__title Напишите свой номер, и мы вам перезвоним
+    .form__fields
+      input.form__input(id="name" name='name', placeholder='Ваше Имя', type='text')
+      input.form__input(id="phone" name='phone', placeholder='Номер телефона', type='text')
+      input(type="hidden" id="products" name="products")
+      input(type="hidden" id="pickup" name="pickup")
+      input(type="hidden" id="subtotal" name="pickup")
+      input(type="hidden" id="delivery" name="delivery")
+    button.form__submit.btn.btn--white.feedback(value='Перезвонить') Перезвонить
+    a.form__text(href="#" title="Политика конфиденциальности") * Потилика конфиденциальности

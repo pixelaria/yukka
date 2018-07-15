@@ -6,10 +6,22 @@ Cart = {
     quantity: '.cart__quantity',
     currency: 'Р' 
   },
-  amount:0,
   
+  amount:0,
+  weight:0,
+  delivery:0,
+  subtotal:0,
+
   init: function() {
     console.log('Cart initialize');
+
+    Cart.order = $('#order');
+    Cart.fields = {
+      product:Cart.order.find('#products'),
+      pickup:Cart.order.find('#pickup'),
+      subtotal:Cart.order.find('#subtotal'),
+      delivery:Cart.order.find('#delivery'),
+    };
 
     // Refresh Widget
     Cart.initWidget();
@@ -46,7 +58,6 @@ Cart = {
       } else {
         $product_order.data('quantity',val);
         Cart.updateProduct($product_order.data());
-        console.log('non zero');
       }
     });
 
@@ -57,6 +68,17 @@ Cart = {
       Cart.deleteProduct($product_order.data('product'));
     });
 
+
+    $(document).on('click','.checkout__btn',function(e){
+      console.log('checkout__btn clicked');
+
+      //prepare fields
+      Cart.fields.product.val();
+      Cart.fields.pickup.val(Cart.pickup);
+      Cart.fields.subtotal.val(Cart.subtotal);
+      Cart.fields.delivery.val(Cart.delivery);
+
+    });
     
   },
 
@@ -162,9 +184,15 @@ Cart = {
     
     if (Cart.amount > 0) {
       $section.removeClass('section--hide');
-      
+
       boxberry.openOnPage('boxberry_map'); 
-      boxberry.open(Cart.boxberry_callback); 
+      boxberry.open(Cart.boxberry_callback, //callback
+        '6SVbWBI29LRPvMemNNuPoA==', // api-token
+        'Санкт-Петербург', // город
+        '',  // код пункта приема посылок
+        Cart.subtotal, // объявленная стоимость
+        Cart.weight, // вес посылки в граммах
+        Cart.subtotal); // сумма к оплате покупателем
 
       var cart_data = Cart.getStorage();
       if (cart_data !== null && Object.keys(cart_data).length) {
@@ -248,7 +276,7 @@ Cart = {
     
     console.log(cart_row.data());
 
-    $('#subtotal').html('<div class="price">'+Cart.subtotal+' <span>Р</span></div>');
+    Cart.update_totals();
   },
 
 
@@ -257,21 +285,25 @@ Cart = {
     var cart_data = Cart.getStorage();
     var amount = 0;
     var subtotal = 0;
+    var weight = 0;
 
     if (cart_data !== null && Object.keys(cart_data).length) {
       for (var key in cart_data) {
         if (cart_data.hasOwnProperty(key)) {
           amount += parseInt(cart_data[key].quantity);
           subtotal += parseInt(cart_data[key].price) * parseInt(cart_data[key].quantity);
+          weight += parseInt(cart_data[key].weight);
           Cart.bindProduct(cart_data[key]);
         }
       }
     }
     console.log('amount: '+amount)
     console.log('subtotal: '+subtotal)
+    console.log('weight: '+weight);
 
     Cart.amount = amount;
     Cart.subtotal = subtotal;
+    Cart.weight = weight;
   },
 
   bindProduct:function(product_data) {
@@ -283,29 +315,17 @@ Cart = {
     $product_order.find('.product__spinner').addClass('product__spinner--active');
     $product_order.find('.spinner__input').val(product_data.quantity);
     $product_order.find('.spinner__placeholder').html(product_data.quantity);
-    
   },
 
   
   boxberry_callback: function(result) {
     console.log(result);
     
-    /*
-    id: "78931", 
-    zip: "198206", 
-    name: "Санкт-Петербург", 
-    address: "198206, Санкт-Петербург г, Петергофское ш, д.55, корпус 1", 
-    phone: "+7(812)930-09-15", 
-    workschedule: "пн-пт:10.00-21.00, сб-вс:11.00-20.00", 
-    period: "", 
-    price: "", 
-    prepaid: "0", 
-    loadlimit: "15" 
-    */
-
     if (result) {
-      var $pickpoint = $('#pickpoint');
-      var _pickpoint = '';
+      var $pickpoint = $('#pickpoint'), 
+          _pickpoint = '';
+      
+      $pickpoint.html('').removeClass('totals__cell--full');
       
       if (result.address)
         _pickpoint+='<span>'+result.address+'</span><br />';
@@ -316,12 +336,30 @@ Cart = {
       if (result.workschedule)
         _pickpoint+='<span>'+result.workschedule+'</span>';
       
-      $pickpoint.html(_pickpoint);
+      $('<div/>',{
+        appendTo:  $pickpoint,
+        class: 'price',
+        html: result.price+'<span>Р</span>'
+      });
+
+      Cart.delivery = result.price;
+      Cart.pickup = _pickpoint;
+      Cart.update_totals();
     }
 
     if (result.prepaid=='1') {
       alert('Отделение работает только по предоплате!');
     }
+  },
+
+  /* Update cart totals */
+  update_totals: function() {
+    console.log('update_totals');
+    var _total = parseInt(Cart.subtotal) + parseInt(Cart.delivery);
+
+    console.log(_total);
+
+    $('#subtotal').html('<div class="price">'+_total+' <span>Р</span></div>');
   },
 
   /* Local Strorage functions */

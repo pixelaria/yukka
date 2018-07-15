@@ -9,10 +9,10 @@ html(lang='ru')
     link(rel='stylesheet', href='./css/libs.min.css')
     link(rel='stylesheet', href='./css/bundle.css')
   body.body
-    script(src="")
-    include includes/aside.pug//points.boxberry.ru/js/boxberry.js
+    script(src="//points.boxberry.ru/js/boxberry.js")
+    include includes/aside.pug
     .wrapper#panel
-      include includes/callback.pug
+      include includes/order.pug
       header.header
         .container.header__container
           .header__logo.logo
@@ -49,7 +49,7 @@ html(lang='ru')
                   .price 900 
                     span Р
                 .catalog__cell.catalog__cell--quantity
-                  .product__order(data-product='50' data-name='Крепость' data-price='900' data-quantity='0' data-image='img/product-50.png')
+                  .product__order(data-product='50' data-name='Крепость' data-price='900' data-quantity='0' data-weight='1200' data-image='img/product-50.png')
                     .product__spinner.spinner
                       input.spinner__input(value='1' type='hidden')
                       span.spinner__button.spinner__button--down -
@@ -65,7 +65,7 @@ html(lang='ru')
                   .price 1200 
                     span Р
                 .catalog__cell.catalog__cell--quantity
-                  .product__order(data-product='51' data-name='Шапито' data-price='1200' data-quantity='0' data-image='img/product-51.png')
+                  .product__order(data-product='51' data-name='Шапито' data-price='1200' data-quantity='0' data-weight='1200' data-image='img/product-51.png')
                     .product__spinner.spinner
                       input.spinner__input(value='1' type='hidden')
                       span.spinner__button.spinner__button--down -
@@ -81,7 +81,7 @@ html(lang='ru')
                   .price 900 
                     span Р
                 .catalog__cell.catalog__cell--quantity
-                  .product__order(data-product='52' data-name='Избушка' data-price='900' data-quantity='0' data-image='img/product-52.png')
+                  .product__order(data-product='52' data-name='Избушка' data-price='900' data-quantity='0' data-weight='1200' data-image='img/product-52.png')
                     .product__spinner.spinner
                       input.spinner__input(value='1' type='hidden')
                       span.spinner__button.spinner__button--down -
@@ -103,7 +103,7 @@ html(lang='ru')
                   p.product__price.price 900
                     span Р
                   p.product__text Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.
-                .product__order(data-product='53' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0' data-image='img/product-53.png')
+                .product__order(data-product='53' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0' data-weight='1200' data-image='img/product-53.png')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -
@@ -118,7 +118,7 @@ html(lang='ru')
                   p.product__price.price 900
                     span Р
                   p.product__text Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.
-                .product__order(data-product='54' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0' data-image='img/product-54.png')
+                .product__order(data-product='54' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0' data-weight='1200' data-image='img/product-54.png')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -
@@ -133,7 +133,7 @@ html(lang='ru')
                   p.product__price.price 900
                     span Р
                   p.product__text Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.
-                .product__order(data-product='55' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0' data-image='img/product-55.png')
+                .product__order(data-product='55' data-name='Фломастеры утолщенные BRAUBERG, 12 цветов' data-price='900' data-quantity='0' data-weight='1200' data-image='img/product-55.png')
                   .product__spinner.spinner
                     input.spinner__input(value='1' type='hidden')
                     span.spinner__button.spinner__button--down -
@@ -154,7 +154,7 @@ html(lang='ru')
                   .delivery__map
                 .delivery__totals.totals
                   .totals__row
-                    .totals__cell Доставка
+                    .totals__cell Доставка до ПВЗ
                     .totals__cell.totals__cell--full#pickpoint Выберите желаемый ПВЗ Boxberry
                       
               .checkout__totals.totals

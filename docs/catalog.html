@@ -25,13 +25,17 @@
       </nav>
     </aside>
     <div class="wrapper" id="panel">
-      <div class="popup" id="callback">
-        <form class="popup__form form form--popup" name="form-callback" action="" id="form-callback">
+      <div class="popup" id="order">
+        <form class="popup__form form form--popup" name="form-order" action="" id="form-order">
           <div class="popup__close"></div>
           <p class="form__title">Напишите свой номер, и мы вам перезвоним</p>
           <div class="form__fields">
-            <input class="form__input" name="name" placeholder="Ваше Имя" type="text">
-            <input class="form__input" name="phone" placeholder="Номер телефона" type="text">
+            <input class="form__input" id="name" name="name" placeholder="Ваше Имя" type="text">
+            <input class="form__input" id="phone" name="phone" placeholder="Номер телефона" type="text">
+            <input type="hidden" id="products" name="products">
+            <input type="hidden" id="pickup" name="pickup">
+            <input type="hidden" id="subtotal" name="pickup">
+            <input type="hidden" id="delivery" name="delivery">
           </div>
           <button class="form__submit btn btn--white feedback" value="Перезвонить">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
         </form>
@@ -65,7 +69,7 @@
                   <div class="price">900 <span>Р</span></div>
                 </div>
                 <div class="catalog__cell catalog__cell--quantity">
-                  <div class="product__order" data-product="50" data-name="Крепость" data-price="900" data-quantity="0" data-image="img/product-50.png">
+                  <div class="product__order" data-product="50" data-name="Крепость" data-price="900" data-quantity="0" data-weight="1200" data-image="img/product-50.png">
                     <div class="product__spinner spinner">
                       <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--down">-</span>
                       <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--up">+</span>
@@ -82,7 +86,7 @@
                   <div class="price">1200 <span>Р</span></div>
                 </div>
                 <div class="catalog__cell catalog__cell--quantity">
-                  <div class="product__order" data-product="51" data-name="Шапито" data-price="1200" data-quantity="0" data-image="img/product-51.png">
+                  <div class="product__order" data-product="51" data-name="Шапито" data-price="1200" data-quantity="0" data-weight="1200" data-image="img/product-51.png">
                     <div class="product__spinner spinner">
                       <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--down">-</span>
                       <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--up">+</span>
@@ -99,7 +103,7 @@
                   <div class="price">900 <span>Р</span></div>
                 </div>
                 <div class="catalog__cell catalog__cell--quantity">
-                  <div class="product__order" data-product="52" data-name="Избушка" data-price="900" data-quantity="0" data-image="img/product-52.png">
+                  <div class="product__order" data-product="52" data-name="Избушка" data-price="900" data-quantity="0" data-weight="1200" data-image="img/product-52.png">
                     <div class="product__spinner spinner">
                       <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--down">-</span>
                       <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--up">+</span>
@@ -121,7 +125,7 @@
                   <p class="product__price price">900<span>Р</span></p>
                   <p class="product__text">Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.</p>
                 </div>
-                <div class="product__order" data-product="53" data-name="Фломастеры утолщенные BRAUBERG, 12 цветов" data-price="900" data-quantity="0" data-image="img/product-53.png">
+                <div class="product__order" data-product="53" data-name="Фломастеры утолщенные BRAUBERG, 12 цветов" data-price="900" data-quantity="0" data-weight="1200" data-image="img/product-53.png">
                   <div class="product__spinner spinner">
                     <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--down">-</span>
                     <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--up">+</span>
@@ -135,7 +139,7 @@
                   <p class="product__price price">900<span>Р</span></p>
                   <p class="product__text">Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.</p>
                 </div>
-                <div class="product__order" data-product="54" data-name="Фломастеры утолщенные BRAUBERG, 12 цветов" data-price="900" data-quantity="0" data-image="img/product-54.png">
+                <div class="product__order" data-product="54" data-name="Фломастеры утолщенные BRAUBERG, 12 цветов" data-price="900" data-quantity="0" data-weight="1200" data-image="img/product-54.png">
                   <div class="product__spinner spinner">
                     <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--down">-</span>
                     <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--up">+</span>
@@ -149,7 +153,7 @@
                   <p class="product__price price">900<span>Р</span></p>
                   <p class="product__text">Практичные, безопасные фломастеры. Полипропиленовый корпус значительно продлевает срок службы. Обладают яркими насыщенными цветами. Чернила легко отстирываются с одежды, смываются с рук. Утолщенный корпус и наконечник отлично подходят для юных художников.</p>
                 </div>
-                <div class="product__order" data-product="55" data-name="Фломастеры утолщенные BRAUBERG, 12 цветов" data-price="900" data-quantity="0" data-image="img/product-55.png">
+                <div class="product__order" data-product="55" data-name="Фломастеры утолщенные BRAUBERG, 12 цветов" data-price="900" data-quantity="0" data-weight="1200" data-image="img/product-55.png">
                   <div class="product__spinner spinner">
                     <input class="spinner__input" value="1" type="hidden"><span class="spinner__button spinner__button--down">-</span>
                     <div class="spinner__placeholder">1</div><span class="spinner__button spinner__button--up">+</span>
@@ -159,7 +163,7 @@
             </div>
           </div>
         </section>
-        <section class="section section--cart">
+        <section class="section section--cart section--hide">
           <div class="container">
             <h2 class="section__title">Ваша корзина</h2>
             <div class="checkout">
@@ -173,7 +177,7 @@
                 </div>
                 <div class="delivery__totals totals">
                   <div class="totals__row">
-                    <div class="totals__cell">Доставка</div>
+                    <div class="totals__cell">Доставка до ПВЗ</div>
                     <div class="totals__cell totals__cell--full" id="pickpoint">Выберите желаемый ПВЗ Boxberry</div>
                   </div>
                 </div>
