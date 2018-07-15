@@ -10,9 +10,11 @@ html(lang='ru')
     link(rel='stylesheet', href='./css/bundle.css')
   body.body
     script(src="//points.boxberry.ru/js/boxberry.js")
+    include includes/callback.pug
+    include includes/order.pug
+
     include includes/aside.pug
     .wrapper#panel
-      include includes/order.pug
       header.header
         .container.header__container
           .header__logo.logo

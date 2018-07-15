@@ -9,12 +9,9 @@ html(lang='ru')
     link(rel='stylesheet', href='./css/libs.min.css')
     link(rel='stylesheet', href='./css/bundle.css')
   body.body
-    
-
+    include includes/callback.pug
     include includes/aside.pug
     .wrapper#panel
-      
-      include includes/callback.pug
       header.header
         .container.header__container
           .header__logo.logo
@@ -367,7 +364,7 @@ html(lang='ru')
                 p.form__title Остались вопросы?
                 .form__fields
                   input.form__input(name='name', placeholder='Ваше Имя', type='text')
-                  input.form__input(name='name', placeholder='Номер телефона', type='text')
+                  input.form__input.im--phone(name='name', placeholder='Номер телефона', type='text')
                 button.form__submit.btn.btn--white.feedback(value='Перезвонить') Перезвонить
                 a.form__text(href="#" title="Политика конфиденциальности") * Потилика конфиденциальности
         section.section.section--contacts#contacts

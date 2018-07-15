@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="./css/bundle.css">
   </head>
   <body class="body">
+    <div class="popup" id="callback">
+      <form class="popup__form form form--popup" name="form-callback" action="" id="form-callback">
+        <div class="popup__close"></div>
+        <p class="form__title">Напишите свой номер, и мы вам перезвоним</p>
+        <div class="form__fields">
+          <input class="form__input" name="name" placeholder="Ваше Имя" type="text">
+          <input class="form__input im--phone" name="phone" placeholder="Номер телефона" type="text">
+        </div>
+        <button class="form__submit btn btn--white feedback" value="Перезвонить">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
+      </form>
+    </div>
     <aside class="navbar" id="navbar">
       <nav class="navbar__nav">
         <div class="navbar__inner">
@@ -24,17 +35,6 @@
       </nav>
     </aside>
     <div class="wrapper" id="panel">
-      <div class="popup" id="callback">
-        <form class="popup__form form form--popup" name="form-callback" action="" id="form-callback">
-          <div class="popup__close"></div>
-          <p class="form__title">Напишите свой номер, и мы вам перезвоним</p>
-          <div class="form__fields">
-            <input class="form__input" name="name" placeholder="Ваше Имя" type="text">
-            <input class="form__input" name="phone" placeholder="Номер телефона" type="text">
-          </div>
-          <button class="form__submit btn btn--white feedback" value="Перезвонить">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
-        </form>
-      </div>
       <header class="header">
         <div class="container header__container">
           <div class="header__logo logo"><a class="logo__link" href="/"><img class="logo__img" alt="" src="img/logo.png"></a></div>
@@ -330,7 +330,7 @@
                 <p class="form__title">Остались вопросы?</p>
                 <div class="form__fields">
                   <input class="form__input" name="name" placeholder="Ваше Имя" type="text">
-                  <input class="form__input" name="name" placeholder="Номер телефона" type="text">
+                  <input class="form__input im--phone" name="name" placeholder="Номер телефона" type="text">
                 </div>
                 <button class="form__submit btn btn--white feedback" value="Перезвонить">Перезвонить</button><a class="form__text" href="#" title="Политика конфиденциальности">* Потилика конфиденциальности</a>
               </form>
