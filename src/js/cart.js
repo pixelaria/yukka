@@ -96,6 +96,10 @@ Cart = {
 
         var _total = parseInt(Cart.subtotal) + parseInt(Cart.delivery);
 
+        Cart.fields.o_subtotal.empty();
+        Cart.fields.o_delivery.empty();
+        Cart.fields.o_total.empty();
+
         $('<div/>',{
           appendTo:  Cart.fields.o_subtotal,
           class: 'price',
@@ -115,10 +119,6 @@ Cart = {
 
 
         Cart.order.addClass('popup--active');
-
-
-
-
 
       } else {
         var $popup = $('<div/>',{
