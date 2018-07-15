@@ -1218,6 +1218,7 @@ h1,h2,h3,h4,ul,p {
   &__form {
     width: 570px;
     min-width: 570px;
+    
     @media @not-desktop {
       width: 100%;
       min-width: 100%;
@@ -1241,6 +1242,10 @@ h1,h2,h3,h4,ul,p {
     line-height: 32px;
     margin-bottom: 60px;
     text-align: center;
+    @media @mobile {
+      font-size: 21px;
+      margin-bottom: 30px;
+    }
   }
 
   &__fields {
@@ -1838,6 +1843,12 @@ h1,h2,h3,h4,ul,p {
     background-color: @red;
     color: @white;
     
+
+    @media @not-desktop {
+      width: 80%;
+      min-width: 300px;
+    }
+
     &--success {
       padding: 60px 70px;
     }
@@ -1880,6 +1891,11 @@ h1,h2,h3,h4,ul,p {
     line-height: 30px;
     text-align: center;
     margin-bottom: 0;
+  }
+
+  @media @mobile {
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
 
