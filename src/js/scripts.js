@@ -45,7 +45,7 @@ $(function (){
         settings: {
           slidesPerRow: 1,
           rows: 1,
-          dots: false
+          dots: true
         }
       }
     ]
@@ -62,6 +62,21 @@ $(function (){
     return false;
   });
 
+  $('body').click(function(e) {
+    var $popup = $('.popup--active');
+    if ($popup.length) {
+      $('body').removeClass('body--noscroll');
+      $popup.removeClass('popup--active');
+      if ($popup.hasClass('popup--remove')) {
+        $popup.remove();
+      }
+    }
+  });
+
+  $('body').delegate('.popup__form', 'click', function(e) {
+    e.stopPropagation();
+  });
+
   $('body').delegate('.popup__close', 'click', function(e) {
     var $popup = $(this).closest('.popup');
     
@@ -73,6 +88,7 @@ $(function (){
     }
     return false;
   });
+
 
 
   $(document).delegate('.spinner__button','click', function(e){
