@@ -61,7 +61,7 @@ h1,h2,h3,h4,ul,p {
   .slideout-panel {
     position: relative;
     z-index: 1;
-    will-change: transform;
+    
     background-color: #FFF; /* A background-color is required */
     min-height: 100vh;
 
@@ -422,6 +422,14 @@ h1,h2,h3,h4,ul,p {
       font-weight: 400;
       line-height: 60px;
       margin-bottom: 40px;
+    }
+
+
+    &--small {
+      @media @not-desktop {
+        font-size: 45px;
+        letter-spacing: 1px;
+      }
     }
 	}
 

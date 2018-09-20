@@ -13,7 +13,7 @@ $(function (){
     'tolerance': 70,
     'side': 'right',
     'tolerance': 70,
-    'touch': false
+    'touch': true
 
   });
 
@@ -47,7 +47,7 @@ $(function (){
         settings: {
           slidesPerRow: 1,
           rows: 1,
-          dots: true
+          dots: false
         }
       }
     ]
