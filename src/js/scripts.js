@@ -1,6 +1,27 @@
 $(function (){
   console.log('init');
 
+
+  $('body').append('<div class="scroll-to-top"></div>');
+
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    
+    if (scroll >= 300) {
+        $('.scroll-to-top').fadeIn();
+    } else {
+        $('.scroll-to-top').fadeOut();
+    }
+  
+  });
+
+  $('.scroll-to-top').click(function () {
+      $('body,html').animate({
+          scrollTop: 0
+      }, 400);
+      return false;
+  });
+
   // Init Cart    
   Cart.init();
 
@@ -37,7 +58,7 @@ $(function (){
   $('.im--phone').mask('+7 (000) 000-00-00');
 
   $('.gallery').slick({
-    dots: true,
+    dots: false,
     slidesPerRow: 3,
     slidesToScroll: 1,
     rows: 2,

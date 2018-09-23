@@ -246,7 +246,7 @@ Cart = {
 
       boxberry.openOnPage('boxberry_map'); 
       boxberry.open(Cart.boxberry_callback, //callback
-        '6SVbWBI29LRPvMemNNuPoA==', // api-token
+        'RXZ6NEqIkrLIlLIk76szGg==', // api-token
         'Санкт-Петербург', // город
         '',  // код пункта приема посылок
         Cart.subtotal, // объявленная стоимость

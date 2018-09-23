@@ -586,6 +586,9 @@ h1,h2,h3,h4,ul,p {
     align-items: center;
     justify-content: center;
 
+    @media @mobile {
+      padding: 0 15px;
+    }
     img {
       width: auto !important;
       height: 100% !important;;
@@ -1033,16 +1036,26 @@ h1,h2,h3,h4,ul,p {
   &:before {
     content:'';
     display: block;
-    padding-top: 66%;
+    padding-top: 63%;
     position: relative;
   }
 
   &__img {
-    width: 100%;
+    width: 95%;
     height: auto;
     position: absolute;
     top: 0;
     left: 0;
+
+    @media @mobile {
+      width: 100%;
+    }
+  }
+}
+
+.gallery  {
+  @media @mobile {
+    padding: 0 30px;
   }
 }
 
@@ -1658,6 +1671,10 @@ h1,h2,h3,h4,ul,p {
     .totals__cell {
       font-size: 36px;
       font-weight: 400;
+
+      @media @mobile {
+        font-size: 21px;
+      }
     }
   }
 
@@ -1847,6 +1864,8 @@ h1,h2,h3,h4,ul,p {
       width: 45% !important;
       min-width: 45% !important;
     }
+
+
   }
 }
 .spinner {
@@ -1934,7 +1953,7 @@ h1,h2,h3,h4,ul,p {
 
 .popup {
   position: fixed; 
-  overflow-y: scroll;
+  overflow-y: ;
   top: 0; left: 0; top: 0; bottom: 0;
 
   display: flex;
@@ -2087,4 +2106,66 @@ h1,h2,h3,h4,ul,p {
 .slick-dots li.slick-active button::before {
   opacity: 1;
   color: #cc3517;
+}
+
+
+.scroll-to-top {
+  display:none;
+  position: fixed;
+  
+  right: 55px;
+  bottom: 10%;
+  margin: auto;
+  width: 35px;
+  height: 45px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(128, 128, 128, 0.3);
+
+  background-image: url('../img/scroll-to-top.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+
+  cursor: pointer;
+  z-index: 9999;
+
+  @media @mobile {
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 40px;
+    height: 45px;
+    background-size: 50%;
+  }
+}
+
+
+.slick-prev {
+  left:-75px;
+  width: 40px;
+  height: 40px;
+  &:before {
+    font-size: 0;
+    border: 20px solid transparent; 
+    border-right: 20px solid #cc3517; 
+  }
+
+  @media @mobile {
+    left: -20px;
+  }
+}
+
+.slick-next {
+  right:-75px;
+  width: 40px;
+  height: 40px;
+  &:before {
+    font-size: 0;
+    border: 20px solid transparent; 
+    border-left: 20px solid #cc3517; 
+  }
+
+  @media @mobile {
+    right: -20px;
+  }
 }
