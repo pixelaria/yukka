@@ -1038,6 +1038,10 @@ h1,h2,h3,h4,ul,p {
     display: block;
     padding-top: 63%;
     position: relative;
+
+    @media @mobile {
+      padding-top: 0;
+    }
   }
 
   &__img {
@@ -1046,16 +1050,19 @@ h1,h2,h3,h4,ul,p {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    margin:auto;
 
     @media @mobile {
       width: 100%;
+      position: relative;
     }
   }
 }
 
 .gallery  {
   @media @mobile {
-    padding: 0 30px;
+    padding: 0 15px;
   }
 }
 
@@ -2152,6 +2159,13 @@ h1,h2,h3,h4,ul,p {
 
   @media @mobile {
     left: -20px;
+    width: 30px;
+    height: 30px;
+
+    &:before {
+      border: 15px solid transparent; 
+      border-right: 15px solid #cc3517; 
+    }
   }
 }
 
@@ -2167,5 +2181,11 @@ h1,h2,h3,h4,ul,p {
 
   @media @mobile {
     right: -20px;
+    width: 30px;
+    height: 30px;
+    &:before {
+      border: 15px solid transparent; 
+      border-left: 15px solid #cc3517; 
+    }
   }
 }
